@@ -24,7 +24,7 @@ npm run dev            # http://localhost:3000
 | `npm run build` | Production build (33 routes, all prerendered) |
 | `npm start` | Serve the production build |
 | `npm run typecheck` | `tsc --noEmit` |
-| `npm run lint` | `next lint` |
+| `npm run lint` | ESLint (flat config, `eslint.config.mjs`) |
 | `npm run fetch:images` | Download the photography from `image-manifest.json` |
 | `npm run qa` | SEO / schema / redirect / accessibility sweep against a running build |
 
@@ -121,6 +121,14 @@ carries a neutral fallback and an entry in `PRELAUNCH.md`.
 options", "seek to reduce", "represent you", never "we will eliminate" or
 "pennies on the dollar". Refund advance content stays general and carries the
 EPS Financial disclosure placeholders until the client supplies real terms.
+
+**Dependency pins are deliberate.** Next is on the 15.5 line, which is what
+cleared the critical advisories behind CVE-2025-66478. ESLint is held at 9
+because `eslint-config-next@15.5.x` caps its peer range there — ESLint 10
+throws `Failed to patch ESLint` against it, so the npm deprecation warning on
+install is cosmetic and unavoidable until the project moves to Next 16. Two
+moderate/high postcss advisories remain inside Next's own bundled copy and
+are only fixable by that major upgrade; see PRELAUNCH.md.
 
 **Review gating is not implemented and should not be.** Everyone who wants to
 leave a review goes to the same public Google link, whatever they intend to

@@ -203,7 +203,53 @@ Currently passing:
 
 ---
 
-## 6. Content scope worth a client sanity check
+## 6. Dependencies and security
+
+Deploy logs will show two npm **warnings**. Neither fails a build, but here
+is what each one is and what was done about it.
+
+### Resolved
+
+**Next.js security advisory (CVE-2025-66478).** The project was initially
+pinned to `next@15.1.6`, which npm flags as vulnerable. Upgraded to
+**`next@15.5.25`** — npm's own `fixAvailable` for the advisory, and not a
+major bump. That cleared the *critical* rating and every advisory in the
+CVE-2025-66478 cluster, and dropped `sharp` out of the dependency tree
+entirely (so one of the two `allow-scripts` warnings is gone too).
+
+Verified after the upgrade: clean typecheck, clean lint, clean build, and
+the full QA and layout sweeps still pass. `next/image` optimization was
+tested end to end against a real JPEG — the endpoint serves AVIF and WebP
+(20KB source → 3.4KB AVIF) with no sharp present and no optimizer warnings.
+
+### Remaining, and why
+
+**Two postcss advisories (1 moderate, 1 high)** live inside Next's own
+bundled `next/node_modules/postcss`. `npm audit` reports the only fix as
+`next@16.3.5`, a breaking major upgrade. Not taken here: a major framework
+bump on a site about to launch is a bigger risk than the advisories, which
+concern source-map handling in CSS processing at build time rather than
+anything the deployed site exposes to visitors. Worth scheduling as its own
+piece of work after launch.
+
+**`npm warn deprecated eslint@9.x`.** ESLint 10 is current, but
+`eslint-config-next@15.5.25` caps its peer range at ESLint 9 — installing 10
+makes linting fail outright with `Failed to patch ESLint`. This was tested,
+not assumed. The warning is cosmetic, ESLint is a devDependency Vercel does
+not run, and it clears with the Next 16 upgrade above.
+
+**`npm warn allow-scripts unrs-resolver`.** npm's supply-chain gate holding
+back a postinstall script, from a transitive dependency of
+`eslint-config-next`. Lint-time only, does not affect the build or the
+deployed site, and safe to leave un-approved.
+
+The lint setup moved to ESLint flat config (`eslint.config.mjs`) because
+`next lint` is deprecated as of Next 15.5; `npm run lint` now calls the
+ESLint CLI directly.
+
+---
+
+## 7. Content scope worth a client sanity check
 
 The Tax Preparation page, and the bookkeeping, tax planning and back taxes
 pages, were specified from the old site's homepage, services page, FAQ and
@@ -211,7 +257,7 @@ Dallas page rather than from their own pages (those hit a fetch limit during
 the brief). The service scope described on each is a reasonable reading of
 the firm's offering but is worth a quick read-through by Demarcus.
 
-## 7. Optional expansion
+## 8. Optional expansion
 
 Plano, Irving or other DFW city pages could be added if the firm confirms
 which cities it actively serves — that would take the site to 21–23 pages.
