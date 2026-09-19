@@ -5,6 +5,7 @@
   "description": "Marketing website for Hewitt Services, a Dallas, TX tax and accounting firm.",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/check-images.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",

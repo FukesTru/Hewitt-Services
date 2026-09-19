@@ -22,12 +22,22 @@ session's network egress allow-list and returned 403.
 From any machine with normal internet access:
 
 ```bash
-npm run fetch:images
+npm run fetch:images          # writes all 23 files into public/images/
+git add public/images
+git commit -m "Add site photography"
+git push
 ```
 
-That reads `image-manifest.json` and writes every file to its correct path
-under `public/images/`. No code change is needed afterwards — `lib/media.ts`
-picks up each file on the next build.
+**All four commands matter.** Downloading locally only fixes your own
+machine. Vercel (or any hosted build) builds from the repository, so the
+images do not exist there until they are committed and pushed. Nothing is
+gitignored under `public/` — the files just have to be added.
+
+Every build prints how many images are missing, so this is visible in the
+Vercel log rather than something you have to notice on the live site.
+
+No code change is needed once the files land — `lib/media.ts` picks each one
+up on the next build.
 
 Until then, every image slot renders a navy/gold gradient panel. Nothing
 404s and no layout shifts, but the site is visibly unfinished.

@@ -55,6 +55,14 @@ for (const image of manifest.images) {
 
 console.log(`\nDownloaded ${downloaded}, skipped ${skipped}, failed ${failures.length}.`);
 
+if (downloaded > 0) {
+  console.log("\nNow commit them — a hosted build (Vercel and friends) only has");
+  console.log("what is in the repo, so downloading locally is not enough:\n");
+  console.log("    git add public/images");
+  console.log('    git commit -m "Add site photography"');
+  console.log("    git push");
+}
+
 if (failures.length) {
   console.log("\nRe-download these from the Artlist library by generation ID,");
   console.log("or regenerate them from the prompts in image-manifest.json:");

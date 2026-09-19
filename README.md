@@ -18,6 +18,17 @@ npm run fetch:images   # pulls the site photography into public/images
 npm run dev            # http://localhost:3000
 ```
 
+The photography is **not in the repository yet**. After `fetch:images`,
+commit it — a hosted build only has what is committed:
+
+```bash
+git add public/images && git commit -m "Add site photography" && git push
+```
+
+Every build prints how many images are missing (`scripts/check-images.mjs`),
+so a deploy without them is obvious in the build log. It is only a warning:
+missing images render a navy/gold gradient panel and the site still ships.
+
 | Script | What it does |
 |---|---|
 | `npm run dev` | Development server |
@@ -26,6 +37,7 @@ npm run dev            # http://localhost:3000
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run lint` | ESLint (flat config, `eslint.config.mjs`) |
 | `npm run fetch:images` | Download the photography from `image-manifest.json` |
+| `npm run prebuild` | Report how many images are missing (runs automatically before `build`) |
 | `npm run qa` | SEO / schema / redirect / accessibility sweep against a running build |
 
 The QA sweeps expect a production build to be running:
