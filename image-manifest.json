@@ -1,0 +1,226 @@
+{
+  "$comment": "Art direction for hewittservices.net. All 23 images were generated with Artlist (Seedream 5.0, 2K) into the firm's Artlist library. The session that built this site could not write the binaries into the repo because Artlist's CDN hosts sit outside its network egress allow-list, so run `npm run fetch:images` from a machine with normal internet access to populate public/images/. Until a file exists the site renders a navy/gold gradient panel in its place (see lib/media.ts) - nothing 404s and no code change is needed when the files arrive.",
+  "generator": {
+    "provider": "Artlist",
+    "model": "Seedream 5.0",
+    "modelGroupId": 360,
+    "resolution": "2k",
+    "creditsPerImage": 100,
+    "totalCredits": 2300
+  },
+  "generatedOn": "2026-09-19",
+  "note": "sourceUrl values are signed Artlist CDN links and may expire. If a download returns 403, re-download that image from the Artlist library using its generationId, or regenerate it from the prompt recorded here.",
+  "stillNeededFromClient": [
+    "public/images/demarcus-hewitt.jpg - photograph of Demarcus Hewitt. Deliberately NOT generated: a synthetic or stock face standing in for a real, named person would misrepresent the firm.",
+    "Logo files, to replace the typographic wordmark in components/Logo.tsx and the placeholder favicon at public/favicon.svg."
+  ],
+  "images": [
+    {
+      "path": "public/images/hero/home-hero.jpg",
+      "usedFor": "Home hero",
+      "alt": "The downtown Dallas skyline at blue hour, seen across open ground",
+      "aspectRatio": "21:9",
+      "generationId": "01a0ba8c-62fc-7070-a675-5fbf7da1ba10",
+      "prompt": "Wide cinematic editorial photograph of the downtown Dallas, Texas skyline at blue hour, shot from a slight elevation across open ground. Deep navy sky graduating to charcoal, warm gold window lights glowing in the towers, faint reflection on glass. Calm, premium, restrained. Soft atmospheric haze, muted contrast in the upper third so white headline text can sit over it legibly. No text, no words, no lettering, no logos, no signage.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__8/-t-e-x-t_-t-o_-i-m-a-g-e-7181c62b-16a0-42c7-a851-a66dce7c52a2.jpeg?Expires=2105196646&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=jsnPUOEGnf3nD2EMFkvKdXMUsy6nsiDNhJ59mz4CMPf9UYbU-Y1VCJ1CNZtO56sTs2cPLOF6H~Ikj3OTwCPX-A7t8WRiwqBOcmeUBoeO0pno186fR5lN53FYU2pWb0fl4P6Yg9uiucMPqe1uu8jrEvW1OH2luIyewWSIN6uRD7NSXn5x0SujjBml2ULYBieztOAl-MCQ2qqnuBL~xvlKXQfOCkcqkEWlDMZVSTzCWkdFAfATMEG2F2MsN523we0kgPLyMPHjNNjtDHTEO0iqzpW1tN9CoS1NLxKvS5S8ZX5334Y9Uy9Lmnxsr-FIyB9kzMYHtqLRRE02nqruWgTWmg__"
+    },
+    {
+      "path": "public/images/hero/dallas-hero.jpg",
+      "usedFor": "Dallas page hero / services hub hero",
+      "alt": "A Dallas office district in late afternoon light, with stone and glass facades",
+      "aspectRatio": "21:9",
+      "generationId": "01a0ba8c-701b-78e2-a49e-b18825dbd512",
+      "prompt": "Editorial architectural photograph of a Dallas, Texas office district in late afternoon — mid-rise modern buildings, clean glass and stone facades, a broad quiet street, mature trees. Warm low sun raking across the stone, deep navy shadows. North Texas light. Muted contrast, room at the top of the frame for overlay text. No text, no signage, no logos.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__7/-t-e-x-t_-t-o_-i-m-a-g-e-d4e53bb6-8bcc-4ab1-af95-c021a40bfa80.jpeg?Expires=2105196646&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=cJV~JnALtqMLK7szEzrFYdXzq3M4IoD4BHGdONPga94PwbIwG08fg720nTY~JCr2HLG7C-EWyc3bgkgo280f7XjOJnJ2hhDufQGX1xwwJ1EmSLwtZOxSA20~m1g9ZgEEhsO2H0zI0MkemolAxEIjbOucPhbBr5RKNaBJSkD23yQRNqtFocA6bjNReLgkRpwzcYzAjhGZmQOm0X4SwovknVVqgo923TDUWlPtHpUVoNBF2Ro9qsNiudPQvmXS4r3DzOuVXcj92LApnwgmIYQA7uGx6FGA88DyMgyAl4rV9fBXcKAEjDfShNLtpMqddx6yE5r~rY0mqmaipR5i~AgXrQ__"
+    },
+    {
+      "path": "public/images/hero/fort-worth-hero.jpg",
+      "usedFor": "Fort Worth page hero",
+      "alt": "The Fort Worth skyline at dusk under a wide Texas sky",
+      "aspectRatio": "21:9",
+      "generationId": "01a0ba8c-7f9c-7e0f-8acd-98022196d42e",
+      "prompt": "Editorial photograph of the Fort Worth, Texas downtown skyline at dusk across the Trinity River flats. Distinctly Fort Worth — lower, warmer, more brick and limestone than a glass megacity, art-deco tower silhouettes, wide Texas sky. Deep navy and indigo sky with warm amber city light. Clearly a different city and composition from the Dallas shot. No text, no signage, no logos.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__9/-t-e-x-t_-t-o_-i-m-a-g-e-481b2a17-f18c-4fc9-a9e1-a0517c871d32.jpeg?Expires=2105196646&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=wGZaGWPz5z9RacMxgM6~JHxop19LhDYfECdn6e2qNqbuaC9tdNMzY-n-JwB8XORgttKksgW1m76zFtEImup-vyRpUe8tzjSC2qiz~oBqRy9Jy5KuxgiJGh~GGXzyFeNqDFPTJKtYnp6GAvh31Vw1ANnJ8mjZC5buZ3BkrfhK~3OM3-XOQl6FQv1s1o9ihLZT2jVnhOQnh3~J~pZ8CCbFeeKrtXRgnO1VTT8paWbtprszi7SzIYeS5~RBe6UuAd0iwI-MAOmT3nGjw8fRyyvVjA9Shx3sEIzxe64iTcF8x5e-rh0zNQ9kIMkg-a~p074BJ~0y4nBWGzCq1qbUj2~Akg__"
+    },
+    {
+      "path": "public/images/hero/about-office.jpg",
+      "usedFor": "About page hero and inline office image",
+      "alt": "A small accounting office with an oak desk, a desk lamp and neatly stacked folders",
+      "aspectRatio": "16:9",
+      "generationId": "01a0ba8c-8d8a-72d2-b757-6fe16007b6b8",
+      "prompt": "Interior photograph of a small, refined accounting practice office. Warm oak desk, a single green-shaded lamp, neat stacks of closed folders, a leather chair, bookshelf with muted spines, tall window with soft daylight. Deep navy walls, brass and gold hardware, ivory paper tones. Quiet, ordered, trustworthy. No people, no text, no readable documents.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__9/-t-e-x-t_-t-o_-i-m-a-g-e-c87a830e-2d1d-4cf2-938b-c6487d08f82a.jpeg?Expires=2105196646&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=ZHy922AF1Kr0~bRnLB-I3aUx2FJn0fJxA4hj3FqfqWp59zxyR5QSXPu0AZ1SwrAkRsT1NjsfoSBVNU3iDGl9sBRvnyxu0Ot1gWK~hB~-41Orddv3Q0jPvGZYY5~ylk1K6gY1FtIz4-K0TDoz3cHF-Uo1YC1n8r9wmuy7LIfaV~jjUpWJz9s6QcxkF~nsGlpIXKag2N0YMIqfFihvI8szOcOxdcBRIIcT4-nHCU9BibaOiSoWYl1wAsMc087eTldzc3j10VZctR3bC630uMkroy0bqVC8FxXBq6281b-zpIp9hrWtzg~oE0MpyzuJleGzSIE9iwMlumeIEKKi436pxw__"
+    },
+    {
+      "path": "public/images/services/monthly-bookkeeping.jpg",
+      "usedFor": "Monthly Bookkeeping service page",
+      "alt": "An organized bookkeeping desk with a laptop, a columnar ledger pad and neatly clipped receipts under warm light",
+      "aspectRatio": "16:9",
+      "generationId": "01a0ba8c-9db6-7947-a6ae-0f9ee91e80e7",
+      "prompt": "Overhead editorial still life of a monthly bookkeeping workspace: an open laptop showing an abstract clean line chart, a columnar ledger pad, a pen, a small stack of neatly squared receipts held by a brass clip, a cup of black coffee. Deep navy desk, ivory paper, warm gold rim light from the left. Orderly and calm. No text, no numbers, no readable screens.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__2/-t-e-x-t_-t-o_-i-m-a-g-e-3e9d8130-4ad1-4dbb-9ca9-d89aaf63afcf.jpeg?Expires=2105196646&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=MjNUCzP-J8N4cLpzFN3yD8H6GZup4QcSpA3n0Etkl5dKyJph-wvSPfSzikgBNIq3g43FYw6a9F41eBMZYdYbkDF78UfvSJbgRAnzhggMJMG3J5XWfmn7ILOXxgjwl7ruJRRNadtidwdetIiiwj66Sl7SHMQeMo7K~iLY2t3cTsrx2H4YwbjZRuOeTWIOjmy4G75WwyggUnEBWohe67~lGb8p-hzuEC-kjfn9BlKBp2HTdX2OloHecNv1r2rRk-a3wmez~SF5VYNBfxDio5l5WAudalNYaEAkjjN8wxqCYZfZRvtnwzbZ3bagZM8XidNyoMjABt5zdf-v4BRp4l-xQg__"
+    },
+    {
+      "path": "public/images/services/tax-planning.jpg",
+      "usedFor": "Tax Planning service page",
+      "alt": "Two advisers reviewing hand-drawn diagrams in a notebook across a dark walnut conference table",
+      "aspectRatio": "16:9",
+      "generationId": "01a0ba8c-a9f3-73ea-9b59-3dd05b0969a5",
+      "prompt": "Editorial photograph of a tax strategy planning session, shot from behind and to the side so no faces are visible — two people at a dark walnut conference table, one gesturing toward an open notebook with hand-drawn abstract diagrams, a tablet and a fountain pen nearby. Deep navy room, warm gold window light. Composed, advisory rather than salesy. No visible faces, no text, no readable documents.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__5/-t-e-x-t_-t-o_-i-m-a-g-e-d12257da-d7c9-4128-8295-8555bdeb5a62.jpeg?Expires=2105196646&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=B8OiYXe4OroHhnuTFo7GEMKTwUE0WWqiNJbEy~spzp3Q5PIwuS~B6dWdKkxQyHrmvzcwZzqUNv8BRkvJCXEd6jAHOdTOivrzaJDhKm-PxX5eVW2imY7VGR0L9vEpDwyq11-~p3a8xeR1LapSXEuWyYKWZtzJIYkqfBvMrFFj6HgXtYfTEkhrfOu-k2lhWSCg7o5l43gBSG8i1ogDdVTBb-9bBNs9S8uLTu9bEFikUMecGrIyyyugSy0M6nW1NpwscP5VqhH~KDgF3FZvERopogLMlO5rRMGdtUnimcjetsdrZzWPU2ncy2pax6Y0IrEnuFTBPLRIzJADD2TmFaf6MA__"
+    },
+    {
+      "path": "public/images/services/tax-preparation.jpg",
+      "usedFor": "Tax Preparation service page",
+      "alt": "A tidy desk with a blank tax form, a slim calculator, reading glasses and a fountain pen under warm light",
+      "aspectRatio": "16:9",
+      "generationId": "01a0ba8c-c6f2-7830-b715-42c913278824",
+      "prompt": "Editorial still life of individual tax preparation: a tidy desk with a blank unmarked form on cream paper, a slim silver calculator, reading glasses folded on top, a fountain pen, and a plain manila folder squared to the edge. Deep navy desk, single warm gold key light from upper left. Precise, calm, meticulous. No text, no numbers, no readable documents.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__6/-t-e-x-t_-t-o_-i-m-a-g-e-033982f1-5c45-4e4b-8ade-3e6f761a7108.jpeg?Expires=2105196646&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=kIh-Gr8bpajddxfOBXn0m1DdghZr9iuIyp7SrUKoM7nRGd1EAmHDUjR~ieY8kcJTye-HR2HbA9VS3Tk3zjRUH-4jlsp-6ubbEX~wIGGTwAbHDceud~m-0nhSQtrdbEPdGWH~FYyy3WtgCpZxVbBEbQJqSB9DZTMkqET0u48HnH-BBjOJqKDN2mtqNBxqYloqIfK~d1fI9aNB7i3yj0FWjicB2oFfS8933-RHYXGcU6aGEF0jxWaT6h6eHXYTWofaEFFccAWyoNxrJzrlcWqh-b7Xc1PVWFZwmO-Qn9o5kvkR6VYUzIRdfurcbt~hy20kuVbsoAjgEVOn3IH4CPxqpA__"
+    },
+    {
+      "path": "public/images/services/back-taxes-compliance.jpg",
+      "usedFor": "Back Taxes and Compliance service page",
+      "alt": "Kraft file folders standing in an archival box with aligned tabs, one lifted forward, under warm light",
+      "aspectRatio": "16:9",
+      "generationId": "01a0ba8c-d328-76c8-a72e-812e5bdd5251",
+      "prompt": "Editorial photograph of several years of tax records being brought back into order: a row of kraft file folders standing in a dark archival box, tabs neatly aligned, one folder lifted slightly forward. Warm gold light falling across the tabs, deep navy background fading to black. The mood is relief and resolution, not shame or clutter. No text, no handwriting, no labels.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__4/-t-e-x-t_-t-o_-i-m-a-g-e-0c8cbeec-28f6-4b69-98ad-aa65290211bb.jpeg?Expires=2105196646&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=OXha9XSRJeGiFqR616PGZRouSjnNzWKdcw~WkLApiyWionsXqFyd4o85wXH9RatsHoy8l5d~x1Siti~k-NScHLi4UuIEiNYFg4H~Zc8dmv9bhWy24VZW-Baq8sab~CFttiP1ofFMhdu9SASeS~8ZMv8hjIYGR6sjkCkV6326YuYjMlppCtWTgF6rrSgIlBozKMqHaNBtOK4-Y7rKLe-UFN3~mrIxuIPYJBgtri-HZ2oEKkxnUCFu4ZqsoShbqKXubyX99Q7jT9d18~ftARhw5LATs-kQA2Gwr-8FjTKyqPXgQ1qNfgb9ctwE6bZJ485aq8Mv9tO~F8VfNRweIs255g__"
+    },
+    {
+      "path": "public/images/services/irs-tax-problems.jpg",
+      "usedFor": "IRS Tax Problems service page",
+      "alt": "An unopened window envelope on a walnut table beside reading glasses and a cup of coffee in morning light",
+      "aspectRatio": "16:9",
+      "generationId": "01a0ba8c-e1e5-7286-8435-32308d1e5bad",
+      "prompt": "Editorial still life: a single plain unopened government-style window envelope on a dark walnut table, slightly angled, beside a pair of reading glasses and a cup of coffee going cold. Morning light from a window off frame, long soft shadow, deep navy tones with a warm gold highlight along the envelope edge. Serious but solvable, not frightening. No text, no stamps, no addresses.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__2/-t-e-x-t_-t-o_-i-m-a-g-e-4610fb93-3d2a-4867-b0d7-fa180291a896.jpeg?Expires=2105196646&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=bbG6~EtoCLVnqi7D70vpz80LcrClcNXclImDzTlOVDxp3OZJSwA5C4zT2uhAPINod~UJdtpw7ieJuAptbK1YgjL~z9ZA1cSH3ENcfiI1Pzxl85YLgawSeU0LAAXCbO9BNm2zuO4cURRIftVzFLAiTVTrstTMjxFIWJTbuAEtq2PURyuteLJsXyGK0QMy0noPFfQDuc3s9F8lXw7MXPq6BDig2nnxhaUMfLYDhGFauuuE5NdzEbX2Tx5kzTyPVWeii5d61lIopWPRz9hE3hNF53SoQDMJ-yMWYZhUuslwbwxm3ln46~KV2bkQK5pIs58snRcGUX2gxdQntmqvtGOHiw__"
+    },
+    {
+      "path": "public/images/services/franchise-tax-reinstatement.jpg",
+      "usedFor": "Texas Franchise Tax Reinstatement service page",
+      "alt": "A small Texas main-street brick and limestone storefront in golden hour light",
+      "aspectRatio": "16:9",
+      "generationId": "01a0ba8c-f080-793b-ba20-ec8a1e9f2d9e",
+      "prompt": "Editorial photograph of a small Texas main-street business exterior at golden hour — warm red brick and limestone storefront, large clean plate-glass window, a simple awning, wide Texas sky with deep navy dusk creeping in. Independent, established, back in good standing. No text, no shop names, no signage.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__6/-t-e-x-t_-t-o_-i-m-a-g-e-5f817bd9-abe3-48bf-8855-e027f928e49f.jpeg?Expires=2105196646&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=ZWXiiGGAi~eGRhknhTO5b1KrwmTB3oScjlTXFzUbzSCeIiKge-rsrnEzop3nXeuj0SP88M1hzXtCyLtudqPda255fNpaAPlchnv3cUk1IABelSHoM0aPOO31VEBH9J~~iV0n6lJYbfXUOruvEqLiT~hrlWT-QSmlNL2w0q0y269iOjXQXMK7~0btYgNClx95zquIIBMAamMBoZsIB7m~y-V8Wuw03y~DxYbKZGvxJvSMtHXygnVp~O6VTozGxYlcjUJGlL40sDkY8nkNbiNjvl2U~jCuitPpRoBmXtu56ILh-NkYZ2vhj3P-Ibm2mDFDhKMEinYrPreUX-d3Xz808w__"
+    },
+    {
+      "path": "public/images/services/refund-advances.jpg",
+      "usedFor": "Refund Advances service page",
+      "alt": "A plain matte navy payment card with a brushed gold edge on a dark surface under a soft light sweep",
+      "aspectRatio": "16:9",
+      "generationId": "01a0ba8c-ff25-7eaf-8ea6-38e1f9370b8e",
+      "prompt": "Clean editorial product-style still life suggesting faster access to funds: a plain matte navy payment card with a brushed gold edge resting at an angle on a dark surface, a soft gold light sweep behind it. Abstract, restrained, banking-grade — no branding of any kind, no cardholder details. Studio lighting, deep navy background. No text, no numbers, no card networks.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__5/-t-e-x-t_-t-o_-i-m-a-g-e-8e0d6409-4d0e-4861-8628-4f352c942d94.jpeg?Expires=2105196646&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=PXcLBfGku4ZUFlWCXlbwMS9LIqpTCIDNSYz3Au~HHq8I6MX00rahUmXK9L2yfwZS-eVSnV5gBCgDaslNoDqXafjZfzlPiIxoAsilIR-hFG0eAFKKeCxUELiYYsXUS~DFm4vCBRbJI9l2YxXOLy2KVt6DU3M9ovHlJkqtH9~PPYYO4uC96dMjyetgeiza1WpBlqCoSF3XQLZpVJLHtuDcNxWMl4KtuUGEWhe1SC0LgiSNVbQeKCPwHvNOR9xDlsEHI-Q7tuRJGNfoFHQykz-ZxrTamtZhoZMV-HVm8tD7c1i7xoYFKNV8PaL27BhbTeg-jdQwjkkWcbVSwU~nCREXTQ__"
+    },
+    {
+      "path": "public/images/hero/tax-center.jpg",
+      "usedFor": "Tax Center page hero",
+      "alt": "A desk calendar, a closed laptop and a brass desk clock arranged on a dark desk",
+      "aspectRatio": "16:9",
+      "generationId": "01a0ba8d-0cbd-7bcd-97e6-052f5434fe56",
+      "prompt": "Editorial still life of a tax resource desk: a clean blank wall-style desk calendar with unmarked grid squares, a laptop closed beside it, a small brass desk clock, and a neat stack of blank cream paper. Deep navy surface, warm gold light from the upper right. Organized, reference-library calm. No text, no numbers, no dates.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__10/-t-e-x-t_-t-o_-i-m-a-g-e-ac8ae298-b796-47ca-b1c0-4b87700f810b.jpeg?Expires=2105196646&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=kPkPGlhywdN8sFIdySdp6TBFcmDAcXFvfChqVlNb1wXskUlJXKPXenN--NChkL0OhxRiu36c5B7YAqVcL71fFBLg85Xp-3P5NA~Bmtqr4V7wC~kaSqtG0mvLRP6nY72Fenvghh5bH2JhStx~~KkZIY33ovXPe-PeRFw0fdGIwZI2x~b9BKd-BfbsnoTHYUYGNhomRNTvxdtrlY8j09qs7pDhP1-NJ9lt7LjzMwSJr8AghUf5pSCoYoztpbCuBXZyMjuuxLwLkHCfJNz2Ta1O4C-iVcy0OqO3K4VE4paYPE5CLHjU~ZYDgMr1HPUTbwSSY9L7Zs7qeWP1ux-TQoRUzQ__"
+    },
+    {
+      "path": "public/images/hero/faq.jpg",
+      "usedFor": "FAQ page hero",
+      "alt": "A deep navy fluted stone wall crossed by a single band of warm gold light",
+      "aspectRatio": "21:9",
+      "generationId": "01a0ba8d-361d-7a51-ac08-6adaa530c65a",
+      "prompt": "Abstract architectural detail photograph: a deep navy coffered ceiling or fluted stone wall lit from a low angle, with a single thin band of warm gold light running across it. Minimal, geometric, quiet. Almost monochrome navy with one gold accent. Very muted contrast, generous negative space. No text, no people.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__1/-t-e-x-t_-t-o_-i-m-a-g-e-14a7ed36-bd5f-4671-9dc1-12aa8c848b24.jpeg?Expires=2105198165&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=fyFRKifsK~iAN16MakfZegdU8w8Gksf03H8MRjYNbQH8mq0SoaMY-fyfJeeIFv9AyyhKquCP0CCuRzPGk6ytd4BVZsX7q~9zqrpf~40MAfNks7rFKIQqWvmbQUePmNFaJwMDLoD-SY82DUEVFti4Az6~aa~YVkTM7yC-LraVYCinKk7pjtlR3B~bkswGTnF39ti1qemoOB6pXiIgfGbj~HErFPnJCwNKlo1bIrSDFPNNc9KEJc~8rTs6OPcOq15FT-4-oE5q91S8Fxe1dSdkGMljCJtfwqQIVFKkTi6htB29jmGnpdZuxIXHAvYVUiUZCr3yu5xQRafpmZiOTr0AsA__"
+    },
+    {
+      "path": "public/images/hero/contact.jpg",
+      "usedFor": "Contact page hero",
+      "alt": "A small office waiting area with two leather chairs and a brass floor lamp",
+      "aspectRatio": "16:9",
+      "generationId": "01a0ba8d-4348-759b-8011-fb0447bf6fcb",
+      "prompt": "Editorial interior photograph of a small professional office entry and waiting area: two simple leather chairs, a low walnut table with a single plant, a warm brass floor lamp, deep navy wall, daylight through a glass door. Welcoming and calm, human-scale, a small firm rather than a corporate lobby. No people, no text, no signage.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__6/-t-e-x-t_-t-o_-i-m-a-g-e-21591005-f61b-4296-a2c1-4b9661632dc8.jpeg?Expires=2105198165&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=sUUYXhUnUuufARykvst6ehorWltbhYYFVwn-F0rLMpTQVjQ2PCBBqzwXL4PgrgRqvAfBQ17H5CL8J9pYJVSPRhryuo0kkAhbtZru81dfyP0ebDy2lOkkGf8Jwv-7SAeVrO5dt750bqe0DI0IQ~zitUzpM1kmZMcpkEwutf1jGCwFYLAgsLi41j7IN2ehR6bHPBIDWoupzf8w4qm0Kz3KgwgOwodejZv2B~lBYtULkn0m24S3eCWc~9z05Ke1bMutVunwVI3v7u2Qpe4bED5boZlkZ8p1ZYPf6hKEsFS6uKcMgmULaVPMEZfHw65zGiZlBG~u643JPCPSodW66BaW4A__"
+    },
+    {
+      "path": "public/images/hero/reviews.jpg",
+      "usedFor": "Reviews page hero",
+      "alt": "Two chairs angled toward each other across a low table after a conversation",
+      "aspectRatio": "16:9",
+      "generationId": "01a0ba8d-5095-70ff-9f4a-ca3c7fe971cc",
+      "prompt": "Warm editorial photograph of an empty small-office meeting corner just after a good conversation: two chairs angled toward each other across a low walnut table, two coffee cups, a closed notebook, soft late daylight. Deep navy walls, ivory and warm gold tones. The mood is trust and follow-through. No people, no stars, no rating graphics, no text.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__1/-t-e-x-t_-t-o_-i-m-a-g-e-95a95249-3ec8-420e-9da6-a5d0d1b59e8b.jpeg?Expires=2105198165&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=s8gT5FNEHK1Gr8vJ6rnKmd051m2iL6EEsrfwGLjWV9iRnlCdBRy4txVhT3lz5JSs2lan6rN-E1gh2ARGFDfdGCgJaX7uLbJ4sUUorUzSv9c2ZMYzv7HoxZMUQL429hxhNkLUOZdONxAMitt8xdl3jF4X6CEPv~-s3-1UDjEXxH8~lUHK8PUvaoBcPzPngv0-jaWOuhzBNMmq1iFe8-TevGTUu5dy-M-6cUcWyJnx56CIlCFS5jEKB-PD2l1921~xFOVdrsb8cqvS8lmgYNQ7Lq6oQMRYIQn2RNm5Zl4cXuNWHDq-d~VKBP3A3QG0s1Y1M6QO7IlfjWnDF8bHWFk7Mw__"
+    },
+    {
+      "path": "public/images/hero/blog.jpg",
+      "usedFor": "Blog index hero",
+      "alt": "An open notebook, a fountain pen and a cup of coffee on a writing desk",
+      "aspectRatio": "16:9",
+      "generationId": "01a0ba8d-5c17-7f28-9495-28915333910f",
+      "prompt": "Editorial still life of a writing desk where practical guidance gets drafted: an open blank notebook with a fountain pen resting in the gutter, a cup of black coffee, a small stack of reference books with plain unmarked spines, warm morning light. Deep navy desk, ivory paper. Thoughtful and unhurried. No text, no handwriting, no titles on book spines.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__6/-t-e-x-t_-t-o_-i-m-a-g-e-cca245ff-0c4e-4861-936c-816e9ed80a22.jpeg?Expires=2105198165&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=qkanMM~iCbvDQxhTcw6UCRl8mkLIiKVuQBoEOpIAcrNqafdNQO1VuRbdWrXuOilcJKd56mz6HHA5IE25E4SfyFwdNgAedciQZPp-y1Mie5PrBasjV-fPvqi5wODdkDzDjjjRGOJFSRP2W-dfWIDXKT3VfBXLGRpV2OnTO6FpFgWSmV0FQJ2diIN1v2RvTJPAZkhGGQVcL4etqv4E6sf7nNNrsEMz1Y~KOoAU7BMHAV4x1QN6s5Ekxa-tfZXlkJUaHWcNYNgbsDj4eKsLUN~MJ4H~OLr0oIBAGm3hGAKb8nG~RtACfdHyxrV~eOpwnrneF7NUPOdNzjkfF9yg7ykA4Q__"
+    },
+    {
+      "path": "public/images/og/og-default.jpg",
+      "usedFor": "Default Open Graph / Twitter share image",
+      "alt": "Hewitt Services — tax and accounting services in Dallas, Texas",
+      "aspectRatio": "16:9",
+      "generationId": "01a0ba8d-68fb-7757-bd29-66b67b77f924",
+      "prompt": "Premium abstract brand backdrop for a financial firm's social share card: a deep navy field with subtle paper-grain texture, crossed by two clean thin gold rules and a soft pool of warm light in the lower right. Extremely minimal, lots of empty space in the left two thirds for a headline. No text, no logos, no people, no objects.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__6/-t-e-x-t_-t-o_-i-m-a-g-e-0afc35b1-5880-43fe-8b83-2b8f394e159e.jpeg?Expires=2105198165&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=MLl7ltSR1MlckF5FESc9~mASSXFpp7eo9PptNVc~dpXevAmFfm-tf37XybSVFNK1TsmZYKxbDSHk83QgOUfAwbhAoiXvZhLZLQSs4MWMRLxg8-rst-A9nX4MZJahDtLPwUeYhC7iQsdwwYjMaez19gdsTECaB0Ci2vlo-2KOXlMIO~OujFM3hvrQM~s5NtfCEgT0xXkugnHf0Mjuaxkl~Mrl3OkzCSJZLUJgpIzDxi7G1VkqDy1jm8mp-S8v9IaYsLb4iCSKxkFSbQMMTYDjNqIJ9scS-v5fhhzwowQQIh0GQxAJYuE8oq9ugb0~Ico5hMP3jxRjx3iWB5MRLe-T9g__"
+    },
+    {
+      "path": "public/images/blog/behind-on-taxes-filing-back-returns-texas.jpg",
+      "usedFor": "Blog cover — back tax filing guide",
+      "alt": "Three closed kraft folders fanned in a neat diagonal row on a dark desk with a pen laid across them",
+      "aspectRatio": "3:2",
+      "generationId": "01a0ba8d-75f5-7e5f-8953-87be4a5cc4df",
+      "prompt": "Editorial photograph for an article about filing several years of back tax returns: a calm desk scene with three closed kraft folders fanned in a neat diagonal row, each slightly offset, a pen laid across the top one, deep navy surface, warm gold light from the right. Progress and order. No text, no numbers, no years, no labels.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__9/-t-e-x-t_-t-o_-i-m-a-g-e-806374ad-7eab-456e-9cc7-2e2213a0e59d.jpeg?Expires=2105198165&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=qpJIHud5gAT8HF~kmzttmWyOhD~2naWAZCCoXSEN7IZQK0TlfZzIUy3ZSeSS1ywxTFrlxTievEp7v4P3MiVA3cF1bHtOq5o78QA3Z4I3rNU2iuesaxj-ZeqO3fqKx4sAFBeAhGOuuCfldw2wq4GFMsLpANMPkXtzUZcIcx3GCeUSuJKSadg2S7CzI0te4u7uQUe4T6-aI5fIUy1S~kw8bZ-cIB8XGiGS3fSGGKFMJE7mbPsJ~mVdL6MXqjomXZXmv3dT1-9iEJwfsU9VsOCHTkvuHXwtBDzicUFyQMi58UkQ7OneVlryjxVV-b5Y1Iqc0Xqsyj3bgzVrmYI8OdJMvw__"
+    },
+    {
+      "path": "public/images/blog/irs-notice-first-30-days.jpg",
+      "usedFor": "Blog cover — first 30 days after an IRS notice",
+      "alt": "An unopened window envelope propped against a brass desk clock on a walnut surface in morning light",
+      "aspectRatio": "3:2",
+      "generationId": "01a0ba8d-91e0-7c3f-bad9-03aad95768ab",
+      "prompt": "Editorial photograph for an article about the first thirty days after an IRS letter arrives: a plain unopened window envelope propped against a small brass desk clock on a dark walnut surface, morning light from the left, long soft shadow. Deep navy tones with a warm gold highlight. Act early, time matters — urgent but composed. No text, no stamps, no clock numerals.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__3/-t-e-x-t_-t-o_-i-m-a-g-e-ae8eb8ff-83d6-4717-817a-f372d36f7a5a.jpeg?Expires=2105198165&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=yJbTM9nlaS66uMaUPQEvhue1kopBIjZyll9C63zLY6WfjHHXwgQjQVteuo-36gzL1yv5hgimSXgr7ULIhcH16z-xFfiUfkyjSYLpDoeTWo3QiTZdkkp4tBhtQdTOfxWvWzDIHwYGH2iXLF0bCmQS5InO3NxCZWOksJkfyO525eGf6WB-C7lhrMpic2IYUbRAh0Z7jhvh2M3qUroacz9GguSkdTLXBf4~wYTKA8mlKtkVDZbvTSe81I5mk9SdH9cRCjnF~v-XKgppJUeVa90vLH7I8rLzz0qkG0-pL6t7CRPxs6TaBmpRWk6v~tc-bGh6u4FnGKadCIhw9-sLMaiabA__"
+    },
+    {
+      "path": "public/images/blog/texas-franchise-tax-forfeiture.jpg",
+      "usedFor": "Blog cover — Texas franchise tax forfeiture",
+      "alt": "The front door of a small brick commercial building at golden hour with a brass handle and clean stone step",
+      "aspectRatio": "3:2",
+      "generationId": "01a0ba8d-9fce-7b46-8268-e5a4b47128cc",
+      "prompt": "Editorial photograph for an article about a Texas business losing and regaining good standing: the front door of a small brick commercial building at golden hour, glass pane catching warm light, a simple brass handle, clean stone step. Composed straight on, orderly, hopeful. No text, no signs, no notices, no stickers.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__4/-t-e-x-t_-t-o_-i-m-a-g-e-0ebb4140-6456-4a76-a297-d0d61e129e05.jpeg?Expires=2105198165&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=u3R0t8OxZgfiAUm-xNd1odB469Vve9fQiklwVL0XEpOxrBKjmZpLhMO52zSqMsieZP3e-oCOk4W7sRgS2yp5Pm89e1iJM2BR-sNOqb73aVT2R8HTyQDJCJNB32NWYshaxu74bJlynx7MZtzfmM5oamrBz61~r0XXRjeGVHjvZopTKTD-~4DhpRTTCDGEZkVHUPZr77MripATgAfGQS1KVZ1Ebe6XuxAYVO1j7p2wJbomPqBWHAQ1ox6sZyHCpwsvKFiq~MnU6jRssCBz2nYxI28U-RVbH3j~Q424IAx24lx3RoD5jklyIT44~eEraPoVi7oLOvxZFp~yrfJHPuIfkw__"
+    },
+    {
+      "path": "public/images/blog/monthly-bookkeeping-vs-year-end-cleanup.jpg",
+      "usedFor": "Blog cover — monthly bookkeeping vs year-end cleanup",
+      "alt": "Twelve small kraft folders in an even row beside the same folders in one leaning stack on a dark desk",
+      "aspectRatio": "3:2",
+      "generationId": "01a0ba8d-ae1f-7219-9f0c-133158dc4c6f",
+      "prompt": "Editorial split-mood still life contrasting steady monthly upkeep with a year-end scramble: on one half of a dark desk, twelve small kraft folders in a perfectly even row; on the other half, the same folders in one tall leaning stack. Single warm gold light from the right, deep navy surface. Diagrammatic rather than chaotic. No text, no numbers, no labels.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__6/-t-e-x-t_-t-o_-i-m-a-g-e-49a45fd5-ac6e-4a21-8266-cf99a28db4ed.jpeg?Expires=2105198165&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=O1noyoxzjGCZJrYYd~L4kX4zNAVFv3WWhC5IRItMBj4VsEU5uwpWSL3meLRWWtjr22v0yyxtvpsL5QTXDOpdRfQ~6-t3i4JWeSIrRYyoFYPgXYg3jQT6DQ03TerV4r7q3NjKkXLs3aT05kPV8Cvx3qyGS5w7LHx1tdxDS9JUgrN4bXZ4zl9NyklqtNQQaE2kqVdSYwf0sK~vfOCGAGGtBlkshkwckPhxCSWg~08CfiyaQ1~FhrcdPslU-dHPzJHD9lGmSBhOQ7ZDeT9UHBrWuTTZvGqTSxXaZzJ8DeGh5zU6wUpBMvg2J83QM2wrRQ-CsgVUawQLNj9UNdJUStjMew__"
+    },
+    {
+      "path": "public/images/blog/tax-refund-advances-explained.jpg",
+      "usedFor": "Blog cover — refund advances explained",
+      "alt": "A plain matte navy payment card lying flat beside a folded cream document under a soft gold light sweep",
+      "aspectRatio": "3:2",
+      "generationId": "01a0ba8d-bd31-70b0-b010-e67e308dbb40",
+      "prompt": "Restrained editorial still life for an article explaining refund advances: a plain matte navy payment card lying flat on a dark surface next to a folded plain cream document, a soft gold light sweep across the top of the frame. Neutral and explanatory, banking-grade, no promotional energy, no cash, no dollar symbols. No text, no numbers, no card networks.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__8/-t-e-x-t_-t-o_-i-m-a-g-e-5ce89937-d0e4-4b8a-bdde-f76c5b99d198.jpeg?Expires=2105198165&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=Q8tcYpz4U8r4pLfWSrbuAMfgeycVPqG7yGw2pr1YrIVPDczWkNGwBw-cNIB5o-LbKmJOvNqd0Z~LEdts52Xo0pdIv18be6IBFIxFdDJKfjvmgVyhs1XGHgklxVbgtWo-9fSO~BGd5zlT5VPO6O3hhvDZvQCUQoTQPVyZBNyPqpfAW~xRMFqryslxRTfRAMps4dIgaLMURE5ABkqdummWsSokCUFSKH6V-Egyykv40ROWtmoM3u3k44d5ICuz~B52mtbI71bir~O-UKwOr5ab12Az4c9alEZ51Q8h1W1Ala5doRrj3QGRNKP~x~EYXZRgxlEjRyg-UE8DQQzzqj-yYw__"
+    },
+    {
+      "path": "public/images/blog/proactive-tax-planning-year-end-questions.jpg",
+      "usedFor": "Blog cover — year-end tax planning questions",
+      "alt": "An open blank notebook with a fountain pen and five blank index cards laid out on a dark walnut desk",
+      "aspectRatio": "3:2",
+      "generationId": "01a0ba8d-c8db-7ffd-a462-073a949019b3",
+      "prompt": "Editorial still life for an article on year-end tax planning questions: an open blank notebook on a dark walnut desk with a fountain pen and five small blank index cards laid out in a neat row beside it, warm low winter light, deep navy tones with gold highlights. Deliberate, strategic, quiet. No text, no numbers, no handwriting.",
+      "sourceUrl": "https://cms-toolkit-artifacts.artlist.io/content/-t-e-x-t_-t-o_-i-m-a-g-e-v1/media__8/-t-e-x-t_-t-o_-i-m-a-g-e-5b93c761-5110-4321-8438-3d83e0594f14.jpeg?Expires=2105198165&Key-Pair-Id=K2ZDLYDZI2R1DF&Signature=jsuUgn~vvnD40yF5SJm6vIbSmCfiD5oCQUiospHflnUFF8GH9vsuKlmW84kVebA38eO~Z4Bld7FubAMUS-iBeXo19C~jGKfh5GE25bOtlFLVxuwbQwWdQ0zGuPVFSxfxsuXGepEMjVH92JojbpYicCSTN6OHG2V02KwbZAxGq8kKGjng95QcWddeCaIGNEiD6aDZAls-Rcb5wok7m5GanmU2B8t0Khn6olEy2-VzhABeqy8vdNwQMLnT86d-tvOV0MLZ5vTQUUs~uC~2MYv6lcVhStl7Vy7EOJ8Bc~JskYoWfrjLZ2TNOTJp~cdZlU212e13y60XduOcWtYAJMYHzg__"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0b1f3a;
+  --navy-dark: #07142a;
+  --gold: #c9a84c;
+  --gold-dark: #8a6d1f;
+  --ivory: #f7f4ec;
+  --ink: #334155;
+  --chalk: #e5e7eb;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Sticky header offset for in-page anchors (#sms-terms, #referrals, …). */
+  scroll-padding-top: 6rem;
+}
+
+body {
+  color: var(--ink);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    @apply font-serif;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  /* Visible focus for every interactive element (WCAG 2.4.7). */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  /* On dark navy the gold outline is low contrast — switch to white. */
+  .on-dark a:focus-visible,
+  .on-dark button:focus-visible,
+  .on-dark [tabindex]:focus-visible {
+    outline-color: #ffffff;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+           text-sm font-semibold tracking-wide transition
+           duration-200 ease-out;
+  }
+  .btn-primary {
+    @apply btn bg-gold text-navy hover:-translate-y-0.5 hover:bg-gold-light
+           hover:shadow-lg hover:shadow-navy/20;
+  }
+  .btn-secondary {
+    @apply btn border-2 border-gold bg-transparent text-gold
+           hover:-translate-y-0.5 hover:bg-gold hover:text-navy;
+  }
+  /* Outline button placed on ivory/white: needs the darker gold for contrast. */
+  .btn-secondary-light {
+    @apply btn border-2 border-gold-dark bg-transparent text-gold-dark
+           hover:-translate-y-0.5 hover:bg-gold-dark hover:text-white;
+  }
+  .wrap {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
+  }
+  .prose-body {
+    @apply text-base leading-relaxed text-ink sm:text-lg;
+  }
+  /* Short gold rule that sits under every page H1. */
+  .accent-rule {
+    @apply block h-1 w-16 rounded-full bg-gold;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em];
+  }
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+  /* Scroll reveal.
+     Visible by default, so the page reads correctly with JavaScript disabled
+     or still loading. The `js` class is added by an inline script in <head>
+     before first paint, which is what arms the animation — so there is no
+     flash of content appearing and then being hidden again. */
+  .reveal {
+    opacity: 1;
+  }
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .js .reveal[data-revealed] {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Hero/section fallback used until the client's photography is dropped in. */
+  .media-fallback {
+    background-color: var(--navy-dark);
+    background-image:
+      radial-gradient(90% 80% at 78% 18%, rgba(201, 168, 76, 0.22) 0%, rgba(201, 168, 76, 0) 62%),
+      radial-gradient(70% 70% at 12% 92%, rgba(18, 50, 92, 0.85) 0%, rgba(7, 20, 42, 0) 70%),
+      linear-gradient(145deg, #07142a 0%, #0b1f3a 52%, #12325c 100%);
+  }
+}
+
+/* Honour the OS "reduce motion" setting for every scroll animation. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  /* Nothing moves and, importantly, nothing starts hidden waiting to be
+     observed — reduced motion must never mean reduced content. */
+  .js .reveal,
+  .js .reveal[data-revealed] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
