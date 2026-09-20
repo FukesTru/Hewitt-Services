@@ -1,11 +1,9 @@
 /**
- * Runs before every build (npm `prebuild`), so a deploy that is missing its
- * photography says so loudly in the build log instead of quietly shipping
- * gradient panels.
+ * Runs before every build (npm `prebuild`) and reports where the site's
+ * photography is coming from, so the state is visible in the deploy log.
  *
- * Deliberately does NOT fail the build: the gradient fallback is a designed
- * state, and the site should still deploy while the client's assets are
- * being finalised.
+ * Never fails the build: serving from the Artlist CDN is a working interim
+ * state, and the gradient fallback is a designed one.
  */
 import { readFile, stat } from "node:fs/promises";
 
@@ -13,36 +11,42 @@ const manifest = JSON.parse(
   await readFile(new URL("../image-manifest.json", import.meta.url), "utf8")
 );
 
-const missing = [];
+const local = [];
+const remote = [];
+const absent = [];
+
 for (const image of manifest.images) {
+  let hasLocal = false;
   try {
-    if ((await stat(image.path)).size > 0) continue;
+    hasLocal = (await stat(image.path)).size > 0;
   } catch {
-    /* falls through to missing */
+    /* not local */
   }
-  missing.push(image.path);
+
+  if (hasLocal) local.push(image.path);
+  else if (image.sourceUrl) remote.push(image.path);
+  else absent.push(image.path);
 }
 
 const total = manifest.images.length;
+const line = "─".repeat(70);
 
-if (missing.length === 0) {
-  console.log(`✓ images: all ${total} present`);
+if (local.length === total) {
+  console.log(`✓ images: all ${total} served from public/ (self-hosted)`);
 } else {
-  const line = "─".repeat(68);
-  console.warn(`\n${line}`);
-  console.warn(`  ⚠  ${missing.length} of ${total} images are missing from public/images/`);
-  console.warn(`${line}`);
-  console.warn("  Those slots will render the navy/gold gradient fallback.");
-  console.warn("  The site builds and deploys fine — it just looks unfinished.\n");
-  console.warn("  To fix, from a machine with normal internet access:\n");
-  console.warn("      npm run fetch:images");
-  console.warn("      git add public/images");
-  console.warn('      git commit -m "Add site photography"');
-  console.warn("      git push\n");
-  console.warn("  The last three matter: downloading locally is not enough.");
-  console.warn("  A hosted build only has what is committed to the repo.");
-  if (missing.length <= 6) {
-    console.warn(`\n  Missing: ${missing.join(", ")}`);
+  console.log(`\n${line}`);
+  console.log(`  images: ${local.length}/${total} self-hosted, ${remote.length} from the Artlist CDN`);
+  if (absent.length) console.log(`          ${absent.length} missing entirely (gradient fallback)`);
+  console.log(line);
+  if (remote.length) {
+    console.log("  The CDN-served images work, but they leave the site depending");
+    console.log("  on a third-party host and on signed URLs outside the firm's");
+    console.log("  control. To self-host them instead:\n");
+    console.log("      npm run fetch:images");
+    console.log("      git add public/images");
+    console.log('      git commit -m "Self-host site photography"');
+    console.log("      git push\n");
+    console.log("  A local file always wins, so that switch needs no code change.");
   }
-  console.warn(`${line}\n`);
+  console.log(`${line}\n`);
 }

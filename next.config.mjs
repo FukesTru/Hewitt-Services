@@ -20,6 +20,17 @@ const nextConfig = {
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
+    // Interim: the site photography is served from the firm's Artlist library
+    // until the files are committed under public/images. lib/media.ts prefers
+    // a local file whenever one exists, so committing them takes effect with
+    // no config change and this entry can then be removed.
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cms-toolkit-artifacts.artlist.io",
+        pathname: "/content/**",
+      },
+    ],
   },
   async redirects() {
     return [

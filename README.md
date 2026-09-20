@@ -18,16 +18,17 @@ npm run fetch:images   # pulls the site photography into public/images
 npm run dev            # http://localhost:3000
 ```
 
-The photography is **not in the repository yet**. After `fetch:images`,
-commit it — a hosted build only has what is committed:
+The photography currently streams from the firm's Artlist CDN, so the site
+looks complete without anything in `public/images/`. To self-host it instead
+— which is where this should end up — run `fetch:images` and commit the
+result:
 
 ```bash
-git add public/images && git commit -m "Add site photography" && git push
+npm run fetch:images && git add public/images && git commit -m "Self-host site photography" && git push
 ```
 
-Every build prints how many images are missing (`scripts/check-images.mjs`),
-so a deploy without them is obvious in the build log. It is only a warning:
-missing images render a navy/gold gradient panel and the site still ships.
+A local file always wins over the CDN, so that needs no code change. Every
+build prints which tier each image is on (`scripts/check-images.mjs`).
 
 | Script | What it does |
 |---|---|
@@ -103,12 +104,15 @@ is for dark backgrounds, `.btn-secondary-light` for light ones.
 
 ## Notes for whoever picks this up next
 
-**Images degrade gracefully.** `lib/media.ts` checks at build time whether a
-file exists. If it does not, the component renders a navy/gold gradient panel
-instead of a broken image. Drop the real file in at the manifest path and it
-appears on the next build, no code change. `lib/media.ts` uses `node:fs`, so
-it must only ever be imported by server components — that is why `BlogCard`
-takes its cover image as a prop rather than resolving it itself.
+**Images resolve in three tiers** (`lib/media.ts`): a file under `public/`
+wins; failing that, the signed Artlist CDN URL from `image-manifest.json`;
+failing that, a navy/gold gradient panel. Nothing ever 404s, and dropping the
+real files in upgrades the site from CDN to self-hosted with no code change.
+Every `fill` image also renders the gradient *behind* the photograph, so a
+slow or failed CDN fetch shows a designed panel rather than a broken-image
+icon — that path was tested with the CDN unreachable. `lib/media.ts` uses
+`node:fs`, so it must only ever be imported by server components; that is why
+`BlogCard` takes its cover image as a prop rather than resolving it itself.
 
 **The scroll reveal is CSS, not a JS animation library.** Content is visible
 by default; an inline script in `<head>` adds a `js` class before first paint

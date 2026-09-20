@@ -11,40 +11,46 @@ it is never filled with a plausible guess.
 
 ## 1. Blocking — the site should not launch without these
 
-### 1.1 Photography (23 images)
+### 1.1 Photography (23 images) — live, but on a borrowed host
 
-All 23 images were generated with Artlist (Seedream 5.0, 2K) and are in the
-firm's Artlist library. The build session could **not** write them into this
-repo: Artlist's CDN hosts (`cms-toolkit-artifacts.artlist.io`,
-`ai-toolkit-generations.imgix.net`, `mcp.artlist.io`) are outside that
-session's network egress allow-list and returned 403.
+All 23 images were generated with Artlist (Seedream 5.0, 2K) and live in the
+firm's Artlist library. **They now render on the site**, served directly from
+Artlist's CDN, so the deploy no longer looks unfinished.
 
-From any machine with normal internet access:
+That is an interim arrangement, not the finished state. Images resolve in
+three tiers, in `lib/media.ts`:
+
+1. A file under `public/images/` — self-hosted. **Always wins.**
+2. The signed Artlist CDN URL from `image-manifest.json` — what is in use now.
+3. Neither — a navy/gold gradient panel.
+
+**Why tier 2 should not be the permanent answer.** It makes the site depend
+on a third-party CDN the firm does not control, on signed URLs (dated
+2036-09-16, but revocable by Artlist at any time), and it means Artlist can
+see traffic patterns for the site. If those URLs ever stop resolving, every
+photograph disappears at once.
+
+**To move to tier 1**, from a machine with normal internet access:
 
 ```bash
-npm run fetch:images          # writes all 23 files into public/images/
+npm run fetch:images          # writes all 23 into public/images/
 git add public/images
-git commit -m "Add site photography"
+git commit -m "Self-host site photography"
 git push
 ```
 
-**All four commands matter.** Downloading locally only fixes your own
-machine. Vercel (or any hosted build) builds from the repository, so the
-images do not exist there until they are committed and pushed. Nothing is
-gitignored under `public/` — the files just have to be added.
+Because a local file always wins, that switch needs **no code change**. Once
+it is done, the `remotePatterns` entry for `cms-toolkit-artifacts.artlist.io`
+in `next.config.mjs` can be deleted.
 
-Every build prints how many images are missing, so this is visible in the
-Vercel log rather than something you have to notice on the live site.
+Every build prints which tier each image is on, so the state is visible in
+the Vercel log rather than something to notice on the live site.
 
-No code change is needed once the files land — `lib/media.ts` picks each one
-up on the next build.
-
-Until then, every image slot renders a navy/gold gradient panel. Nothing
-404s and no layout shifts, but the site is visibly unfinished.
-
-If a signed URL has expired (403), the manifest also records each image's
-Artlist `generationId` and the exact prompt, so it can be re-downloaded from
-the library or regenerated.
+**Degradation was tested**, not assumed: with the CDN unreachable, pages
+render the navy gradient behind every image slot — no broken-image icons, no
+white holes, no layout shift. The `remotePatterns` config was verified too
+(the allowed host reaches the fetch stage; an unlisted host is rejected with
+400).
 
 | Where | Files |
 |---|---|
@@ -53,6 +59,10 @@ the library or regenerated.
 | Blog covers | `public/images/blog/` (6) |
 | Social share card | `public/images/og/og-default.jpg` (1) |
 | Artlist credits used | 2,300 |
+
+If a signed URL has expired (403), the manifest also records each image's
+Artlist `generationId` and the exact prompt, so it can be re-downloaded from
+the library or regenerated.
 
 ### 1.2 Founder photograph — client to supply
 

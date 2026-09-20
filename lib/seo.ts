@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteMediaUrl } from "./media";
 import { site } from "./site";
 
 type PageSeoInput = {
@@ -31,6 +32,9 @@ export function pageMetadata({
   publishedTime,
 }: PageSeoInput): Metadata {
   const url = canonical(path);
+  // Social crawlers need an absolute URL, and the image may be served from
+  // the Artlist CDN rather than this domain.
+  const imageUrl = absoluteMediaUrl(image, site.url);
 
   return {
     title,
@@ -49,7 +53,7 @@ export function pageMetadata({
       ...(publishedTime ? { publishedTime } : {}),
       images: [
         {
-          url: `${site.url}${image}`,
+          url: imageUrl,
           width: 1200,
           height: 630,
           alt: imageAlt ?? title,
@@ -60,7 +64,7 @@ export function pageMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [`${site.url}${image}`],
+      images: [imageUrl],
     },
   };
 }

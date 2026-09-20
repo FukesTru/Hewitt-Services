@@ -39,14 +39,21 @@ export function Media({
 
   if (fill) {
     return (
-      <Image
-        src={media.src}
-        alt={media.alt}
-        fill
-        priority={priority}
-        sizes={sizes}
-        className={`object-cover ${className}`}
-      />
+      <>
+        {/* Designed backdrop sitting behind the photograph. If the image is
+            slow, or is being served from the Artlist CDN and that request
+            fails, the area still reads as a navy/gold panel rather than a
+            broken-image icon or a white hole. */}
+        <div aria-hidden="true" className="media-fallback absolute inset-0" />
+        <Image
+          src={media.src}
+          alt={media.alt}
+          fill
+          priority={priority}
+          sizes={sizes}
+          className={`object-cover ${className}`}
+        />
+      </>
     );
   }
 

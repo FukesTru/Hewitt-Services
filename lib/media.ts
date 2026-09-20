@@ -2,37 +2,75 @@ import fs from "node:fs";
 import path from "node:path";
 
 /**
- * Every art-directed image on the site.
+ * Every art-directed image on the site, resolved in three tiers.
  *
- * The photography was generated with Artlist (Seedream 5.0) and lives in the
- * firm's Artlist library — see `image-manifest.json` in the project root for
- * the generation IDs and the exact prompts. The build session could not write
- * the binaries into the repo because Artlist's CDN hosts are outside its
- * egress allow-list, so `npm run fetch:images` (or a manual download) drops
- * them in at the paths below.
+ *   1. A file in public/  — self-hosted. Always preferred.
+ *   2. The signed Artlist CDN URL from image-manifest.json — interim, so the
+ *      photography shows on a deploy before the files are committed.
+ *   3. Neither — a navy/gold gradient panel. Nothing 404s.
  *
- * Until a file is present, `media()` reports `available: false` and the
- * component renders a navy/gold gradient panel instead. Nothing 404s, and the
- * real photograph appears on the next build once the file exists.
+ * Tier 1 wins automatically, so `npm run fetch:images` + commit silently
+ * upgrades the site from CDN to self-hosted with no code change.
+ *
+ * Tier 2 is deliberately a stopgap, not the destination: it makes the site
+ * depend on a third-party CDN and on signed URLs that, while dated to 2036,
+ * are outside the firm's control. See PRELAUNCH.md.
  */
 export type Media = {
   src: string;
   alt: string;
   available: boolean;
+  /** True when serving from the Artlist CDN rather than public/. */
+  remote: boolean;
 };
 
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 
-function exists(src: string): boolean {
+/** Public-relative path ("/images/…") → signed CDN URL. */
+const remoteSources: Map<string, string> = (() => {
+  const map = new Map<string, string>();
   try {
-    return fs.existsSync(path.join(PUBLIC_DIR, src));
+    const raw = fs.readFileSync(path.join(process.cwd(), "image-manifest.json"), "utf8");
+    const manifest = JSON.parse(raw) as {
+      images?: { path?: string; sourceUrl?: string }[];
+    };
+    for (const image of manifest.images ?? []) {
+      if (!image.path || !image.sourceUrl) continue;
+      // Manifest paths are repo-relative ("public/images/…"); strip the prefix.
+      const publicPath = image.path.replace(/^public\//, "/");
+      map.set(publicPath, image.sourceUrl);
+    }
+  } catch {
+    // No manifest, or unreadable — every image simply falls to the gradient.
+  }
+  return map;
+})();
+
+function localExists(src: string): boolean {
+  try {
+    return fs.statSync(path.join(PUBLIC_DIR, src)).size > 0;
   } catch {
     return false;
   }
 }
 
 export function media(src: string, alt: string): Media {
-  return { src, alt, available: exists(src) };
+  if (localExists(src)) {
+    return { src, alt, available: true, remote: false };
+  }
+
+  const remote = remoteSources.get(src);
+  if (remote) {
+    return { src: remote, alt, available: true, remote: true };
+  }
+
+  return { src, alt, available: false, remote: false };
+}
+
+/** Absolute URL for Open Graph / Twitter cards, which cannot use a relative path. */
+export function absoluteMediaUrl(src: string, siteUrl: string): string {
+  const resolved = media(src, "");
+  return resolved.remote ? resolved.src : `${siteUrl}${src}`;
 }
 
 export const IMAGES = {
