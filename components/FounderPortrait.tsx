@@ -8,10 +8,14 @@ const SRC = "/images/demarcus-hewitt.jpg";
 /**
  * Founder photograph.
  *
- * TODO(client assets): the client is uploading a photograph of Demarcus
- * Hewitt. Drop it at public{SRC} and it renders automatically. Deliberately
- * NOT an illustration or a stock portrait — a generated or stock face standing
- * in for a real, named person would misrepresent the firm.
+ * The supplied photograph of Demarcus Hewitt lives at public{SRC}. It is
+ * rendered in a 4:5 frame with object-cover: the source is square, so the
+ * crop trims the sides and keeps the full height (head and hands both stay
+ * in frame).
+ *
+ * The monogram fallback below is kept for the case where the file is absent.
+ * It is deliberately NOT an illustration or a stock portrait — a generated or
+ * stock face standing in for a real, named person would misrepresent the firm.
  */
 export function FounderPortrait({ className = "" }: { className?: string }) {
   const available = (() => {

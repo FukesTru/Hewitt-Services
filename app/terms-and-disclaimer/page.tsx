@@ -107,8 +107,8 @@ export default function TermsPage() {
               </p>
 
               <p>
-                <strong className="font-semibold text-navy">Programme description.</strong> We offer
-                two separate, optional messaging programmes, and you choose each independently:
+                <strong className="font-semibold text-navy">Program description.</strong> We offer
+                two separate, optional messaging programs, and you choose each independently:
               </p>
               <LegalList
                 items={[
@@ -136,7 +136,7 @@ export default function TermsPage() {
 
               <p>
                 <strong className="font-semibold text-navy">How to opt out.</strong> Reply STOP to any
-                message to stop receiving messages from that programme. You will receive a single
+                message to stop receiving messages from that program. You will receive a single
                 confirmation, after which no further messages will be sent.
               </p>
 
@@ -224,7 +224,7 @@ export default function TermsPage() {
                 <strong className="font-semibold text-navy">Our target.</strong> We aim to meet the
                 Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA. In building this site we
                 have worked to provide semantic structure and landmarks, a skip-to-content link,
-                visible keyboard focus, text alternatives for images, labelled form fields, colour
+                visible keyboard focus, text alternatives for images, labeled form fields, color
                 contrast that meets the AA thresholds, and support for the operating system&rsquo;s
                 reduced-motion setting.
               </p>

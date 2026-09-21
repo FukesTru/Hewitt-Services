@@ -97,7 +97,7 @@ or an FAQ means editing `lib/services.ts`, `lib/posts.ts` or `lib/faqs.ts`.
 | `navy` | `#0B1F3A` | Primary dark |
 | `navy-dark` | `#07142A` | Deeper bands, footer |
 | `gold` | `#C9A84C` | Accents and buttons **on dark only** |
-| `gold-dark` | `#8A6D1F` | Gold-coloured **text on light** (contrast) |
+| `gold-dark` | `#8A6D1F` | Gold-colored **text on light** (contrast) |
 | `ivory` | `#F7F4EC` | Alternating light sections |
 | `ink` | `#334155` | Body text on light |
 | `chalk` | `#E5E7EB` | Body text on dark |

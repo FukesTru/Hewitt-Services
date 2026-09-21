@@ -35,7 +35,7 @@ export function LeadMagnetStrip({
                 Request the Tax Organizer
               </a>
               <p className="mt-2 max-w-[16rem] text-xs text-ink/70">
-                The download is being finalised — email us and we will send it straight over.
+                The download is being finalized — email us and we will send it straight over.
               </p>
             </div>
           )}

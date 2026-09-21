@@ -186,7 +186,7 @@ export const posts: Post[] = [
           "A bank flags the account or declines to open a new one",
           "A buyer's diligence turns it up mid-transaction",
           "A lender asks for a certificate of account status that cannot be issued",
-          "A licence, permit or contract renewal is refused",
+          "A license, permit or contract renewal is refused",
         ],
       },
       {

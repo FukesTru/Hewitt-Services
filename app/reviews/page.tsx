@@ -99,7 +99,7 @@ export default function ReviewsPage() {
                     Ask us for the review link
                   </a>
                   <p className="mt-3 max-w-sm text-xs text-chalk/70">
-                    Our direct Google review link is being finalised — email us and we will send it
+                    Our direct Google review link is being finalized — email us and we will send it
                     straight over.
                   </p>
                 </div>

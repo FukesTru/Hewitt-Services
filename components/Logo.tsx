@@ -8,7 +8,7 @@ type Props = { variant?: "light" | "dark"; className?: string };
  * TODO(client assets): the client is uploading the Hewitt Services logo.
  * Replace the markup below with the supplied file (keep the Link wrapper and
  * the accessible name) and re-check the palette in tailwind.config.ts against
- * the logo's actual brand colours.
+ * the logo's actual brand colors.
  */
 export function Logo({ variant = "light", className = "" }: Props) {
   const isLight = variant === "light";

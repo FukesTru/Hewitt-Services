@@ -125,7 +125,7 @@ export default function AboutPage() {
 
             <p className="prose-body mt-8 max-w-prose">
               That sentence describes the whole practice. Reducing liability for business owners means
-              planning ahead of the year rather than reporting on it. Maximising refunds for
+              planning ahead of the year rather than reporting on it. Maximizing refunds for
               individuals means asking the questions that surface the credits and deductions people
               did not know to mention.
             </p>

@@ -74,14 +74,20 @@ If a signed URL has expired (403), the manifest also records each image's
 Artlist `generationId` and the exact prompt, so it can be re-downloaded from
 the library or regenerated.
 
-### 1.2 Founder photograph — client to supply
+### 1.2 Founder photograph — supplied ✅
 
-`public/images/demarcus-hewitt.jpg`
+`public/images/demarcus-hewitt.jpg` (1500×1500, 466 KB) is in the repo and
+renders on the homepage founder feature and on `/about`. Because it is
+committed, it appears on a deploy regardless of the Artlist situation above.
 
-**Deliberately not generated.** A synthetic or stock face standing in for a
-real, named person would misrepresent the firm. Until the real photograph is
-dropped in at that path, `components/FounderPortrait.tsx` renders a neutral
-monogram card.
+Alt text: "Demarcus Hewitt, Founder and Enrolled Agent of Hewitt Services".
+Served through the image optimizer — 466 KB source down to roughly 20 KB AVIF
+at display size.
+
+It was never generated: a synthetic or stock face standing in for a real,
+named person would misrepresent the firm. The monogram fallback in
+`components/FounderPortrait.tsx` remains for the case where the file is
+missing.
 
 ### 1.3 Logo and favicon — client to supply
 
@@ -89,7 +95,7 @@ monogram card.
   **Services**" with a gold rule). Replace the markup with the supplied file,
   keeping the `Link` wrapper and its accessible name.
 - `public/favicon.svg` — placeholder navy/gold "H" tile.
-- **If the logo's brand colours differ from the palette below, update
+- **If the logo's brand colors differ from the palette below, update
   `tailwind.config.ts`.** The current palette was specified in the brief, not
   taken from the logo.
 
@@ -226,7 +232,7 @@ Currently passing:
 
 - Run Lighthouse against the deployed build once the real images are in
   place (image weight is the one thing these checks cannot judge).
-- Re-check colour contrast if the palette changes to match the supplied logo.
+- Re-check color contrast if the palette changes to match the supplied logo.
 - Screen-reader pass on the mega-menu and the FAQ accordions.
 - Submit `sitemap.xml` in Google Search Console and confirm the 301s resolve
   on the live domain.
