@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "fetch:images": "node scripts/fetch-images.mjs",
-    "qa": "node scripts/qa.mjs"
+    "qa": "node scripts/qa.mjs",
+    "images": "node scripts/install-images.mjs"
   },
   "dependencies": {
     "next": "^15.5.25",

@@ -30,18 +30,28 @@ on a third-party CDN the firm does not control, on signed URLs (dated
 see traffic patterns for the site. If those URLs ever stop resolving, every
 photograph disappears at once.
 
-**To move to tier 1**, from a machine with normal internet access:
+**To move to tier 1**, one command from a machine with normal internet
+access:
 
 ```bash
-npm run fetch:images          # writes all 23 into public/images/
-git add public/images
-git commit -m "Self-host site photography"
-git push
+npm run images
 ```
 
-Because a local file always wins, that switch needs **no code change**. Once
-it is done, the `remotePatterns` entry for `cms-toolkit-artifacts.artlist.io`
-in `next.config.mjs` can be deleted.
+That downloads all 23 into `public/images`, verifies each is a real JPEG,
+then commits and pushes. Because a local file always wins, it needs **no code
+change** — and afterwards the `remotePatterns` entry for
+`cms-toolkit-artifacts.artlist.io` in `next.config.mjs` and the
+`/api/image-check` route can both be deleted.
+
+If every download fails, this machine cannot reach Artlist either; the script
+says so, commits nothing, and tells you what to do next.
+
+**Diagnosing a deploy that shows no images.** Visit `/api/image-check` on the
+deployed site. It reports how many images are self-hosted and whether that
+server can actually reach Artlist, and gives a verdict. This exists because
+the build environment cannot reach Artlist at all, so whether a hosted deploy
+could was unknowable from there. It is excluded from `robots.txt` and should
+be deleted once the images are self-hosted.
 
 Every build prints which tier each image is on, so the state is visible in
 the Vercel log rather than something to notice on the live site.

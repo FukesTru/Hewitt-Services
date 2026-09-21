@@ -24,8 +24,12 @@ looks complete without anything in `public/images/`. To self-host it instead
 result:
 
 ```bash
-npm run fetch:images && git add public/images && git commit -m "Self-host site photography" && git push
+npm run images
 ```
+
+That fetches, verifies, commits and pushes in one step. If the deployed site
+still shows no photography, visit `/api/image-check` on it — that route says
+whether the server can reach Artlist and what to do about it.
 
 A local file always wins over the CDN, so that needs no code change. Every
 build prints which tier each image is on (`scripts/check-images.mjs`).
@@ -37,7 +41,8 @@ build prints which tier each image is on (`scripts/check-images.mjs`).
 | `npm start` | Serve the production build |
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run lint` | ESLint (flat config, `eslint.config.mjs`) |
-| `npm run fetch:images` | Download the photography from `image-manifest.json` |
+| `npm run images` | Fetch the photography, then commit and push it (the one you want) |
+| `npm run fetch:images` | Fetch only, no git |
 | `npm run prebuild` | Report how many images are missing (runs automatically before `build`) |
 | `npm run qa` | SEO / schema / redirect / accessibility sweep against a running build |
 
