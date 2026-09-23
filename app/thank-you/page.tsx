@@ -27,7 +27,7 @@ export default function ThankYouPage() {
             <p className="prose-body">
               A real person reads every inquiry that comes through this site. If your matter is
               time-sensitive — an IRS deadline, a levy notice, a filing date — please call us on{" "}
-              <a href={site.phone.href} className="font-semibold text-gold-dark underline">
+              <a href={site.phone.href} className="font-semibold text-moss-dark underline">
                 {site.phone.display}
               </a>{" "}
               rather than waiting for a reply.
@@ -49,8 +49,8 @@ export default function ThankYouPage() {
           </Reveal>
 
           <Reveal delay={2} className="mt-16">
-            <h2 className="font-serif text-2xl font-bold text-navy">While you wait</h2>
-            <span className="accent-rule mt-4 bg-gold-dark" aria-hidden="true" />
+            <h2 className="font-serif text-2xl font-bold text-forest">While you wait</h2>
+            <span className="accent-rule mt-4 bg-moss-dark" aria-hidden="true" />
             <ul className="mt-6 grid gap-4 sm:grid-cols-3">
               {[
                 { label: "Tax Center", href: "/tax-center", body: "Organizers, key dates and official IRS tools." },
@@ -60,9 +60,9 @@ export default function ThankYouPage() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="group block h-full rounded-xl border border-navy/10 bg-ivory p-6 transition hover:-translate-y-1 hover:border-gold-dark"
+                    className="group block h-full rounded-xl border border-forest/10 bg-mist p-6 transition hover:-translate-y-1 hover:border-moss-dark"
                   >
-                    <span className="font-serif text-lg font-semibold text-navy group-hover:text-gold-dark">
+                    <span className="font-serif text-lg font-semibold text-forest group-hover:text-moss-dark">
                       {l.label}
                     </span>
                     <span className="mt-2 block text-sm text-ink">{l.body}</span>

@@ -15,11 +15,11 @@ export function LeadMagnetStrip({
   const href = site.downloads.taxOrganizer;
 
   return (
-    <section id="downloads" className="bg-ivory">
+    <section id="downloads" className="bg-mist">
       <div className="wrap py-14">
-        <Reveal className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-gold-dark/25 bg-white p-8 sm:p-10 lg:flex-row lg:items-center">
+        <Reveal className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-moss-dark/25 bg-white p-8 sm:p-10 lg:flex-row lg:items-center">
           <div className="max-w-2xl">
-            <h2 className="font-serif text-2xl font-bold text-navy sm:text-3xl">{heading}</h2>
+            <h2 className="font-serif text-2xl font-bold text-forest sm:text-3xl">{heading}</h2>
             <p className="mt-3 text-base leading-relaxed text-ink">{body}</p>
           </div>
 

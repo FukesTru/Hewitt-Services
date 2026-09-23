@@ -17,7 +17,7 @@ export function CTABand({
   defaultInterest,
 }: Props) {
   return (
-    <section className="on-dark bg-navy">
+    <section className="on-dark bg-forest">
       <div className="wrap section">
         <div className={`grid gap-12 ${withForm ? "lg:grid-cols-2" : ""}`}>
           <Reveal>
@@ -42,7 +42,7 @@ export function CTABand({
             <p className="mt-8 text-sm text-chalk/70">
               {site.address.full}
               <br />
-              <a href={`mailto:${site.email}`} className="underline hover:text-gold">
+              <a href={`mailto:${site.email}`} className="underline hover:text-moss">
                 {site.email}
               </a>
             </p>
@@ -50,7 +50,7 @@ export function CTABand({
 
           {withForm ? (
             <Reveal delay={1}>
-              <div className="rounded-2xl bg-navy-dark p-6 ring-1 ring-white/10 sm:p-8">
+              <div className="rounded-2xl bg-forest-dark p-6 ring-1 ring-white/10 sm:p-8">
                 <h3 className="font-serif text-xl font-semibold text-white">Send us a message</h3>
                 <p className="mt-2 text-sm text-chalk/80">
                   We reply to every inquiry. Fields marked * are required.

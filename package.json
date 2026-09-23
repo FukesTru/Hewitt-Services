@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit",
     "fetch:images": "node scripts/fetch-images.mjs",
     "qa": "node scripts/qa.mjs",
-    "images": "node scripts/install-images.mjs"
+    "images": "node scripts/install-images.mjs",
+    "contrast": "node scripts/contrast.mjs"
   },
   "dependencies": {
     "next": "^15.5.25",

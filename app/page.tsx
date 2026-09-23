@@ -126,11 +126,11 @@ export default function HomePage() {
       <section className="section bg-white">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <p className="eyebrow text-gold-dark">What we do</p>
-            <h2 className="mt-4 font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <p className="eyebrow text-moss-dark">What we do</p>
+            <h2 className="mt-4 font-serif text-3xl font-bold text-forest sm:text-4xl">
               Tax and accounting, handled properly
             </h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
           </Reveal>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -154,24 +154,24 @@ export default function HomePage() {
       </section>
 
       {/* Who we help */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <p className="eyebrow text-gold-dark">Who we help</p>
-            <h2 className="mt-4 font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <p className="eyebrow text-moss-dark">Who we help</p>
+            <h2 className="mt-4 font-serif text-3xl font-bold text-forest sm:text-4xl">
               Different situations, the same standard of care
             </h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
           </Reveal>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-3">
             {WHO_WE_HELP.map((item, i) => (
-              <Reveal key={item.title} delay={i} className="border-t-2 border-gold-dark pt-6">
-                <h3 className="font-serif text-xl font-semibold text-navy">{item.title}</h3>
+              <Reveal key={item.title} delay={i} className="border-t-2 border-moss-dark pt-6">
+                <h3 className="font-serif text-xl font-semibold text-forest">{item.title}</h3>
                 <p className="mt-4 text-base leading-relaxed text-ink">{item.body}</p>
                 <Link
                   href={item.href}
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold-dark hover:underline"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-moss-dark hover:underline"
                 >
                   {item.linkLabel} <span aria-hidden="true">&rarr;</span>
                 </Link>
@@ -182,10 +182,10 @@ export default function HomePage() {
       </section>
 
       {/* Why clients choose us */}
-      <section className="on-dark section bg-navy">
+      <section className="on-dark section bg-forest">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <p className="eyebrow text-gold">Why clients choose us</p>
+            <p className="eyebrow text-moss">Why clients choose us</p>
             <h2 className="mt-4 font-serif text-3xl font-bold text-white sm:text-4xl">
               Accuracy that ends in peace of mind
             </h2>
@@ -207,17 +207,17 @@ export default function HomePage() {
       <section className="section bg-white">
         <div className="wrap grid items-center gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-navy">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-forest">
               <FounderPortrait />
             </div>
           </Reveal>
 
           <Reveal delay={1} className="lg:col-span-7">
-            <p className="eyebrow text-gold-dark">Meet the founder</p>
-            <h2 className="mt-4 font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <p className="eyebrow text-moss-dark">Meet the founder</p>
+            <h2 className="mt-4 font-serif text-3xl font-bold text-forest sm:text-4xl">
               {site.founder.name}, {site.founder.credential}
             </h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
 
             <p className="prose-body mt-6 max-w-prose">
               Hewitt Services is led by {site.founder.name}, an Enrolled Agent — a credential that
@@ -226,8 +226,8 @@ export default function HomePage() {
               people fear about taxes never happens.
             </p>
 
-            <blockquote className="mt-8 border-l-4 border-gold-dark pl-6">
-              <p className="font-serif text-xl italic leading-relaxed text-navy">
+            <blockquote className="mt-8 border-l-4 border-moss-dark pl-6">
+              <p className="font-serif text-xl italic leading-relaxed text-forest">
                 &ldquo;{site.founder.quote}&rdquo;
               </p>
               <footer className="mt-3 text-sm text-ink">
@@ -243,14 +243,14 @@ export default function HomePage() {
       </section>
 
       {/* How we work */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <p className="eyebrow text-gold-dark">How we work</p>
-            <h2 className="mt-4 font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <p className="eyebrow text-moss-dark">How we work</p>
+            <h2 className="mt-4 font-serif text-3xl font-bold text-forest sm:text-4xl">
               Four steps, no surprises
             </h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
           </Reveal>
           <div className="mt-12">
             <ProcessTimeline steps={HOW_WE_WORK} />
@@ -283,7 +283,7 @@ export default function HomePage() {
           <Reveal className="mx-auto max-w-3xl">
             <GoogleReviews />
             <p className="mt-6 text-center text-sm">
-              <Link href="/reviews" className="font-semibold text-gold-dark hover:underline">
+              <Link href="/reviews" className="font-semibold text-moss-dark hover:underline">
                 More about reviews <span aria-hidden="true">&rarr;</span>
               </Link>
             </p>
@@ -292,14 +292,14 @@ export default function HomePage() {
       </section>
 
       {/* FAQ teaser */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-4">
-            <p className="eyebrow text-gold-dark">Questions</p>
-            <h2 className="mt-4 font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <p className="eyebrow text-moss-dark">Questions</p>
+            <h2 className="mt-4 font-serif text-3xl font-bold text-forest sm:text-4xl">
               The things people ask first
             </h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
           </Reveal>
           <Reveal delay={1} className="lg:col-span-8">
             <FaqTeaser faqs={homeFaqs} count={4} />
@@ -312,13 +312,13 @@ export default function HomePage() {
         <div className="wrap">
           <Reveal className="flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-2xl">
-              <p className="eyebrow text-gold-dark">From the blog</p>
-              <h2 className="mt-4 font-serif text-3xl font-bold text-navy sm:text-4xl">
+              <p className="eyebrow text-moss-dark">From the blog</p>
+              <h2 className="mt-4 font-serif text-3xl font-bold text-forest sm:text-4xl">
                 Practical guidance, plainly written
               </h2>
-              <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+              <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
             </div>
-            <Link href="/blog" className="text-sm font-semibold text-gold-dark hover:underline">
+            <Link href="/blog" className="text-sm font-semibold text-moss-dark hover:underline">
               All articles <span aria-hidden="true">&rarr;</span>
             </Link>
           </Reveal>

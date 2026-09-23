@@ -12,13 +12,13 @@ export function ProcessTimeline({ steps, tone = "light" }: Props) {
           <span
             aria-hidden="true"
             className={`flex h-11 w-11 items-center justify-center rounded-full font-serif text-lg font-bold ${
-              dark ? "bg-gold text-navy" : "bg-navy text-gold"
+              dark ? "bg-moss text-forest" : "bg-forest text-moss"
             }`}
           >
             {i + 1}
           </span>
           <h3
-            className={`mt-5 font-serif text-lg font-semibold ${dark ? "text-white" : "text-navy"}`}
+            className={`mt-5 font-serif text-lg font-semibold ${dark ? "text-white" : "text-forest"}`}
           >
             <span className="sr-only">Step {i + 1}: </span>
             {step.title}

@@ -46,7 +46,7 @@ export function FounderPortrait({ className = "" }: { className?: string }) {
     >
       <span
         aria-hidden="true"
-        className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-gold/60 font-serif text-2xl text-gold"
+        className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-moss/60 font-serif text-2xl text-moss"
       >
         DH
       </span>

@@ -28,13 +28,13 @@ export function CookieConsent() {
       role="dialog"
       aria-label="Cookie consent"
       aria-live="polite"
-      className="on-dark fixed inset-x-0 bottom-0 z-[60] border-t border-white/15 bg-navy-dark/98 backdrop-blur"
+      className="on-dark fixed inset-x-0 bottom-0 z-[60] border-t border-white/15 bg-forest-dark/98 backdrop-blur"
     >
       <div className="wrap flex flex-col gap-4 py-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-3xl text-sm leading-relaxed text-chalk">
           We use essential cookies to run this site, and analytics cookies to understand how it is
           used — only if you accept. Read our{" "}
-          <Link href="/privacy-policy" className="text-gold underline">
+          <Link href="/privacy-policy" className="text-moss underline">
             Privacy Policy
           </Link>
           .

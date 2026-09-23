@@ -29,7 +29,7 @@ export function CalendlyEmbed({ minHeight = 700 }: { minHeight?: number }) {
   }, [load]);
 
   return (
-    <div ref={ref} className="overflow-hidden rounded-xl border border-navy/10 bg-white">
+    <div ref={ref} className="overflow-hidden rounded-xl border border-forest/10 bg-white">
       {load ? (
         <iframe
           src={site.links.booking}
@@ -40,7 +40,7 @@ export function CalendlyEmbed({ minHeight = 700 }: { minHeight?: number }) {
         />
       ) : (
         <div
-          className="flex flex-col items-center justify-center gap-4 bg-ivory p-10 text-center"
+          className="flex flex-col items-center justify-center gap-4 bg-mist p-10 text-center"
           style={{ minHeight }}
         >
           <p className="text-sm text-ink">Loading the booking calendar…</p>

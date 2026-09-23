@@ -1,6 +1,6 @@
 <!-- TODO(client assets): regenerate from the supplied Hewitt Services logo. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Hewitt Services">
-  <rect width="64" height="64" rx="12" fill="#0B1F3A"/>
+  <rect width="64" height="64" rx="12" fill="#2C4A28"/>
   <text x="32" y="41" font-family="Georgia, 'Times New Roman', serif" font-size="30"
-        font-weight="700" fill="#C9A84C" text-anchor="middle">H</text>
+        font-weight="700" fill="#8CBF94" text-anchor="middle">H</text>
 </svg>

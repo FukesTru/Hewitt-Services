@@ -40,11 +40,11 @@ export function ContactForm({
   const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
 
-  const label = `block text-sm font-medium ${dark ? "text-chalk" : "text-navy"}`;
+  const label = `block text-sm font-medium ${dark ? "text-chalk" : "text-forest"}`;
   const field = `mt-1.5 block w-full rounded-md border px-3.5 py-2.5 text-base transition ${
     dark
-      ? "border-white/20 bg-white/5 text-white placeholder:text-chalk/50 focus:border-gold"
-      : "border-navy/20 bg-white text-ink placeholder:text-ink/40 focus:border-gold-dark"
+      ? "border-white/20 bg-white/5 text-white placeholder:text-chalk/50 focus:border-moss"
+      : "border-forest/20 bg-white text-ink placeholder:text-ink/40 focus:border-moss-dark"
   }`;
   const help = `text-xs leading-relaxed ${dark ? "text-chalk/70" : "text-ink/70"}`;
 
@@ -168,7 +168,7 @@ export function ContactForm({
           name="serviceInquiryConfirmed"
           type="checkbox"
           required
-          className="mt-1 h-4 w-4 shrink-0 accent-[#8A6D1F]"
+          className="mt-1 h-4 w-4 shrink-0 accent-[#2F6A38]"
         />
         <label htmlFor={`${id}-confirm`} className={`text-sm ${dark ? "text-chalk" : "text-ink"}`}>
           I confirm this is a service inquiry and not an advertising message or solicitation.{" "}
@@ -177,8 +177,8 @@ export function ContactForm({
       </div>
 
       {/* SMS consent: two separate, unchecked, entirely optional opt-ins. */}
-      <fieldset className={`rounded-lg border p-4 ${dark ? "border-white/15" : "border-navy/15"}`}>
-        <legend className={`px-2 text-sm font-semibold ${dark ? "text-chalk" : "text-navy"}`}>
+      <fieldset className={`rounded-lg border p-4 ${dark ? "border-white/15" : "border-forest/15"}`}>
+        <legend className={`px-2 text-sm font-semibold ${dark ? "text-chalk" : "text-forest"}`}>
           Text message consent (optional)
         </legend>
 
@@ -187,7 +187,7 @@ export function ContactForm({
             id={`${id}-sms-service`}
             name="smsServiceConsent"
             type="checkbox"
-            className="mt-1 h-4 w-4 shrink-0 accent-[#8A6D1F]"
+            className="mt-1 h-4 w-4 shrink-0 accent-[#2F6A38]"
           />
           <label htmlFor={`${id}-sms-service`} className={`text-sm ${dark ? "text-chalk" : "text-ink"}`}>
             I agree to receive non-marketing text messages from {site.name}, such as appointment
@@ -203,7 +203,7 @@ export function ContactForm({
             id={`${id}-sms-marketing`}
             name="smsMarketingConsent"
             type="checkbox"
-            className="mt-1 h-4 w-4 shrink-0 accent-[#8A6D1F]"
+            className="mt-1 h-4 w-4 shrink-0 accent-[#2F6A38]"
           />
           <label
             htmlFor={`${id}-sms-marketing`}
@@ -221,14 +221,14 @@ export function ContactForm({
           Consent to receive text messages is not a condition of purchase. See our{" "}
           <Link
             href="/privacy-policy"
-            className={`underline ${dark ? "text-gold" : "text-gold-dark"}`}
+            className={`underline ${dark ? "text-moss" : "text-moss-dark"}`}
           >
             Privacy Policy
           </Link>{" "}
           and{" "}
           <Link
             href="/terms-and-disclaimer#sms-terms"
-            className={`underline ${dark ? "text-gold" : "text-gold-dark"}`}
+            className={`underline ${dark ? "text-moss" : "text-moss-dark"}`}
           >
             SMS Terms
           </Link>
@@ -250,7 +250,7 @@ export function ContactForm({
           href={site.links.portal}
           target="_blank"
           rel="noopener noreferrer"
-          className={`underline ${dark ? "text-gold" : "text-gold-dark"}`}
+          className={`underline ${dark ? "text-moss" : "text-moss-dark"}`}
         >
           secure client portal
         </a>

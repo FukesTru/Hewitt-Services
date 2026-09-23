@@ -20,14 +20,14 @@ export function Logo({ variant = "light", className = "" }: Props) {
     >
       <span
         className={`font-serif text-xl font-bold tracking-tight sm:text-2xl ${
-          isLight ? "text-white" : "text-navy"
+          isLight ? "text-white" : "text-forest"
         }`}
       >
-        Hewitt <span className={isLight ? "text-gold" : "text-gold-dark"}>Services</span>
+        Hewitt <span className={isLight ? "text-moss" : "text-moss-dark"}>Services</span>
       </span>
       <span
         className={`mt-1 h-px w-10 transition-all duration-300 group-hover:w-16 ${
-          isLight ? "bg-gold" : "bg-gold-dark"
+          isLight ? "bg-moss" : "bg-moss-dark"
         }`}
         aria-hidden="true"
       />

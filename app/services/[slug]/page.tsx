@@ -105,7 +105,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </p>
             <a
               href={site.phone.href}
-              className="shrink-0 rounded-full bg-white px-5 py-2 text-sm font-bold text-red-900 transition hover:bg-ivory"
+              className="shrink-0 rounded-full bg-white px-5 py-2 text-sm font-bold text-red-900 transition hover:bg-mist"
             >
               Call {site.phone.display}
             </a>
@@ -125,8 +125,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </Reveal>
 
           {isRefundAdvance ? (
-            <Reveal delay={1} className="mt-10 max-w-prose rounded-lg border-l-4 border-gold-dark bg-ivory p-6">
-              <p className="text-sm font-semibold text-navy">Important</p>
+            <Reveal delay={1} className="mt-10 max-w-prose rounded-lg border-l-4 border-moss-dark bg-mist p-6">
+              <p className="text-sm font-semibold text-forest">Important</p>
               <p className="mt-2 text-sm leading-relaxed text-ink">{EPS_STANDING_NOTE}</p>
             </Reveal>
           ) : null}
@@ -134,11 +134,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* What we handle */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap">
           <Reveal>
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">What We Handle</h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">What We Handle</h2>
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
           </Reveal>
           <Reveal delay={1} className="mt-10">
             <CheckList items={service.handles} />
@@ -147,7 +147,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* How it works */}
-      <section className="on-dark section bg-navy">
+      <section className="on-dark section bg-forest">
         <div className="wrap">
           <Reveal>
             <h2 className="font-serif text-3xl font-bold text-white sm:text-4xl">How It Works</h2>
@@ -163,13 +163,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="section bg-white">
         <div className="wrap grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-7">
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">Who This Is For</h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">Who This Is For</h2>
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
             <p className="prose-body mt-6 max-w-prose">{service.whoFor.lead}</p>
             <ul className="mt-6 space-y-3">
               {service.whoFor.bullets.map((b) => (
                 <li key={b} className="flex gap-3 text-base text-ink">
-                  <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                  <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-moss-dark" />
                   {b}
                 </li>
               ))}
@@ -177,7 +177,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </Reveal>
 
           <Reveal delay={1} className="lg:col-span-5">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-navy">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-forest">
               <Media media={hero} fill sizes="(min-width: 1024px) 30rem, 100vw" />
             </div>
           </Reveal>
@@ -185,13 +185,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* FAQs */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap">
           <Reveal>
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">
               {service.name}: Common Questions
             </h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
           </Reveal>
           <Reveal delay={1} className="mt-10">
             <FAQAccordion faqs={service.faqs} />
@@ -225,10 +225,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       />
 
       {isRefundAdvance ? (
-        <section className="bg-ivory py-10">
+        <section className="bg-mist py-10">
           <div className="wrap">
             <p className="max-w-3xl text-xs leading-relaxed text-ink">
-              <strong className="font-semibold text-navy">Refund advance disclosure.</strong>{" "}
+              <strong className="font-semibold text-forest">Refund advance disclosure.</strong>{" "}
               {EPS_STANDING_NOTE} See our{" "}
               <Link href="/terms-and-disclaimer" className="underline">
                 Terms and Disclaimer

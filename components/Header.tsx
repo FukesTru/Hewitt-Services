@@ -8,26 +8,26 @@ import { site, mainNav, servicesNavGroups } from "@/lib/site";
 
 function UtilityBar() {
   return (
-    <div className="hidden border-b border-white/10 bg-navy-dark lg:block">
+    <div className="hidden border-b border-white/10 bg-forest-dark lg:block">
       {/* Links fill the bar's full height so the hit area matches what is drawn. */}
       <div className="wrap flex h-10 items-stretch justify-end gap-2 text-xs text-chalk">
-        <a href={site.phone.href} className="flex items-center px-2 transition hover:text-gold">
+        <a href={site.phone.href} className="flex items-center px-2 transition hover:text-moss">
           {site.phone.display}
         </a>
-        <a href={`mailto:${site.email}`} className="flex items-center px-2 transition hover:text-gold">
+        <a href={`mailto:${site.email}`} className="flex items-center px-2 transition hover:text-moss">
           {site.email}
         </a>
         <a
           href={site.links.portal}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center px-2 transition hover:text-gold"
+          className="flex items-center px-2 transition hover:text-moss"
         >
           Client Login
         </a>
         <Link
           href="/tax-center#downloads"
-          className="flex items-center px-2 font-semibold text-gold transition hover:text-gold-light"
+          className="flex items-center px-2 font-semibold text-moss transition hover:text-moss-light"
         >
           Free Tax Organizer
         </Link>
@@ -41,16 +41,16 @@ function ServicesMenu({ onNavigate }: { onNavigate?: () => void }) {
     <div className="grid gap-8 p-8 sm:grid-cols-3">
       {servicesNavGroups.map((group) => (
         <div key={group.heading}>
-          <p className="eyebrow mb-3 text-gold-dark">{group.heading}</p>
+          <p className="eyebrow mb-3 text-moss-dark">{group.heading}</p>
           <ul className="space-y-3">
             {group.items.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   onClick={onNavigate}
-                  className="group block rounded-md p-2 -m-2 transition hover:bg-ivory"
+                  className="group block rounded-md p-2 -m-2 transition hover:bg-mist"
                 >
-                  <span className="block text-sm font-semibold text-navy group-hover:text-gold-dark">
+                  <span className="block text-sm font-semibold text-forest group-hover:text-moss-dark">
                     {item.label}
                   </span>
                   {item.blurb ? (
@@ -66,7 +66,7 @@ function ServicesMenu({ onNavigate }: { onNavigate?: () => void }) {
         <Link
           href="/services"
           onClick={onNavigate}
-          className="inline-flex items-center gap-2 border-t border-ivory pt-4 text-sm font-semibold text-gold-dark hover:underline"
+          className="inline-flex items-center gap-2 border-t border-mist pt-4 text-sm font-semibold text-moss-dark hover:underline"
         >
           View all services
           <span aria-hidden="true">&rarr;</span>
@@ -128,7 +128,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
   return (
     <header
       className={`on-dark fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        solid ? "bg-navy shadow-lg shadow-navy/20" : "bg-transparent"
+        solid ? "bg-forest shadow-lg shadow-forest/20" : "bg-transparent"
       }`}
     >
       <UtilityBar />
@@ -154,7 +154,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
                     aria-haspopup="true"
                     onClick={() => setOpenMenu(openMenu === item.label ? null : item.label)}
                     className={`flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition ${
-                      active ? "text-gold" : "text-white hover:text-gold"
+                      active ? "text-moss" : "text-white hover:text-moss"
                     }`}
                   >
                     {item.label}
@@ -171,7 +171,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
                   <Link
                     href={item.href}
                     className={`block rounded-md px-3 py-2 text-sm font-medium transition ${
-                      active ? "text-gold" : "text-white hover:text-gold"
+                      active ? "text-moss" : "text-white hover:text-moss"
                     }`}
                   >
                     {item.label}
@@ -182,7 +182,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
                   <div
                     onMouseEnter={cancelClose}
                     onMouseLeave={scheduleClose}
-                    className={`absolute left-1/2 top-full -translate-x-1/2 overflow-hidden rounded-xl bg-white shadow-2xl shadow-navy/30 ring-1 ring-navy/10 ${
+                    className={`absolute left-1/2 top-full -translate-x-1/2 overflow-hidden rounded-xl bg-white shadow-2xl shadow-forest/30 ring-1 ring-forest/10 ${
                       item.groups ? "w-[46rem]" : "w-56"
                     }`}
                   >
@@ -195,7 +195,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
                             <Link
                               href={child.href}
                               onClick={() => setOpenMenu(null)}
-                              className="block rounded-md px-3 py-2 text-sm font-medium text-navy transition hover:bg-ivory hover:text-gold-dark"
+                              className="block rounded-md px-3 py-2 text-sm font-medium text-forest transition hover:bg-mist hover:text-moss-dark"
                             >
                               {child.label}
                             </Link>
@@ -213,7 +213,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
         <div className="hidden items-center gap-4 lg:flex">
           <a
             href={site.phone.href}
-            className="inline-flex items-center rounded-md px-2 py-3 text-sm font-semibold text-white transition hover:text-gold"
+            className="inline-flex items-center rounded-md px-2 py-3 text-sm font-semibold text-white transition hover:text-moss"
           >
             {site.phone.display}
           </a>
@@ -243,11 +243,11 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
       {mobileOpen ? (
         <div
           id="mobile-menu"
-          className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-white/10 bg-navy pb-10 lg:hidden"
+          className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-white/10 bg-forest pb-10 lg:hidden"
         >
           <div className="wrap space-y-6 pt-6">
             <div className="space-y-2">
-              <p className="eyebrow text-gold">Services</p>
+              <p className="eyebrow text-moss">Services</p>
               {servicesNavGroups.flatMap((g) => g.items).map((item) => (
                 <Link
                   key={item.href}
@@ -257,7 +257,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
                   {item.label}
                 </Link>
               ))}
-              <Link href="/services" className="block px-3 py-2 text-sm font-semibold text-gold">
+              <Link href="/services" className="block px-3 py-2 text-sm font-semibold text-moss">
                 View all services &rarr;
               </Link>
             </div>

@@ -16,7 +16,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="on-dark bg-navy-dark text-chalk">
+    <footer className="on-dark bg-forest-dark text-chalk">
       <div className="wrap py-16">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -34,12 +34,12 @@ export function Footer() {
                 {site.address.city}, {site.address.region} {site.address.postalCode}
               </p>
               <p>
-                <a href={site.phone.href} className="transition hover:text-gold">
+                <a href={site.phone.href} className="transition hover:text-moss">
                   {site.phone.display}
                 </a>
               </p>
               <p>
-                <a href={`mailto:${site.email}`} className="transition hover:text-gold">
+                <a href={`mailto:${site.email}`} className="transition hover:text-moss">
                   {site.email}
                 </a>
               </p>
@@ -56,7 +56,7 @@ export function Footer() {
                 href={site.links.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition hover:border-gold hover:text-gold"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition hover:border-moss hover:text-moss"
               >
                 <span className="sr-only">Hewitt Services on Facebook</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -67,7 +67,7 @@ export function Footer() {
                 href={site.links.portal}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-10 items-center text-sm font-semibold text-gold transition hover:text-gold-light"
+                className="inline-flex h-10 items-center text-sm font-semibold text-moss transition hover:text-moss-light"
               >
                 Client Login
               </a>
@@ -81,7 +81,7 @@ export function Footer() {
                 <ul className="mt-4 space-y-2.5 text-sm">
                   {services.map((s) => (
                     <li key={s.slug}>
-                      <Link href={`/services/${s.slug}`} className="text-chalk/80 transition hover:text-gold">
+                      <Link href={`/services/${s.slug}`} className="text-chalk/80 transition hover:text-moss">
                         {s.name}
                       </Link>
                     </li>
@@ -94,7 +94,7 @@ export function Footer() {
                 <ul className="mt-4 space-y-2.5 text-sm">
                   {company.map((c) => (
                     <li key={c.href}>
-                      <Link href={c.href} className="text-chalk/80 transition hover:text-gold">
+                      <Link href={c.href} className="text-chalk/80 transition hover:text-moss">
                         {c.label}
                       </Link>
                     </li>
@@ -106,13 +106,18 @@ export function Footer() {
                 <h2 className="font-serif text-base font-semibold text-white">Locations</h2>
                 <ul className="mt-4 space-y-2.5 text-sm">
                   <li>
-                    <Link href="/tax-solutions-in-dallas" className="text-chalk/80 transition hover:text-gold">
+                    <Link href="/tax-solutions-in-dallas" className="text-chalk/80 transition hover:text-moss">
                       Dallas, TX
                     </Link>
                   </li>
                   <li>
-                    <Link href="/fort-worth-tax-services" className="text-chalk/80 transition hover:text-gold">
+                    <Link href="/fort-worth-tax-services" className="text-chalk/80 transition hover:text-moss">
                       Fort Worth, TX
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/remote-tax-services" className="text-chalk/80 transition hover:text-moss">
+                      Remotely, across Texas
                     </Link>
                   </li>
                 </ul>
@@ -133,22 +138,22 @@ export function Footer() {
             </p>
             <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
               <li>
-                <Link href="/privacy-policy" className="transition hover:text-gold">
+                <Link href="/privacy-policy" className="transition hover:text-moss">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms-and-disclaimer" className="transition hover:text-gold">
+                <Link href="/terms-and-disclaimer" className="transition hover:text-moss">
                   Terms and Disclaimer
                 </Link>
               </li>
               <li>
-                <Link href="/terms-and-disclaimer#accessibility" className="transition hover:text-gold">
+                <Link href="/terms-and-disclaimer#accessibility" className="transition hover:text-moss">
                   Accessibility
                 </Link>
               </li>
               <li>
-                <Link href="/sitemap" className="transition hover:text-gold">
+                <Link href="/sitemap" className="transition hover:text-moss">
                   Site Map
                 </Link>
               </li>

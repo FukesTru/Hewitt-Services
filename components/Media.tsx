@@ -13,7 +13,7 @@ type Props = {
 };
 
 /**
- * Renders a photograph when the file is present, and a navy/gold gradient
+ * Renders a photograph when the file is present, and a deep-green gradient
  * panel when it is not. See lib/media.ts for why a file may be missing.
  */
 export function Media({
@@ -42,7 +42,7 @@ export function Media({
       <>
         {/* Designed backdrop sitting behind the photograph. If the image is
             slow, or is being served from the Artlist CDN and that request
-            fails, the area still reads as a navy/gold panel rather than a
+            fails, the area still reads as a deep-green panel rather than a
             broken-image icon or a white hole. */}
         <div aria-hidden="true" className="media-fallback absolute inset-0" />
         <Image

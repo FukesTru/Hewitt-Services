@@ -25,8 +25,8 @@ export function BlogFilter({ items }: { items: BlogItem[] }) {
               aria-pressed={selected}
               className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
                 selected
-                  ? "border-navy bg-navy text-white"
-                  : "border-navy/20 bg-white text-navy hover:border-gold-dark hover:text-gold-dark"
+                  ? "border-forest bg-forest text-white"
+                  : "border-forest/20 bg-white text-forest hover:border-moss-dark hover:text-moss-dark"
               }`}
             >
               {cat}

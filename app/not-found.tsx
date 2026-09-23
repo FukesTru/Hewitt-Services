@@ -21,7 +21,7 @@ export default function NotFound() {
         <div className="wrap">
           <p className="prose-body max-w-prose">
             Try one of these, or call us on{" "}
-            <a href={site.phone.href} className="font-semibold text-gold-dark underline">
+            <a href={site.phone.href} className="font-semibold text-moss-dark underline">
               {site.phone.display}
             </a>{" "}
             and we will point you to the right place.
@@ -37,7 +37,7 @@ export default function NotFound() {
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className="block rounded-xl border border-navy/10 bg-ivory p-5 text-sm font-semibold text-navy transition hover:-translate-y-1 hover:border-gold-dark hover:text-gold-dark"
+                  className="block rounded-xl border border-forest/10 bg-mist p-5 text-sm font-semibold text-forest transition hover:-translate-y-1 hover:border-moss-dark hover:text-moss-dark"
                 >
                   {l.label}
                 </Link>

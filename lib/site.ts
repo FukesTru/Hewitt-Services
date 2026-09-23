@@ -108,6 +108,7 @@ export const mainNav = [
     children: [
       { label: "Dallas", href: "/tax-solutions-in-dallas" },
       { label: "Fort Worth", href: "/fort-worth-tax-services" },
+      { label: "Remotely", href: "/remote-tax-services" },
     ],
   },
   { label: "Blog", href: "/blog" },

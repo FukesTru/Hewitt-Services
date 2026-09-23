@@ -92,20 +92,28 @@ or an FAQ means editing `lib/services.ts`, `lib/posts.ts` or `lib/faqs.ts`.
 
 ## Design system
 
+Green and white, taken from the client's existing site: a deep green for the
+dark bands and a mid green for accents. Everything else is a tint of those two.
+
 | Token | Value | Use |
 |---|---|---|
-| `navy` | `#0B1F3A` | Primary dark |
-| `navy-dark` | `#07142A` | Deeper bands, footer |
-| `gold` | `#C9A84C` | Accents and buttons **on dark only** |
-| `gold-dark` | `#8A6D1F` | Gold-colored **text on light** (contrast) |
-| `ivory` | `#F7F4EC` | Alternating light sections |
-| `ink` | `#334155` | Body text on light |
-| `chalk` | `#E5E7EB` | Body text on dark |
+| `forest` | `#2C4A28` | Primary dark — hero, header, footer, dark bands |
+| `forest-dark` | `#1E3419` | Utility bar, deepest bands, gradient base |
+| `forest-light` | `#3E7D45` | Mid green, gradients and hover fills |
+| `moss` | `#8CBF94` | Accents and buttons **on dark only** |
+| `moss-dark` | `#2F6A38` | Green **text, links and rules on light** (contrast) |
+| `moss-light` | `#BFDCC4` | Lightest accent — hover states on dark |
+| `mist` | `#F2F6F0` | Alternating light sections |
+| `ink` | `#37413A` | Body text on light |
+| `chalk` | `#E3EAE2` | Body text on dark |
 
 Playfair Display for headings, Inter for body and UI.
 
-`gold` fails contrast as text on white — use `gold-dark` there. `.btn-secondary`
+`moss` fails contrast as text on white — use `moss-dark` there. `.btn-secondary`
 is for dark backgrounds, `.btn-secondary-light` for light ones.
+
+`npm run contrast` checks every pairing the design actually uses against WCAG
+2.1 AA and exits non-zero if one slips. Run it after touching the palette.
 
 ## Notes for whoever picks this up next
 

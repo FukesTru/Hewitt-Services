@@ -14,14 +14,14 @@ type Props = {
 /** Native <details> — keyboard accessible and works before hydration. */
 export function FAQAccordion({ faqs, className = "" }: Props) {
   return (
-    <div className={`divide-y divide-navy/10 border-y border-navy/10 ${className}`}>
+    <div className={`divide-y divide-forest/10 border-y border-forest/10 ${className}`}>
       {faqs.map((faq) => (
         <details key={faq.q} className="group py-5">
           <summary className="flex cursor-pointer list-none items-start justify-between gap-6 text-left">
-            <h3 className="font-serif text-base font-semibold text-navy sm:text-lg">{faq.q}</h3>
+            <h3 className="font-serif text-base font-semibold text-forest sm:text-lg">{faq.q}</h3>
             <span
               aria-hidden="true"
-              className="mt-1 shrink-0 text-xl leading-none text-gold-dark transition-transform duration-200 group-open:rotate-45"
+              className="mt-1 shrink-0 text-xl leading-none text-moss-dark transition-transform duration-200 group-open:rotate-45"
             >
               +
             </span>
@@ -32,14 +32,14 @@ export function FAQAccordion({ faqs, className = "" }: Props) {
               <p className="mt-3">
                 <Link
                   href={faq.link.href}
-                  className="text-sm font-semibold text-gold-dark hover:underline"
+                  className="text-sm font-semibold text-moss-dark hover:underline"
                 >
                   {faq.link.label} <span aria-hidden="true">&rarr;</span>
                 </Link>
               </p>
             ) : null}
             {faq.disclosure ? (
-              <p className="mt-4 rounded-md border border-dashed border-gold-dark/50 bg-ivory p-4 text-xs leading-relaxed text-ink">
+              <p className="mt-4 rounded-md border border-dashed border-moss-dark/50 bg-mist p-4 text-xs leading-relaxed text-ink">
                 {/* Required disclosures are the provider's to supply — this block
                     stays visible until the client confirms EPS Financial's terms. */}
                 {EPS_DISCLOSURE_PLACEHOLDER}
@@ -58,7 +58,7 @@ export function FaqTeaser({ faqs, count = 4 }: { faqs: Faq[]; count?: number }) 
       <FAQAccordion faqs={faqs.slice(0, count)} />
       <Link
         href="/faq"
-        className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-gold-dark hover:underline"
+        className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-moss-dark hover:underline"
       >
         Read all frequently asked questions
         <span aria-hidden="true">&rarr;</span>

@@ -29,7 +29,7 @@ export function PageHero({
 }: Props) {
   return (
     <section
-      className={`on-dark relative isolate overflow-hidden bg-navy ${
+      className={`on-dark relative isolate overflow-hidden bg-forest ${
         size === "tall" ? "pt-40 pb-24 sm:pt-48 sm:pb-32" : "pt-36 pb-16 sm:pt-44 sm:pb-20"
       }`}
     >
@@ -38,9 +38,9 @@ export function PageHero({
           <Media media={image} fill priority={priority} sizes="100vw" />
           {/* Two-layer scrim keeps headline contrast well above 4.5:1 whatever
               the photograph underneath happens to be. */}
-          <div className="absolute inset-0 bg-navy-dark/75" aria-hidden="true" />
+          <div className="absolute inset-0 bg-forest-dark/75" aria-hidden="true" />
           <div
-            className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy-dark/70 to-navy-dark/30"
+            className="absolute inset-0 bg-gradient-to-r from-forest-dark via-forest-dark/70 to-forest-dark/30"
             aria-hidden="true"
           />
         </div>
@@ -52,7 +52,7 @@ export function PageHero({
         {crumbs ? <Breadcrumbs crumbs={crumbs} /> : null}
 
         <div className="max-w-3xl">
-          {eyebrow ? <p className="eyebrow mb-4 text-gold">{eyebrow}</p> : null}
+          {eyebrow ? <p className="eyebrow mb-4 text-moss">{eyebrow}</p> : null}
           <h1
             className={`font-bold text-white ${
               size === "tall"

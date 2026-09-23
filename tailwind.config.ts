@@ -9,20 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: {
-          DEFAULT: "#0B1F3A",
-          dark: "#07142A",
-          light: "#12325C",
+        // Greens sampled from the client's existing site: a deep green for
+        // dark bands and a mid green for accents. Everything else is a tint
+        // of those two, chosen so each pairing clears WCAG 2.1 AA.
+        forest: {
+          DEFAULT: "#2C4A28",
+          dark: "#1E3419",
+          light: "#3E7D45",
         },
-        gold: {
-          DEFAULT: "#C9A84C",
-          // Dark gold is the only gold approved for TEXT on light backgrounds.
-          dark: "#8A6D1F",
-          light: "#E3CF92",
+        moss: {
+          DEFAULT: "#8CBF94",
+          // Dark moss is the only green approved for TEXT on light
+          // backgrounds — 6.5:1 on white. The DEFAULT is for dark bands.
+          dark: "#2F6A38",
+          light: "#BFDCC4",
         },
-        ivory: "#F7F4EC",
-        ink: "#334155",
-        chalk: "#E5E7EB",
+        mist: "#F2F6F0",
+        ink: "#37413A",
+        chalk: "#E3EAE2",
       },
       fontFamily: {
         serif: ["var(--font-playfair)", "Playfair Display", "Georgia", "serif"],

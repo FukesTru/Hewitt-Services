@@ -7,7 +7,7 @@ import path from "node:path";
  *   1. A file in public/  — self-hosted. Always preferred.
  *   2. The signed Artlist CDN URL from image-manifest.json — interim, so the
  *      photography shows on a deploy before the files are committed.
- *   3. Neither — a navy/gold gradient panel. Nothing 404s.
+ *   3. Neither — a deep-green gradient panel. Nothing 404s.
  *
  * Tier 1 wins automatically, so `npm run fetch:images` + commit silently
  * upgrades the site from CDN to self-hosted with no code change.
@@ -88,6 +88,11 @@ export const IMAGES = {
     media(
       "/images/hero/fort-worth-hero.jpg",
       "The Fort Worth skyline at dusk under a wide Texas sky"
+    ),
+  remoteHero: () =>
+    media(
+      "/images/hero/remote-hero.jpg",
+      "A laptop, a stack of folders and a cup of coffee on an oak table by a window looking out over open Texas country at dusk"
     ),
   aboutOffice: () =>
     media(

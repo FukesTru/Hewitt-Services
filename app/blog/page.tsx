@@ -61,10 +61,10 @@ export default function BlogIndexPage() {
       </section>
 
       {/* Email signup */}
-      <section className="bg-ivory">
+      <section className="bg-mist">
         <div className="wrap py-14">
-          <Reveal className="mx-auto max-w-2xl rounded-2xl border border-gold-dark/25 bg-white p-8 text-center sm:p-10">
-            <h2 className="font-serif text-2xl font-bold text-navy">
+          <Reveal className="mx-auto max-w-2xl rounded-2xl border border-moss-dark/25 bg-white p-8 text-center sm:p-10">
+            <h2 className="font-serif text-2xl font-bold text-forest">
               Get helpful tax tips in your inbox
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink">

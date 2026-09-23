@@ -2,7 +2,7 @@ import { site } from "@/lib/site";
 
 export function MapEmbed({ height = 380 }: { height?: number }) {
   return (
-    <div className="overflow-hidden rounded-xl border border-navy/10">
+    <div className="overflow-hidden rounded-xl border border-forest/10">
       <iframe
         src={site.maps.embed}
         title={`Map showing the ${site.name} office at ${site.address.full}`}

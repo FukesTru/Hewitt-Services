@@ -86,8 +86,8 @@ export default function TaxCenterPage() {
       <section id="downloads" className="section scroll-mt-28 bg-white">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">Free downloads</h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">Free downloads</h2>
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
             <p className="prose-body mt-6">
               Our organizers walk through everything to gather before an appointment, so nothing is
               missed and nothing holds up your return.
@@ -111,9 +111,9 @@ export default function TaxCenterPage() {
                 subject: "Business%20Tax%20Organizer%20request",
               },
             ].map((d, i) => (
-              <Reveal key={d.title} delay={i} className="flex flex-col rounded-2xl border border-navy/10 bg-ivory p-8">
-                <p className="eyebrow text-gold-dark">{d.sub}</p>
-                <h3 className="mt-3 font-serif text-xl font-semibold text-navy">{d.title}</h3>
+              <Reveal key={d.title} delay={i} className="flex flex-col rounded-2xl border border-forest/10 bg-mist p-8">
+                <p className="eyebrow text-moss-dark">{d.sub}</p>
+                <h3 className="mt-3 font-serif text-xl font-semibold text-forest">{d.title}</h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-ink">{d.body}</p>
                 {d.href ? (
                   <a href={d.href} download className="btn-primary mt-6 self-start">
@@ -138,11 +138,11 @@ export default function TaxCenterPage() {
       </section>
 
       {/* Quick links */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">Quick links</h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">Quick links</h2>
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
             <p className="prose-body mt-6">
               Official government tools. We link straight to the source rather than routing you
               through a third party.
@@ -156,9 +156,9 @@ export default function TaxCenterPage() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex h-full flex-col rounded-xl border border-navy/10 bg-white p-6 transition hover:-translate-y-1 hover:border-gold-dark hover:shadow-lg hover:shadow-navy/10"
+                  className="group flex h-full flex-col rounded-xl border border-forest/10 bg-white p-6 transition hover:-translate-y-1 hover:border-moss-dark hover:shadow-lg hover:shadow-forest/10"
                 >
-                  <h3 className="font-serif text-base font-semibold text-navy group-hover:text-gold-dark">
+                  <h3 className="font-serif text-base font-semibold text-forest group-hover:text-moss-dark">
                     {link.label}{" "}
                     <span aria-hidden="true" className="text-xs">
                       &#8599;
@@ -186,16 +186,16 @@ export default function TaxCenterPage() {
       <section className="section bg-white">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">Key tax dates</h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">Key tax dates</h2>
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
           </Reveal>
 
-          <Reveal delay={1} className="mt-10 overflow-hidden rounded-xl border border-navy/10">
+          <Reveal delay={1} className="mt-10 overflow-hidden rounded-xl border border-forest/10">
             <table className="w-full text-left">
               <caption className="sr-only">
                 Key federal and Texas tax due dates for a typical year
               </caption>
-              <thead className="bg-navy text-white">
+              <thead className="bg-forest text-white">
                 <tr>
                   <th scope="col" className="px-6 py-4 font-serif text-sm font-semibold">
                     Date
@@ -205,10 +205,10 @@ export default function TaxCenterPage() {
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-navy/10 bg-white">
+              <tbody className="divide-y divide-forest/10 bg-white">
                 {DATES.map((d) => (
                   <tr key={`${d.date}-${d.item}`}>
-                    <th scope="row" className="whitespace-nowrap px-6 py-4 text-sm font-semibold text-navy">
+                    <th scope="row" className="whitespace-nowrap px-6 py-4 text-sm font-semibold text-forest">
                       {d.date}
                     </th>
                     <td className="px-6 py-4 text-sm text-ink">{d.item}</td>
@@ -219,7 +219,7 @@ export default function TaxCenterPage() {
           </Reveal>
 
           <Reveal className="mt-6">
-            <p className="max-w-prose rounded-lg border-l-4 border-gold-dark bg-ivory p-5 text-sm leading-relaxed text-ink">
+            <p className="max-w-prose rounded-lg border-l-4 border-moss-dark bg-mist p-5 text-sm leading-relaxed text-ink">
               Dates can shift when they fall on a weekend or holiday. Confirm current-year dates with
               us or the IRS.
             </p>
@@ -228,13 +228,13 @@ export default function TaxCenterPage() {
       </section>
 
       {/* Record keeping */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">
               How long should you keep tax records?
             </h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
           </Reveal>
 
           <Reveal delay={1} className="lg:col-span-7">
@@ -255,7 +255,7 @@ export default function TaxCenterPage() {
                 closing point to count from, and those records are exactly what makes filing that
                 year possible later.
               </p>
-              <p className="rounded-lg border-l-4 border-gold-dark bg-white p-5 text-sm leading-relaxed text-ink">
+              <p className="rounded-lg border-l-4 border-moss-dark bg-white p-5 text-sm leading-relaxed text-ink">
                 General guidance only. Ask us about your situation.
               </p>
             </div>
@@ -273,7 +273,7 @@ export default function TaxCenterPage() {
               { label: "Frequently asked questions", href: "/faq" },
             ].map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="font-semibold text-gold-dark hover:underline">
+                <Link href={l.href} className="font-semibold text-moss-dark hover:underline">
                   {l.label} <span aria-hidden="true">&rarr;</span>
                 </Link>
               </li>

@@ -12,7 +12,7 @@ export function TrustStrip({ items = defaults }: { items?: string[] }) {
           <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true" className="shrink-0">
             <path
               d="M4 10.5l4 4 8-9"
-              stroke="#C9A84C"
+              stroke="#8CBF94"
               strokeWidth="2.2"
               strokeLinecap="round"
               strokeLinejoin="round"

@@ -49,13 +49,13 @@ export default function FaqPage() {
             {/* Sticky topic filter — plain anchors, so it works without JS. */}
             <nav aria-label="FAQ topics" className="lg:col-span-3">
               <div className="lg:sticky lg:top-28">
-                <p className="eyebrow text-gold-dark">Jump to</p>
+                <p className="eyebrow text-moss-dark">Jump to</p>
                 <ul className="mt-4 space-y-1">
                   {faqGroups.map((group) => (
                     <li key={group.id}>
                       <a
                         href={`#${group.id}`}
-                        className="block rounded-md px-3 py-2 text-sm font-medium text-navy transition hover:bg-ivory hover:text-gold-dark"
+                        className="block rounded-md px-3 py-2 text-sm font-medium text-forest transition hover:bg-mist hover:text-moss-dark"
                       >
                         {group.heading}
                       </a>
@@ -69,10 +69,10 @@ export default function FaqPage() {
               <div className="space-y-14">
                 {faqGroups.map((group) => (
                   <section key={group.id} id={group.id} className="scroll-mt-28">
-                    <h2 className="font-serif text-2xl font-bold text-navy sm:text-3xl">
+                    <h2 className="font-serif text-2xl font-bold text-forest sm:text-3xl">
                       {group.heading}
                     </h2>
-                    <span className="accent-rule mt-4 bg-gold-dark" aria-hidden="true" />
+                    <span className="accent-rule mt-4 bg-moss-dark" aria-hidden="true" />
                     <div className="mt-6">
                       <FAQAccordion faqs={group.faqs} />
                     </div>

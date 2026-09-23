@@ -75,7 +75,7 @@ export default function ReviewsPage() {
       </section>
 
       {/* Leave a review */}
-      <section className="on-dark section bg-navy">
+      <section className="on-dark section bg-forest">
         <div className="wrap grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
             <h2 className="font-serif text-3xl font-bold text-white sm:text-4xl">
@@ -122,7 +122,7 @@ export default function ReviewsPage() {
                 <li key={step.title} className="flex gap-5">
                   <span
                     aria-hidden="true"
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold font-serif text-base font-bold text-navy"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-moss font-serif text-base font-bold text-forest"
                   >
                     {i + 1}
                   </span>
@@ -140,7 +140,7 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      <section className="bg-ivory py-12">
+      <section className="bg-mist py-12">
         <div className="wrap">
           <ul className="flex flex-wrap gap-x-8 gap-y-3 text-sm">
             {[
@@ -149,7 +149,7 @@ export default function ReviewsPage() {
               { label: "Contact us", href: "/contact" },
             ].map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="font-semibold text-gold-dark hover:underline">
+                <Link href={l.href} className="font-semibold text-moss-dark hover:underline">
                   {l.label} <span aria-hidden="true">&rarr;</span>
                 </Link>
               </li>

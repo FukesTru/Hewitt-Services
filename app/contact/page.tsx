@@ -67,10 +67,10 @@ export default function ContactPage() {
       <section className="section bg-white">
         <div className="wrap grid gap-12 lg:grid-cols-2">
           <Reveal>
-            <h2 className="font-serif text-2xl font-bold text-navy sm:text-3xl">
+            <h2 className="font-serif text-2xl font-bold text-forest sm:text-3xl">
               Book a time that suits you
             </h2>
-            <span className="accent-rule mt-4 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-4 bg-moss-dark" aria-hidden="true" />
             <p className="mt-4 text-base leading-relaxed text-ink">
               Pick a slot directly in our calendar. You will get a confirmation straight away.
             </p>
@@ -80,15 +80,15 @@ export default function ContactPage() {
           </Reveal>
 
           <Reveal delay={1}>
-            <h2 className="font-serif text-2xl font-bold text-navy sm:text-3xl">
+            <h2 className="font-serif text-2xl font-bold text-forest sm:text-3xl">
               Or send us a message
             </h2>
-            <span className="accent-rule mt-4 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-4 bg-moss-dark" aria-hidden="true" />
             <p className="mt-4 text-base leading-relaxed text-ink">
               Tell us a little about what you need and we will come back to you. Fields marked * are
               required.
             </p>
-            <div className="mt-8 rounded-2xl border border-navy/10 bg-ivory p-6 sm:p-8">
+            <div className="mt-8 rounded-2xl border border-forest/10 bg-mist p-6 sm:p-8">
               <ContactForm id="contact-page-form" />
             </div>
           </Reveal>
@@ -96,15 +96,15 @@ export default function ContactPage() {
       </section>
 
       {/* Details + map */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap grid gap-12 lg:grid-cols-2">
           <Reveal>
-            <h2 className="font-serif text-2xl font-bold text-navy sm:text-3xl">Our details</h2>
-            <span className="accent-rule mt-4 bg-gold-dark" aria-hidden="true" />
+            <h2 className="font-serif text-2xl font-bold text-forest sm:text-3xl">Our details</h2>
+            <span className="accent-rule mt-4 bg-moss-dark" aria-hidden="true" />
 
             <address className="mt-8 space-y-5 text-base not-italic text-ink">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-navy">Address</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-forest">Address</p>
                 <p className="mt-1">
                   {site.name}
                   <br />
@@ -114,31 +114,31 @@ export default function ContactPage() {
                 </p>
               </div>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-navy">Phone</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-forest">Phone</p>
                 <p className="mt-1">
-                  <a href={site.phone.href} className="text-gold-dark underline">
+                  <a href={site.phone.href} className="text-moss-dark underline">
                     {site.phone.display}
                   </a>
                 </p>
               </div>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-navy">Email</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-forest">Email</p>
                 <p className="mt-1">
-                  <a href={`mailto:${site.email}`} className="text-gold-dark underline">
+                  <a href={`mailto:${site.email}`} className="text-moss-dark underline">
                     {site.email}
                   </a>
                 </p>
               </div>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-navy">Hours</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-forest">Hours</p>
                 {/* PLACEHOLDER: business hours to be supplied by the client. */}
                 <p className="mt-1">{site.hours ?? site.hoursPlaceholder}</p>
               </div>
             </address>
 
             {/* Existing client */}
-            <div className="mt-10 rounded-xl border border-gold-dark/30 bg-white p-6">
-              <h3 className="font-serif text-lg font-semibold text-navy">Existing client?</h3>
+            <div className="mt-10 rounded-xl border border-moss-dark/30 bg-white p-6">
+              <h3 className="font-serif text-lg font-semibold text-forest">Existing client?</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink">
                 Upload documents, sign returns and check on your work through the secure portal.
               </p>
@@ -156,7 +156,7 @@ export default function ContactPage() {
           <Reveal delay={1}>
             <MapEmbed height={520} />
             <p className="mt-4 text-sm">
-              <Link href="/tax-solutions-in-dallas" className="font-semibold text-gold-dark hover:underline">
+              <Link href="/tax-solutions-in-dallas" className="font-semibold text-moss-dark hover:underline">
                 More about our Dallas office <span aria-hidden="true">&rarr;</span>
               </Link>
             </p>
@@ -165,7 +165,7 @@ export default function ContactPage() {
       </section>
 
       {/* What to expect */}
-      <section className="on-dark section bg-navy">
+      <section className="on-dark section bg-forest">
         <div className="wrap">
           <Reveal className="max-w-2xl">
             <h2 className="font-serif text-3xl font-bold text-white sm:text-4xl">
@@ -179,7 +179,7 @@ export default function ContactPage() {
               <Reveal as="li" key={step.title} delay={i}>
                 <span
                   aria-hidden="true"
-                  className="flex h-11 w-11 items-center justify-center rounded-full bg-gold font-serif text-lg font-bold text-navy"
+                  className="flex h-11 w-11 items-center justify-center rounded-full bg-moss font-serif text-lg font-bold text-forest"
                 >
                   {i + 1}
                 </span>
@@ -198,8 +198,8 @@ export default function ContactPage() {
       <section className="section bg-white">
         <div className="wrap grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-4">
-            <h2 className="font-serif text-2xl font-bold text-navy sm:text-3xl">Before you call</h2>
-            <span className="accent-rule mt-4 bg-gold-dark" aria-hidden="true" />
+            <h2 className="font-serif text-2xl font-bold text-forest sm:text-3xl">Before you call</h2>
+            <span className="accent-rule mt-4 bg-moss-dark" aria-hidden="true" />
             <p className="mt-4 text-base leading-relaxed text-ink">
               A few things people usually want to know first.
             </p>
@@ -210,7 +210,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-ivory py-12">
+      <section className="bg-mist py-12">
         <div className="wrap">
           <ul className="flex flex-wrap gap-x-8 gap-y-3 text-sm">
             {[
@@ -219,7 +219,7 @@ export default function ContactPage() {
               { label: "Tax solutions in Dallas", href: "/tax-solutions-in-dallas" },
             ].map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="font-semibold text-gold-dark hover:underline">
+                <Link href={l.href} className="font-semibold text-moss-dark hover:underline">
                   {l.label} <span aria-hidden="true">&rarr;</span>
                 </Link>
               </li>

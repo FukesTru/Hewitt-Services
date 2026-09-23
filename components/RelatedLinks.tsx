@@ -15,8 +15,8 @@ export function RelatedLinks({ slugs, heading = "Related services", extra }: Pro
 
   return (
     <div>
-      <h2 className="font-serif text-2xl font-bold text-navy sm:text-3xl">{heading}</h2>
-      <span className="accent-rule mt-4 bg-gold-dark" aria-hidden="true" />
+      <h2 className="font-serif text-2xl font-bold text-forest sm:text-3xl">{heading}</h2>
+      <span className="accent-rule mt-4 bg-moss-dark" aria-hidden="true" />
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {related.map((s) => (
@@ -28,7 +28,7 @@ export function RelatedLinks({ slugs, heading = "Related services", extra }: Pro
         <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm">
           {extra.map((link) => (
             <li key={link.href}>
-              <Link href={link.href} className="font-semibold text-gold-dark hover:underline">
+              <Link href={link.href} className="font-semibold text-moss-dark hover:underline">
                 {link.label} <span aria-hidden="true">&rarr;</span>
               </Link>
             </li>

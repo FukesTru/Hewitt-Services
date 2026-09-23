@@ -15,7 +15,7 @@ export function GoogleReviews({ tone = "light" }: { tone?: "light" | "dark" }) {
   return (
     <div
       className={`rounded-2xl border p-8 text-center sm:p-10 ${
-        dark ? "border-white/15 bg-white/5" : "border-navy/10 bg-white"
+        dark ? "border-white/15 bg-white/5" : "border-forest/10 bg-white"
       }`}
     >
       {/*
@@ -27,7 +27,7 @@ export function GoogleReviews({ tone = "light" }: { tone?: "light" | "dark" }) {
         set site.links.googleReviews in lib/site.ts.
         ────────────────────────────────────────────────────────────────────
       */}
-      <p className={`font-serif text-xl font-semibold ${dark ? "text-white" : "text-navy"}`}>
+      <p className={`font-serif text-xl font-semibold ${dark ? "text-white" : "text-forest"}`}>
         What our clients say
       </p>
       <p className={`mx-auto mt-3 max-w-xl text-sm leading-relaxed ${dark ? "text-chalk/80" : "text-ink"}`}>

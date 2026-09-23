@@ -60,8 +60,8 @@ export default function AboutPage() {
       <section className="section bg-white">
         <div className="wrap grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-7">
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">The firm</h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">The firm</h2>
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
 
             <div className="mt-6 max-w-prose space-y-5">
               <p className="prose-body">
@@ -88,7 +88,7 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal delay={1} className="lg:col-span-5">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-navy">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-forest">
               <Media media={IMAGES.aboutOffice()} fill sizes="(min-width: 1024px) 30rem, 100vw" />
             </div>
           </Reveal>
@@ -96,26 +96,26 @@ export default function AboutPage() {
       </section>
 
       {/* Founder */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap grid items-center gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-navy">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-forest">
               <FounderPortrait />
             </div>
           </Reveal>
 
           <Reveal delay={1} className="lg:col-span-7">
-            <p className="eyebrow text-gold-dark">Founder</p>
-            <h2 className="mt-4 font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <p className="eyebrow text-moss-dark">Founder</p>
+            <h2 className="mt-4 font-serif text-3xl font-bold text-forest sm:text-4xl">
               {site.founder.name}
             </h2>
             <p className="mt-2 text-lg text-ink">
               {site.founder.jobTitle} ({site.founder.credential})
             </p>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
 
-            <blockquote className="mt-8 border-l-4 border-gold-dark pl-6">
-              <p className="font-serif text-xl italic leading-relaxed text-navy sm:text-2xl">
+            <blockquote className="mt-8 border-l-4 border-moss-dark pl-6">
+              <p className="font-serif text-xl italic leading-relaxed text-forest sm:text-2xl">
                 &ldquo;{site.founder.quote}&rdquo;
               </p>
               <footer className="mt-4 text-sm text-ink">
@@ -144,7 +144,7 @@ export default function AboutPage() {
       </section>
 
       {/* What is an EA */}
-      <section className="on-dark section bg-navy">
+      <section className="on-dark section bg-forest">
         <div className="wrap grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
             <h2 className="font-serif text-3xl font-bold text-white sm:text-4xl">
@@ -177,8 +177,8 @@ export default function AboutPage() {
       <section className="section bg-white">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">Our approach</h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">Our approach</h2>
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
           </Reveal>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -186,15 +186,15 @@ export default function AboutPage() {
               <Reveal
                 key={item.title}
                 delay={i}
-                className="rounded-xl border border-navy/10 bg-ivory p-7"
+                className="rounded-xl border border-forest/10 bg-mist p-7"
               >
                 <span
                   aria-hidden="true"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-navy font-serif text-base font-bold text-gold"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-forest font-serif text-base font-bold text-moss"
                 >
                   {i + 1}
                 </span>
-                <h3 className="mt-5 font-serif text-lg font-semibold text-navy">{item.title}</h3>
+                <h3 className="mt-5 font-serif text-lg font-semibold text-forest">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink">{item.body}</p>
               </Reveal>
             ))}
@@ -203,13 +203,13 @@ export default function AboutPage() {
       </section>
 
       {/* How we work with you */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap grid gap-12 lg:grid-cols-2">
           <Reveal>
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">
               How we work with you
             </h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
             <p className="prose-body mt-6 max-w-prose">
               You choose how this runs. Clients in Dallas and the wider DFW area are welcome to sit
               down with us in person. Clients elsewhere in Texas work with us entirely remotely, and
@@ -229,8 +229,8 @@ export default function AboutPage() {
             </a>
           </Reveal>
 
-          <Reveal delay={1} className="rounded-2xl border border-navy/10 bg-white p-8">
-            <h3 className="font-serif text-xl font-semibold text-navy">Working with us means</h3>
+          <Reveal delay={1} className="rounded-2xl border border-forest/10 bg-white p-8">
+            <h3 className="font-serif text-xl font-semibold text-forest">Working with us means</h3>
             <ul className="mt-6 space-y-4">
               {[
                 "Virtual appointments anywhere in Texas, or in person in Dallas",
@@ -239,7 +239,7 @@ export default function AboutPage() {
                 "Year-round availability, not seasonal opening hours",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-sm leading-relaxed text-ink">
-                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-moss-dark" />
                   {item}
                 </li>
               ))}
@@ -251,9 +251,9 @@ export default function AboutPage() {
       {/* Referrals */}
       <section id="referrals" className="section bg-white scroll-mt-28">
         <div className="wrap">
-          <Reveal className="mx-auto max-w-3xl rounded-2xl border border-gold-dark/25 bg-ivory p-8 text-center sm:p-12">
-            <h2 className="font-serif text-3xl font-bold text-navy">Referrals are welcome</h2>
-            <span className="accent-rule mx-auto mt-5 bg-gold-dark" aria-hidden="true" />
+          <Reveal className="mx-auto max-w-3xl rounded-2xl border border-moss-dark/25 bg-mist p-8 text-center sm:p-12">
+            <h2 className="font-serif text-3xl font-bold text-forest">Referrals are welcome</h2>
+            <span className="accent-rule mx-auto mt-5 bg-moss-dark" aria-hidden="true" />
             <p className="prose-body mx-auto mt-6 max-w-2xl">
               This firm has grown mostly the quiet way — one client telling someone else that the
               work was done properly. If we have helped you, and you know someone in the same spot,
@@ -276,7 +276,7 @@ export default function AboutPage() {
       </section>
 
       {/* Related */}
-      <section className="bg-ivory py-12">
+      <section className="bg-mist py-12">
         <div className="wrap">
           <ul className="flex flex-wrap gap-x-8 gap-y-3 text-sm">
             {[
@@ -286,7 +286,7 @@ export default function AboutPage() {
               { label: "Contact us", href: "/contact" },
             ].map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="font-semibold text-gold-dark hover:underline">
+                <Link href={l.href} className="font-semibold text-moss-dark hover:underline">
                   {l.label} <span aria-hidden="true">&rarr;</span>
                 </Link>
               </li>

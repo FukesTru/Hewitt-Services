@@ -139,13 +139,13 @@ export default function DallasPage() {
       </section>
 
       {/* Once-a-year vs integrated */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap grid gap-10 lg:grid-cols-2">
-          <Reveal className="rounded-2xl border border-navy/10 bg-white p-8">
-            <h2 className="font-serif text-2xl font-bold text-navy sm:text-3xl">
+          <Reveal className="rounded-2xl border border-forest/10 bg-white p-8">
+            <h2 className="font-serif text-2xl font-bold text-forest sm:text-3xl">
               Why the once-a-year approach falls short
             </h2>
-            <span className="accent-rule mt-4 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-4 bg-moss-dark" aria-hidden="true" />
             <ul className="mt-6 space-y-4 text-base leading-relaxed text-ink">
               {[
                 "By the time the return is prepared, every decision that shaped the bill has already been made.",
@@ -154,14 +154,14 @@ export default function DallasPage() {
                 "Problems — an unfiled year, a franchise tax lapse — go unnoticed until they escalate.",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
-                  <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                  <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-moss-dark" />
                   {item}
                 </li>
               ))}
             </ul>
           </Reveal>
 
-          <Reveal delay={1} className="on-dark rounded-2xl bg-navy p-8">
+          <Reveal delay={1} className="on-dark rounded-2xl bg-forest p-8">
             <h2 className="font-serif text-2xl font-bold text-white sm:text-3xl">
               Why an integrated approach works
             </h2>
@@ -174,7 +174,7 @@ export default function DallasPage() {
                 "If the IRS does get in touch, the firm answering already knows your file.",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
-                  <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                  <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-moss" />
                   {item}
                 </li>
               ))}
@@ -187,10 +187,10 @@ export default function DallasPage() {
       <section className="section bg-white">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">
               From compliance to wealth preservation
             </h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
             <p className="prose-body mt-6">
               Compliance reports what already happened. Preservation is about deciding what happens
               next. These four pieces are where most of the difference is made.
@@ -202,9 +202,9 @@ export default function DallasPage() {
               <Reveal key={p.title} delay={i}>
                 <Link
                   href={p.href}
-                  className="group block h-full rounded-xl border border-navy/10 bg-ivory p-7 transition hover:-translate-y-1 hover:border-gold-dark hover:shadow-lg hover:shadow-navy/10"
+                  className="group block h-full rounded-xl border border-forest/10 bg-mist p-7 transition hover:-translate-y-1 hover:border-moss-dark hover:shadow-lg hover:shadow-forest/10"
                 >
-                  <h3 className="font-serif text-lg font-semibold text-navy group-hover:text-gold-dark">
+                  <h3 className="font-serif text-lg font-semibold text-forest group-hover:text-moss-dark">
                     {p.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-ink">{p.body}</p>
@@ -216,13 +216,13 @@ export default function DallasPage() {
       </section>
 
       {/* All services */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">
               Services available from our Dallas office
             </h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
           </Reveal>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -239,12 +239,12 @@ export default function DallasPage() {
       <section className="section bg-white">
         <div className="wrap grid gap-12 lg:grid-cols-2">
           <Reveal>
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">Our Dallas office</h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">Our Dallas office</h2>
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
 
             <address className="mt-8 space-y-4 text-base not-italic text-ink">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-navy">Address</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-forest">Address</p>
                 <p className="mt-1">
                   {site.address.streetName}, {site.address.unit}
                   <br />
@@ -252,28 +252,28 @@ export default function DallasPage() {
                 </p>
               </div>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-navy">Phone</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-forest">Phone</p>
                 <p className="mt-1">
-                  <a href={site.phone.href} className="text-gold-dark underline">
+                  <a href={site.phone.href} className="text-moss-dark underline">
                     {site.phone.display}
                   </a>
                 </p>
               </div>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-navy">Email</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-forest">Email</p>
                 <p className="mt-1">
-                  <a href={`mailto:${site.email}`} className="text-gold-dark underline">
+                  <a href={`mailto:${site.email}`} className="text-moss-dark underline">
                     {site.email}
                   </a>
                 </p>
               </div>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-navy">Hours</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-forest">Hours</p>
                 {/* PLACEHOLDER: business hours to be supplied by the client. */}
                 <p className="mt-1">{site.hours ?? site.hoursPlaceholder}</p>
               </div>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-navy">
+                <p className="text-sm font-semibold uppercase tracking-wide text-forest">
                   In person or virtual
                 </p>
                 <p className="mt-1">
@@ -304,13 +304,13 @@ export default function DallasPage() {
       </section>
 
       {/* Local resources */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <h2 className="font-serif text-2xl font-bold text-navy sm:text-3xl">
+            <h2 className="font-serif text-2xl font-bold text-forest sm:text-3xl">
               Texas and federal tax resources
             </h2>
-            <span className="accent-rule mt-4 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-4 bg-moss-dark" aria-hidden="true" />
             <p className="mt-4 text-base text-ink">
               Official sources, straight from the agencies themselves.
             </p>
@@ -330,7 +330,7 @@ export default function DallasPage() {
                   href={r.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block rounded-lg border border-navy/10 bg-white p-4 text-sm font-medium text-navy transition hover:border-gold-dark hover:text-gold-dark"
+                  className="block rounded-lg border border-forest/10 bg-white p-4 text-sm font-medium text-forest transition hover:border-moss-dark hover:text-moss-dark"
                 >
                   {r.label}{" "}
                   <span aria-hidden="true" className="text-xs">
@@ -348,10 +348,10 @@ export default function DallasPage() {
       <section className="section bg-white">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">
               Dallas tax questions, answered
             </h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
           </Reveal>
           <Reveal delay={1} className="mt-10">
             <FAQAccordion faqs={DALLAS_FAQS} />

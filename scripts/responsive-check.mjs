@@ -16,6 +16,7 @@ const WIDTHS = [375, 768, 1280];
 const PAGES = [
   "/", "/about", "/services", "/services/monthly-bookkeeping", "/services/irs-tax-problems",
   "/services/refund-advances", "/tax-solutions-in-dallas", "/fort-worth-tax-services",
+  "/remote-tax-services",
   "/tax-center", "/faq", "/blog", "/blog/irs-notice-first-30-days", "/reviews",
   "/contact", "/privacy-policy", "/terms-and-disclaimer", "/sitemap", "/thank-you",
 ];

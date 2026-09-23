@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
             <LegalSection heading="Information we collect">
               <p>We collect information in three ways.</p>
               <p>
-                <strong className="font-semibold text-navy">Information you give us.</strong> When you
+                <strong className="font-semibold text-forest">Information you give us.</strong> When you
                 submit the contact form we collect your name, email address, telephone number, the
                 service you are asking about, anything you write in the message field, and your
                 choices on the consent checkboxes. When you book an appointment through our
@@ -69,14 +69,14 @@ export default function PrivacyPolicyPage() {
                 to carry out the engagement, which you upload through our secure client portal.
               </p>
               <p>
-                <strong className="font-semibold text-navy">Information collected automatically.</strong>{" "}
+                <strong className="font-semibold text-forest">Information collected automatically.</strong>{" "}
                 If you accept analytics cookies, our analytics provider records standard usage data
                 such as the pages you visit, approximate location derived from your IP address,
                 referring site, device type and browser. If you do not accept, no analytics tags are
                 loaded.
               </p>
               <p>
-                <strong className="font-semibold text-navy">Information from embedded services.</strong>{" "}
+                <strong className="font-semibold text-forest">Information from embedded services.</strong>{" "}
                 Pages containing a map or a booking calendar load content from those providers, which
                 may receive your IP address as part of delivering that content.
               </p>
@@ -146,8 +146,8 @@ export default function PrivacyPolicyPage() {
                 updates), to both, or to neither. Consent to receive text messages is not a condition
                 of purchasing any goods or services.
               </p>
-              <p className="rounded-lg border-l-4 border-gold-dark bg-ivory p-5">
-                <strong className="font-semibold text-navy">
+              <p className="rounded-lg border-l-4 border-moss-dark bg-mist p-5">
+                <strong className="font-semibold text-forest">
                   No mobile information will be shared with third parties or affiliates for
                   marketing or promotional purposes.
                 </strong>{" "}
@@ -157,11 +157,11 @@ export default function PrivacyPolicyPage() {
               <p>
                 Message frequency may vary. Message and data rates may apply. Reply STOP to any
                 message to opt out. Text HELP to {site.phone.display} for help, or email us at{" "}
-                <a href={`mailto:${site.email}`} className="text-gold-dark underline">
+                <a href={`mailto:${site.email}`} className="text-moss-dark underline">
                   {site.email}
                 </a>
                 . Full messaging terms are set out in our{" "}
-                <Link href="/terms-and-disclaimer#sms-terms" className="text-gold-dark underline">
+                <Link href="/terms-and-disclaimer#sms-terms" className="text-moss-dark underline">
                   SMS Terms and Conditions
                 </Link>
                 .
@@ -206,7 +206,7 @@ export default function PrivacyPolicyPage() {
               />
               <p>
                 To make a request, email{" "}
-                <a href={`mailto:${site.email}`} className="text-gold-dark underline">
+                <a href={`mailto:${site.email}`} className="text-moss-dark underline">
                   {site.email}
                 </a>{" "}
                 or call {site.phone.display}. We may need to verify your identity before acting on a
@@ -235,11 +235,11 @@ export default function PrivacyPolicyPage() {
                 <br />
                 {site.address.full}
                 <br />
-                <a href={site.phone.href} className="text-gold-dark underline">
+                <a href={site.phone.href} className="text-moss-dark underline">
                   {site.phone.display}
                 </a>
                 <br />
-                <a href={`mailto:${site.email}`} className="text-gold-dark underline">
+                <a href={`mailto:${site.email}`} className="text-moss-dark underline">
                   {site.email}
                 </a>
               </p>

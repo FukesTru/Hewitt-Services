@@ -94,8 +94,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </Reveal>
 
           {/* Closing CTA */}
-          <Reveal delay={1} className="mt-12 max-w-prose rounded-2xl border border-gold-dark/25 bg-ivory p-8">
-            <p className="font-serif text-xl font-semibold text-navy">{CLOSING_CTA}</p>
+          <Reveal delay={1} className="mt-12 max-w-prose rounded-2xl border border-moss-dark/25 bg-mist p-8">
+            <p className="font-serif text-xl font-semibold text-forest">{CLOSING_CTA}</p>
             <div className="mt-6 flex flex-wrap gap-4">
               <a
                 href={site.links.booking}
@@ -116,16 +116,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </Reveal>
 
           {/* Author box */}
-          <Reveal className="mt-12 max-w-prose rounded-2xl border border-navy/10 bg-white p-7">
+          <Reveal className="mt-12 max-w-prose rounded-2xl border border-forest/10 bg-white p-7">
             <div className="flex items-start gap-5">
               <span
                 aria-hidden="true"
-                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-navy font-serif text-lg font-bold text-gold"
+                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-forest font-serif text-lg font-bold text-moss"
               >
                 HS
               </span>
               <div>
-                <p className="font-serif text-lg font-semibold text-navy">{site.name}</p>
+                <p className="font-serif text-lg font-semibold text-forest">{site.name}</p>
                 <p className="mt-2 text-sm leading-relaxed text-ink">
                   A Dallas tax and accounting firm led by {site.founder.name},{" "}
                   {site.founder.credential} — an Enrolled Agent federally authorized to represent
@@ -134,7 +134,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 </p>
                 <Link
                   href="/about"
-                  className="mt-3 inline-block text-sm font-semibold text-gold-dark hover:underline"
+                  className="mt-3 inline-block text-sm font-semibold text-moss-dark hover:underline"
                 >
                   About the firm <span aria-hidden="true">&rarr;</span>
                 </Link>
@@ -145,7 +145,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </article>
 
       {/* Related services */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap">
           <Reveal>
             <RelatedLinks
@@ -164,8 +164,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <section className="section bg-white">
         <div className="wrap">
           <Reveal className="flex flex-wrap items-end justify-between gap-6">
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">Keep reading</h2>
-            <Link href="/blog" className="text-sm font-semibold text-gold-dark hover:underline">
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">Keep reading</h2>
+            <Link href="/blog" className="text-sm font-semibold text-moss-dark hover:underline">
               All articles <span aria-hidden="true">&rarr;</span>
             </Link>
           </Reveal>

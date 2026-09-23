@@ -11,11 +11,20 @@ it is never filled with a plausible guess.
 
 ## 1. Blocking — the site should not launch without these
 
-### 1.1 Photography (23 images) — live, but on a borrowed host
+### 1.1 Photography (24 images) — live, but on a borrowed host
 
-All 23 images were generated with Artlist (Seedream 5.0, 2K) and live in the
+All 24 images were generated with Artlist (Seedream 5.0, 2K) and live in the
 firm's Artlist library. **They now render on the site**, served directly from
 Artlist's CDN, so the deploy no longer looks unfinished.
+
+**Art direction predates the green palette.** The first 23 were briefed to the
+original navy-and-gold scheme — deep navy skies, warm gold window light — and
+the site is now green and white. They still read as dark, warm photographs
+behind white headline text rather than clashing, but they are no longer
+colour-matched to the brand. Worth a look on a real screen before launch. If
+the client wants them re-shot to the green palette, regenerating all 24 costs
+2,400 Artlist credits; the prompts are in `image-manifest.json` and only need
+the colour clauses rewritten.
 
 That is an interim arrangement, not the finished state. Images resolve in
 three tiers, in `lib/media.ts`:
@@ -167,6 +176,7 @@ accepts analytics cookies; while the ID is still the placeholder,
 | **Free Tax Organizer PDF** | `lib/site.ts` → `downloads.taxOrganizer` | Lead-magnet strip and Tax Center offer "Request by email" instead of a download. |
 | **Business Tax Organizer PDF** | `lib/site.ts` → `downloads.businessTaxOrganizer` | Same. |
 | **Registered legal entity name** | `lib/site.ts` → `legalNote` | Uses "Hewitt Services" throughout. The old site mixed in "Hewitt Financial Services"; the brand is Hewitt Services everywhere here. |
+| **Clients outside Texas** | `app/remote-tax-services/page.tsx` | The Remotely page claims Texas only — "our office is in Dallas and we do not keep premises anywhere else". Nothing nationwide was implied. Confirm whether out-of-state clients are accepted, and the page can be widened. |
 | **Fort Worth in-person meetings** | `app/fort-worth-tax-services/page.tsx` | Page says "In-person in Fort Worth by appointment — ask us when you call" and states plainly that the firm has no Fort Worth office. Confirm whether in-person meetings there are actually offered. |
 | **YouTube video ownership** | `app/page.tsx` | The old site embedded `youtube.com/embed/Db9xL1q1LCY`. **Not rendered** — ownership unconfirmed. A commented slot with the URL is ready on the homepage. |
 | **Founder biography details** | `app/about/page.tsx` | Years of experience, education, prior employers, awards and client counts are all **absent**, with a commented placeholder listing them. None were invented. Supply them if the firm wants them published. |

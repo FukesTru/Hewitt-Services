@@ -105,11 +105,11 @@ export default function ServicesPage() {
       </section>
 
       {GROUPS.map((group, gi) => (
-        <section key={group.heading} className={gi % 2 === 0 ? "section bg-ivory" : "section bg-white"}>
+        <section key={group.heading} className={gi % 2 === 0 ? "section bg-mist" : "section bg-white"}>
           <div className="wrap">
             <Reveal className="max-w-2xl">
-              <h2 className="font-serif text-2xl font-bold text-navy sm:text-3xl">{group.heading}</h2>
-              <span className="accent-rule mt-4 bg-gold-dark" aria-hidden="true" />
+              <h2 className="font-serif text-2xl font-bold text-forest sm:text-3xl">{group.heading}</h2>
+              <span className="accent-rule mt-4 bg-moss-dark" aria-hidden="true" />
               <p className="mt-4 text-base leading-relaxed text-ink">{group.blurb}</p>
             </Reveal>
 
@@ -129,7 +129,7 @@ export default function ServicesPage() {
       ))}
 
       {/* Helper */}
-      <section className="on-dark section bg-navy">
+      <section className="on-dark section bg-forest">
         <div className="wrap">
           <Reveal className="max-w-2xl">
             <h2 className="font-serif text-3xl font-bold text-white sm:text-4xl">
@@ -146,13 +146,13 @@ export default function ServicesPage() {
               <Reveal key={item.q} delay={i}>
                 <Link
                   href={item.href}
-                  className="group flex h-full flex-col rounded-xl border border-white/15 bg-white/5 p-7 transition hover:-translate-y-1 hover:border-gold/60 hover:bg-white/10"
+                  className="group flex h-full flex-col rounded-xl border border-white/15 bg-white/5 p-7 transition hover:-translate-y-1 hover:border-moss/60 hover:bg-white/10"
                 >
-                  <h3 className="font-serif text-xl font-semibold text-white group-hover:text-gold">
+                  <h3 className="font-serif text-xl font-semibold text-white group-hover:text-moss">
                     {item.q}
                   </h3>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-chalk/85">{item.a}</p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold">
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-moss">
                     {item.label}
                     <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
                       &rarr;
@@ -166,11 +166,11 @@ export default function ServicesPage() {
           <Reveal className="mt-10">
             <p className="text-sm text-chalk/80">
               Still unsure?{" "}
-              <Link href="/faq" className="font-semibold text-gold underline">
+              <Link href="/faq" className="font-semibold text-moss underline">
                 Read the FAQ
               </Link>{" "}
               or{" "}
-              <Link href="/contact" className="font-semibold text-gold underline">
+              <Link href="/contact" className="font-semibold text-moss underline">
                 contact us
               </Link>
               . The first call is free and nothing is decided on it.

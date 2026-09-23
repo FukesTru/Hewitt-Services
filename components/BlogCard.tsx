@@ -10,16 +10,16 @@ import type { Post } from "@/lib/posts";
  */
 export function BlogCard({ post, cover }: { post: Post; cover: MediaType }) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-navy/10 bg-white transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/10">
+    <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-forest/10 bg-white transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-forest/10">
       <Link href={`/blog/${post.slug}`} className="block" tabIndex={-1} aria-hidden="true">
-        <div className="relative aspect-[3/2] overflow-hidden bg-navy">
+        <div className="relative aspect-[3/2] overflow-hidden bg-forest">
           <Media media={cover} fill sizes="(min-width: 1024px) 24rem, 100vw" />
         </div>
       </Link>
 
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-center gap-3 text-xs">
-          <span className="rounded-full bg-ivory px-3 py-1 font-semibold text-gold-dark">
+          <span className="rounded-full bg-mist px-3 py-1 font-semibold text-moss-dark">
             {post.category}
           </span>
           <time dateTime={post.date} className="text-ink/60">
@@ -31,11 +31,11 @@ export function BlogCard({ post, cover }: { post: Post; cover: MediaType }) {
           </time>
         </div>
 
-        <h3 className="mt-4 font-serif text-lg font-semibold leading-snug text-navy group-hover:text-gold-dark">
+        <h3 className="mt-4 font-serif text-lg font-semibold leading-snug text-forest group-hover:text-moss-dark">
           <Link href={`/blog/${post.slug}`}>{post.title}</Link>
         </h3>
         <p className="mt-3 flex-1 text-sm leading-relaxed text-ink">{post.excerpt}</p>
-        <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold-dark">
+        <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-moss-dark">
           Read the article
           <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">
             &rarr;

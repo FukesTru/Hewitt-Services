@@ -19,7 +19,7 @@ function withLinks(text: string): ReactNode[] {
       <Link
         key={`${match[2]}-${match.index}`}
         href={match[2]}
-        className="font-medium text-gold-dark underline underline-offset-2 hover:text-navy"
+        className="font-medium text-moss-dark underline underline-offset-2 hover:text-forest"
       >
         {match[1]}
       </Link>
@@ -36,14 +36,14 @@ export function Prose({ blocks }: { blocks: Block[] }) {
       {blocks.map((block, i) => {
         if (block.type === "h2") {
           return (
-            <h2 key={i} className="pt-4 font-serif text-2xl font-bold text-navy sm:text-3xl">
+            <h2 key={i} className="pt-4 font-serif text-2xl font-bold text-forest sm:text-3xl">
               {block.text}
             </h2>
           );
         }
         if (block.type === "h3") {
           return (
-            <h3 key={i} className="pt-2 font-serif text-xl font-semibold text-navy">
+            <h3 key={i} className="pt-2 font-serif text-xl font-semibold text-forest">
               {block.text}
             </h3>
           );
@@ -53,7 +53,7 @@ export function Prose({ blocks }: { blocks: Block[] }) {
             <ul key={i} className="space-y-3 pl-1">
               {block.items.map((item) => (
                 <li key={item} className="flex gap-3 text-base leading-relaxed text-ink">
-                  <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                  <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-moss-dark" />
                   <span>{withLinks(item)}</span>
                 </li>
               ))}
@@ -78,10 +78,10 @@ export function CheckList({ items, tone = "light" }: { items: string[]; tone?: "
       {items.map((item) => (
         <li key={item} className="flex gap-3">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" className="mt-0.5 shrink-0">
-            <circle cx="10" cy="10" r="9.25" stroke={dark ? "#C9A84C" : "#8A6D1F"} strokeWidth="1.5" />
+            <circle cx="10" cy="10" r="9.25" stroke={dark ? "#8CBF94" : "#2F6A38"} strokeWidth="1.5" />
             <path
               d="M6 10.2l2.7 2.7L14 7.6"
-              stroke={dark ? "#C9A84C" : "#8A6D1F"}
+              stroke={dark ? "#8CBF94" : "#2F6A38"}
               strokeWidth="1.8"
               strokeLinecap="round"
               strokeLinejoin="round"

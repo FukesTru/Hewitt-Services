@@ -139,21 +139,21 @@ export default function FortWorthPage() {
           </Reveal>
 
           <Reveal delay={1} className="lg:col-span-4">
-            <div className="rounded-2xl border border-gold-dark/25 bg-ivory p-7">
-              <h2 className="font-serif text-lg font-semibold text-navy">
+            <div className="rounded-2xl border border-moss-dark/25 bg-mist p-7">
+              <h2 className="font-serif text-lg font-semibold text-forest">
                 How we serve Fort Worth
               </h2>
               <ul className="mt-5 space-y-4 text-sm leading-relaxed text-ink">
                 <li className="flex gap-3">
-                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-moss-dark" />
                   Secure virtual appointments across Tarrant County
                 </li>
                 <li className="flex gap-3">
-                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-moss-dark" />
                   In-person meetings at our Dallas office
                 </li>
                 <li className="flex gap-3">
-                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-dark" />
+                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-moss-dark" />
                   {/* PLACEHOLDER: client to confirm whether in-person meetings
                       are offered in Fort Worth itself. Until confirmed, this
                       page must not claim a Fort Worth location. */}
@@ -170,13 +170,13 @@ export default function FortWorthPage() {
       </section>
 
       {/* Services */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">
               Services for Fort Worth clients
             </h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
             <p className="prose-body mt-6">
               Everything the firm does is available to Tarrant County clients, with tax planning and
               IRS representation the two that Fort Worth business owners ask about most.
@@ -198,7 +198,7 @@ export default function FortWorthPage() {
       </section>
 
       {/* Working with us */}
-      <section className="on-dark section bg-navy">
+      <section className="on-dark section bg-forest">
         <div className="wrap">
           <Reveal className="max-w-2xl">
             <h2 className="font-serif text-3xl font-bold text-white sm:text-4xl">
@@ -215,21 +215,21 @@ export default function FortWorthPage() {
       {/* Dallas office details */}
       <section className="section bg-white">
         <div className="wrap">
-          <Reveal className="grid gap-10 rounded-2xl border border-navy/10 bg-ivory p-8 sm:p-10 lg:grid-cols-2">
+          <Reveal className="grid gap-10 rounded-2xl border border-forest/10 bg-mist p-8 sm:p-10 lg:grid-cols-2">
             <div>
-              <h2 className="font-serif text-2xl font-bold text-navy sm:text-3xl">
+              <h2 className="font-serif text-2xl font-bold text-forest sm:text-3xl">
                 If you would rather meet in person
               </h2>
-              <span className="accent-rule mt-4 bg-gold-dark" aria-hidden="true" />
+              <span className="accent-rule mt-4 bg-moss-dark" aria-hidden="true" />
               <address className="mt-6 space-y-1 text-base not-italic text-ink">
-                <p className="font-semibold text-navy">{site.name}</p>
+                <p className="font-semibold text-forest">{site.name}</p>
                 <p>
                   {site.address.streetName}, {site.address.unit}
                   <br />
                   {site.address.city}, {site.address.region} {site.address.postalCode}
                 </p>
                 <p className="pt-2">
-                  <a href={site.phone.href} className="text-gold-dark underline">
+                  <a href={site.phone.href} className="text-moss-dark underline">
                     {site.phone.display}
                   </a>
                 </p>
@@ -263,13 +263,13 @@ export default function FortWorthPage() {
       </section>
 
       {/* FAQ */}
-      <section className="section bg-ivory">
+      <section className="section bg-mist">
         <div className="wrap">
           <Reveal className="max-w-2xl">
-            <h2 className="font-serif text-3xl font-bold text-navy sm:text-4xl">
+            <h2 className="font-serif text-3xl font-bold text-forest sm:text-4xl">
               Questions from Fort Worth clients
             </h2>
-            <span className="accent-rule mt-5 bg-gold-dark" aria-hidden="true" />
+            <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
           </Reveal>
           <Reveal delay={1} className="mt-10">
             <FAQAccordion faqs={FW_FAQS} />
@@ -284,7 +284,7 @@ export default function FortWorthPage() {
                 { label: "Contact us", href: "/contact" },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="font-semibold text-gold-dark hover:underline">
+                  <Link href={l.href} className="font-semibold text-moss-dark hover:underline">
                     {l.label} <span aria-hidden="true">&rarr;</span>
                   </Link>
                 </li>

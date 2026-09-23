@@ -3,13 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --navy: #0b1f3a;
-  --navy-dark: #07142a;
-  --gold: #c9a84c;
-  --gold-dark: #8a6d1f;
-  --ivory: #f7f4ec;
-  --ink: #334155;
-  --chalk: #e5e7eb;
+  /* Greens taken from the client's existing site. */
+  --forest: #2c4a28;
+  --forest-dark: #1e3419;
+  --forest-light: #3e7d45;
+  --moss: #8cbf94;
+  --moss-dark: #2f6a38;
+  --moss-light: #bfdcc4;
+  --mist: #f2f6f0;
+  --ink: #37413a;
+  --chalk: #e3eae2;
 }
 
 html {
@@ -40,11 +43,11 @@ body {
   textarea:focus-visible,
   summary:focus-visible,
   [tabindex]:focus-visible {
-    outline: 3px solid var(--gold);
+    outline: 3px solid var(--moss-dark);
     outline-offset: 2px;
     border-radius: 2px;
   }
-  /* On dark navy the gold outline is low contrast — switch to white. */
+  /* On the dark green bands a green outline is low contrast — use white. */
   .on-dark a:focus-visible,
   .on-dark button:focus-visible,
   .on-dark [tabindex]:focus-visible {
@@ -59,17 +62,17 @@ body {
            duration-200 ease-out;
   }
   .btn-primary {
-    @apply btn bg-gold text-navy hover:-translate-y-0.5 hover:bg-gold-light
-           hover:shadow-lg hover:shadow-navy/20;
+    @apply btn bg-moss text-forest-dark hover:-translate-y-0.5 hover:bg-moss-light
+           hover:shadow-lg hover:shadow-forest/20;
   }
   .btn-secondary {
-    @apply btn border-2 border-gold bg-transparent text-gold
-           hover:-translate-y-0.5 hover:bg-gold hover:text-navy;
+    @apply btn border-2 border-moss bg-transparent text-moss
+           hover:-translate-y-0.5 hover:bg-moss hover:text-forest-dark;
   }
-  /* Outline button placed on ivory/white: needs the darker gold for contrast. */
+  /* Outline button placed on mist/white: needs the dark green for contrast. */
   .btn-secondary-light {
-    @apply btn border-2 border-gold-dark bg-transparent text-gold-dark
-           hover:-translate-y-0.5 hover:bg-gold-dark hover:text-white;
+    @apply btn border-2 border-moss-dark bg-transparent text-moss-dark
+           hover:-translate-y-0.5 hover:bg-moss-dark hover:text-white;
   }
   .wrap {
     @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
@@ -77,9 +80,9 @@ body {
   .prose-body {
     @apply text-base leading-relaxed text-ink sm:text-lg;
   }
-  /* Short gold rule that sits under every page H1. */
+  /* Short green rule that sits under every page H1. */
   .accent-rule {
-    @apply block h-1 w-16 rounded-full bg-gold;
+    @apply block h-1 w-16 rounded-full bg-moss;
   }
   .eyebrow {
     @apply text-xs font-semibold uppercase tracking-[0.2em];
@@ -110,11 +113,11 @@ body {
 
   /* Hero/section fallback used until the client's photography is dropped in. */
   .media-fallback {
-    background-color: var(--navy-dark);
+    background-color: var(--forest-dark);
     background-image:
-      radial-gradient(90% 80% at 78% 18%, rgba(201, 168, 76, 0.22) 0%, rgba(201, 168, 76, 0) 62%),
-      radial-gradient(70% 70% at 12% 92%, rgba(18, 50, 92, 0.85) 0%, rgba(7, 20, 42, 0) 70%),
-      linear-gradient(145deg, #07142a 0%, #0b1f3a 52%, #12325c 100%);
+      radial-gradient(90% 80% at 78% 18%, rgba(140, 191, 148, 0.22) 0%, rgba(140, 191, 148, 0) 62%),
+      radial-gradient(70% 70% at 12% 92%, rgba(62, 125, 69, 0.85) 0%, rgba(30, 52, 25, 0) 70%),
+      linear-gradient(145deg, #1e3419 0%, #2c4a28 52%, #3e7d45 100%);
   }
 }
 

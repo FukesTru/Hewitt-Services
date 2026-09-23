@@ -13,7 +13,8 @@ const PAGES = [
   "/services/monthly-bookkeeping", "/services/tax-planning", "/services/tax-preparation",
   "/services/back-taxes-compliance", "/services/irs-tax-problems",
   "/services/franchise-tax-reinstatement", "/services/refund-advances",
-  "/tax-solutions-in-dallas", "/fort-worth-tax-services", "/tax-center", "/faq",
+  "/tax-solutions-in-dallas", "/fort-worth-tax-services", "/remote-tax-services",
+  "/tax-center", "/faq",
   "/blog", "/reviews", "/contact", "/privacy-policy", "/terms-and-disclaimer", "/sitemap",
   "/thank-you",
   "/blog/behind-on-taxes-filing-back-returns-texas",
@@ -157,7 +158,7 @@ async function checkSitemapXml() {
   const xml = await res.text();
   if (/thank-you/.test(xml)) fail("sitemap.xml", "must not list /thank-you");
   const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  if (urls.length !== 26) fail("sitemap.xml", `expected 26 URLs, found ${urls.length}`);
+  if (urls.length !== 27) fail("sitemap.xml", `expected 27 URLs, found ${urls.length}`);
   const robots = await (await fetch(`${BASE}/robots.txt`)).text();
   if (!/Disallow: \/thank-you/.test(robots)) fail("robots.txt", "must disallow /thank-you");
   if (!/Sitemap: https:\/\/hewittservices\.net\/sitemap\.xml/.test(robots)) {

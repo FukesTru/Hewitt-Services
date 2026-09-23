@@ -47,6 +47,13 @@ export const routes: Route[] = [
     priority: 0.7,
     changeFrequency: "monthly",
   },
+  {
+    path: "/remote-tax-services",
+    label: "Remote Tax Services Across Texas",
+    group: "Locations",
+    priority: 0.7,
+    changeFrequency: "monthly",
+  },
 
   { path: "/tax-center", label: "Tax Center", group: "Resources", priority: 0.7, changeFrequency: "monthly" },
   { path: "/faq", label: "Frequently Asked Questions", group: "Resources", priority: 0.7, changeFrequency: "monthly" },

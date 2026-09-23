@@ -12,12 +12,12 @@ export function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
           return (
             <li key={crumb.path} className="flex items-center gap-2">
               {last ? (
-                <span aria-current="page" className="text-gold">
+                <span aria-current="page" className="text-moss">
                   {crumb.name}
                 </span>
               ) : (
                 <>
-                  <Link href={crumb.path} className="transition hover:text-gold">
+                  <Link href={crumb.path} className="transition hover:text-moss">
                     {crumb.name}
                   </Link>
                   <span aria-hidden="true" className="text-chalk/40">

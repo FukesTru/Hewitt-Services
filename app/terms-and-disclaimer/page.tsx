@@ -51,7 +51,7 @@ export default function TermsPage() {
                 { label: "Accessibility", href: "#accessibility" },
               ].map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} className="font-semibold text-gold-dark hover:underline">
+                  <a href={l.href} className="font-semibold text-moss-dark hover:underline">
                     {l.label}
                   </a>
                 </li>
@@ -66,36 +66,36 @@ export default function TermsPage() {
                 please do not use the site.
               </p>
               <p>
-                <strong className="font-semibold text-navy">Permitted use.</strong> You may view,
+                <strong className="font-semibold text-forest">Permitted use.</strong> You may view,
                 download and print pages from this site for your own information and for the purpose
                 of enquiring about our services. You may not republish material from this site,
                 sell or license it, or use it for any commercial purpose without our written
                 permission.
               </p>
               <p>
-                <strong className="font-semibold text-navy">Intellectual property.</strong> The
+                <strong className="font-semibold text-forest">Intellectual property.</strong> The
                 content, layout and design of this site belong to {site.name} or our licensors,
                 except where otherwise stated.
               </p>
               <p>
-                <strong className="font-semibold text-navy">Acceptable conduct.</strong> Do not use
+                <strong className="font-semibold text-forest">Acceptable conduct.</strong> Do not use
                 this site to transmit unlawful material, attempt to gain unauthorized access to any
                 system, interfere with the site&rsquo;s operation, or send advertising or
                 solicitations through our contact form.
               </p>
               <p>
-                <strong className="font-semibold text-navy">External links.</strong> We link to
+                <strong className="font-semibold text-forest">External links.</strong> We link to
                 government agencies and other third-party resources for convenience. We do not
                 control those sites and are not responsible for their content or their privacy
                 practices.
               </p>
               <p>
-                <strong className="font-semibold text-navy">Availability.</strong> We aim to keep the
+                <strong className="font-semibold text-forest">Availability.</strong> We aim to keep the
                 site available, but we do not guarantee uninterrupted access and may change or
                 withdraw any part of it.
               </p>
               <p>
-                <strong className="font-semibold text-navy">Governing law.</strong> These terms are
+                <strong className="font-semibold text-forest">Governing law.</strong> These terms are
                 governed by the laws of the State of Texas.
               </p>
             </LegalSection>
@@ -107,7 +107,7 @@ export default function TermsPage() {
               </p>
 
               <p>
-                <strong className="font-semibold text-navy">Program description.</strong> We offer
+                <strong className="font-semibold text-forest">Program description.</strong> We offer
                 two separate, optional messaging programs, and you choose each independently:
               </p>
               <LegalList
@@ -118,59 +118,59 @@ export default function TermsPage() {
               />
 
               <p>
-                <strong className="font-semibold text-navy">How to opt in.</strong> Tick the relevant
+                <strong className="font-semibold text-forest">How to opt in.</strong> Tick the relevant
                 box on our contact form, or tell us in writing. Both boxes are unchecked by default,
                 and neither is required in order to work with us. Consent to receive text messages is
                 not a condition of any purchase.
               </p>
 
               <p>
-                <strong className="font-semibold text-navy">Message frequency.</strong> Message
+                <strong className="font-semibold text-forest">Message frequency.</strong> Message
                 frequency may vary.
               </p>
 
               <p>
-                <strong className="font-semibold text-navy">Cost.</strong> Message and data rates may
+                <strong className="font-semibold text-forest">Cost.</strong> Message and data rates may
                 apply. We do not charge for the messages themselves; your mobile carrier may.
               </p>
 
               <p>
-                <strong className="font-semibold text-navy">How to opt out.</strong> Reply STOP to any
+                <strong className="font-semibold text-forest">How to opt out.</strong> Reply STOP to any
                 message to stop receiving messages from that program. You will receive a single
                 confirmation, after which no further messages will be sent.
               </p>
 
               <p>
-                <strong className="font-semibold text-navy">How to get help.</strong> Text HELP to{" "}
+                <strong className="font-semibold text-forest">How to get help.</strong> Text HELP to{" "}
                 {site.phone.display} for help, call{" "}
-                <a href={site.phone.href} className="text-gold-dark underline">
+                <a href={site.phone.href} className="text-moss-dark underline">
                   {site.phone.display}
                 </a>
                 , or email{" "}
-                <a href={`mailto:${site.email}`} className="text-gold-dark underline">
+                <a href={`mailto:${site.email}`} className="text-moss-dark underline">
                   {site.email}
                 </a>
                 .
               </p>
 
               <p>
-                <strong className="font-semibold text-navy">Carriers and delivery.</strong> Delivery is
+                <strong className="font-semibold text-forest">Carriers and delivery.</strong> Delivery is
                 not guaranteed, and carriers are not liable for delayed or undelivered messages.
               </p>
 
               <p>
-                <strong className="font-semibold text-navy">Privacy.</strong> No mobile information
+                <strong className="font-semibold text-forest">Privacy.</strong> No mobile information
                 will be shared with third parties or affiliates for marketing or promotional
                 purposes. Text messaging originator opt-in data and consent are not shared with any
                 third parties or affiliates. See our{" "}
-                <Link href="/privacy-policy" className="text-gold-dark underline">
+                <Link href="/privacy-policy" className="text-moss-dark underline">
                   Privacy Policy
                 </Link>{" "}
                 for the full detail.
               </p>
 
               <p>
-                <strong className="font-semibold text-navy">Sensitive information.</strong> Please do
+                <strong className="font-semibold text-forest">Sensitive information.</strong> Please do
                 not send Social Security numbers, tax documents or other sensitive information by
                 text message. Use the secure client portal.
               </p>
@@ -184,32 +184,32 @@ export default function TermsPage() {
                 qualified professional about your own situation.
               </p>
               <p>
-                <strong className="font-semibold text-navy">No client relationship.</strong> Using
+                <strong className="font-semibold text-forest">No client relationship.</strong> Using
                 this website, submitting the contact form, or booking a consultation does not create
                 a professional or client relationship. No engagement exists until it is agreed in
                 writing between you and {site.name}.
               </p>
               <p>
-                <strong className="font-semibold text-navy">No guarantee of results.</strong> Tax
+                <strong className="font-semibold text-forest">No guarantee of results.</strong> Tax
                 outcomes depend on your individual facts, your records and the law as it stands. We
                 do not guarantee any particular outcome, refund amount, tax saving, settlement,
                 approval or timeframe — including in matters before the IRS or the Texas
                 Comptroller. Nothing on this site should be read as promising one.
               </p>
               <p>
-                <strong className="font-semibold text-navy">Refund advances.</strong> Refund advance
+                <strong className="font-semibold text-forest">Refund advances.</strong> Refund advance
                 is subject to approval and eligibility. It is not your tax refund. Terms are provided
                 by EPS Financial.
               </p>
               <p>
-                <strong className="font-semibold text-navy">Our credentials.</strong> {site.name} is a
+                <strong className="font-semibold text-forest">Our credentials.</strong> {site.name} is a
                 tax and accounting practice led by an Enrolled Agent, a practitioner authorized by
                 the federal government to represent taxpayers before the Internal Revenue Service. We
                 are not a law firm and do not provide legal advice, and we are not a certified public
                 accounting firm.
               </p>
               <p>
-                <strong className="font-semibold text-navy">Currency of information.</strong> Tax law
+                <strong className="font-semibold text-forest">Currency of information.</strong> Tax law
                 and filing dates change. Pages on this site are accurate to the best of our knowledge
                 when written but may not reflect later changes.
               </p>
@@ -221,7 +221,7 @@ export default function TermsPage() {
                 screen readers, keyboard navigation, magnification or other assistive technology.
               </p>
               <p>
-                <strong className="font-semibold text-navy">Our target.</strong> We aim to meet the
+                <strong className="font-semibold text-forest">Our target.</strong> We aim to meet the
                 Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA. In building this site we
                 have worked to provide semantic structure and landmarks, a skip-to-content link,
                 visible keyboard focus, text alternatives for images, labeled form fields, color
@@ -229,18 +229,18 @@ export default function TermsPage() {
                 reduced-motion setting.
               </p>
               <p>
-                <strong className="font-semibold text-navy">Ongoing work.</strong> Accessibility is not
+                <strong className="font-semibold text-forest">Ongoing work.</strong> Accessibility is not
                 a one-off task. We review the site as it changes, and some third-party embedded
                 content — such as the booking calendar and maps — is outside our direct control.
               </p>
               <p>
-                <strong className="font-semibold text-navy">Telling us about a problem.</strong> If any
+                <strong className="font-semibold text-forest">Telling us about a problem.</strong> If any
                 part of this site is difficult to use, please tell us and we will put it right. Call{" "}
-                <a href={site.phone.href} className="text-gold-dark underline">
+                <a href={site.phone.href} className="text-moss-dark underline">
                   {site.phone.display}
                 </a>{" "}
                 or email{" "}
-                <a href={`mailto:${site.email}`} className="text-gold-dark underline">
+                <a href={`mailto:${site.email}`} className="text-moss-dark underline">
                   {site.email}
                 </a>
                 . Describe the page and what went wrong, and we will respond and offer the
@@ -254,11 +254,11 @@ export default function TermsPage() {
                 <br />
                 {site.address.full}
                 <br />
-                <a href={site.phone.href} className="text-gold-dark underline">
+                <a href={site.phone.href} className="text-moss-dark underline">
                   {site.phone.display}
                 </a>
                 <br />
-                <a href={`mailto:${site.email}`} className="text-gold-dark underline">
+                <a href={`mailto:${site.email}`} className="text-moss-dark underline">
                   {site.email}
                 </a>
               </p>

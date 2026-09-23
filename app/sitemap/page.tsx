@@ -41,12 +41,12 @@ export default function SiteMapPage() {
               if (items.length === 0) return null;
               return (
                 <Reveal key={group} delay={gi}>
-                  <h2 className="font-serif text-xl font-bold text-navy">{group}</h2>
-                  <span className="accent-rule mt-3 bg-gold-dark" aria-hidden="true" />
+                  <h2 className="font-serif text-xl font-bold text-forest">{group}</h2>
+                  <span className="accent-rule mt-3 bg-moss-dark" aria-hidden="true" />
                   <ul className="mt-5 space-y-2.5">
                     {items.map((r) => (
                       <li key={r.path}>
-                        <Link href={r.path} className="text-sm text-ink transition hover:text-gold-dark">
+                        <Link href={r.path} className="text-sm text-ink transition hover:text-moss-dark">
                           {r.label}
                         </Link>
                       </li>
@@ -57,14 +57,14 @@ export default function SiteMapPage() {
             })}
 
             <Reveal delay={5}>
-              <h2 className="font-serif text-xl font-bold text-navy">Blog articles</h2>
-              <span className="accent-rule mt-3 bg-gold-dark" aria-hidden="true" />
+              <h2 className="font-serif text-xl font-bold text-forest">Blog articles</h2>
+              <span className="accent-rule mt-3 bg-moss-dark" aria-hidden="true" />
               <ul className="mt-5 space-y-2.5">
                 {posts.map((p) => (
                   <li key={p.slug}>
                     <Link
                       href={`/blog/${p.slug}`}
-                      className="text-sm text-ink transition hover:text-gold-dark"
+                      className="text-sm text-ink transition hover:text-moss-dark"
                     >
                       {p.title}
                     </Link>
@@ -74,10 +74,10 @@ export default function SiteMapPage() {
             </Reveal>
           </div>
 
-          <Reveal className="mt-16 rounded-xl border border-navy/10 bg-ivory p-6">
+          <Reveal className="mt-16 rounded-xl border border-forest/10 bg-mist p-6">
             <p className="text-sm text-ink">
               Looking for the machine-readable version?{" "}
-              <a href="/sitemap.xml" className="font-semibold text-gold-dark underline">
+              <a href="/sitemap.xml" className="font-semibold text-moss-dark underline">
                 sitemap.xml
               </a>
             </p>
