@@ -105,28 +105,26 @@ named person would misrepresent the firm. The monogram fallback in
 `components/FounderPortrait.tsx` remains for the case where the file is
 missing.
 
-### 1.3 Logo — supplied, but only as a small raster ⚠️
+### 1.3 Logo — supplied and in use ✅
 
-The client supplied the logo as a 330×72 WebP, archived unchanged at
-`public/images/logo-hewitt-services.webp`. At that size it is too soft to set
-a header from, its strapline is illegible below roughly 40px tall, and its
-wordmark is near-black — invisible on the dark green header. So it is not used
-directly. Instead:
+`public/images/logo-hewitt-services.webp` (330×72) is the client's file,
+unaltered, and it is what renders in the header and the footer.
 
-- `components/LogoMark.tsx` — the mark redrawn as vector. The four greens are
-  sampled from the supplied file; the serif "H" is drawn as plain rectangles
-  so it needs no font and the same markup serves the page and the favicon.
-- `components/Logo.tsx` — mark plus the wordmark set live in Playfair Display,
-  with the strapline in the footer lockup.
-- `public/favicon.svg` and `public/apple-touch-icon.png` — generated from that
-  mark.
+Its wordmark is near-black, which would vanish on the dark green header, so on
+the dark bands it sits on a white panel. The artwork itself is not recoloured,
+cropped or redrawn.
 
-**Worth asking the client for the vector original (AI, EPS, SVG or PDF).**
-With it, the wordmark could be set in the firm's actual typeface rather than
-Playfair Display, which is the one part of the lockup that is an
-approximation. Everything else is exact.
+`public/favicon.png` and `public/apple-touch-icon.png` are cropped from the
+mark in that same file.
 
-The palette now follows the logo: `forest` `#1C4C23`, `forest-light` `#2E9C5A`,
+**Worth asking the client for a larger or vector original (AI, EPS, SVG or
+PDF).** At 330×72 the file is displayed at 40px tall in the header, which is
+sharp on a normal screen and adequate on a retina one, but there is no headroom
+to go bigger, and the strapline "Where excellence is at its best" is only a few
+pixels tall at that size. A vector original would also give a crisper favicon
+and touch icon.
+
+The palette follows the logo: `forest` `#1C4C23`, `forest-light` `#2E9C5A`,
 `moss` `#86BF87` and `moss-dark` `#14793A` are its four greens.
 
 ### 1.4 EPS Financial disclosures — client to supply

@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   authors: [{ name: site.name, url: site.url }],
   formatDetection: { telephone: true, address: true, email: true },
   icons: {
-    // Drawn from the client's logo mark — see components/LogoMark.tsx.
-    icon: "/favicon.svg",
+    // Cropped from the supplied logo artwork.
+    icon: "/favicon.png",
     apple: "/apple-touch-icon.png",
   },
 };

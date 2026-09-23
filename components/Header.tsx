@@ -134,7 +134,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
       <UtilityBar />
 
       <nav className="wrap flex h-20 items-center justify-between gap-4" aria-label="Main">
-        <Logo />
+        <Logo priority />
 
         <ul className="hidden items-center gap-0.5 lg:flex xl:gap-1">
           {mainNav.map((item) => {

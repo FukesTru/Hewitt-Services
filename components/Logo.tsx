@@ -1,63 +1,46 @@
+import Image from "next/image";
 import Link from "next/link";
-import { LogoMark } from "./LogoMark";
 
 type Props = {
+  /** "light" = placed on a dark green band; "dark" = on white or mist. */
   variant?: "light" | "dark";
   className?: string;
-  /** Show the strapline under the wordmark. Off in the header, on in the footer. */
-  tagline?: boolean;
+  priority?: boolean;
 };
 
+const LOGO = "/images/logo-hewitt-services.webp";
+
 /**
- * Brand lockup: the vector mark plus the wordmark.
+ * The client's logo, used exactly as supplied.
  *
- * The client supplied the logo as a 330x72 raster (kept at
- * public/images/logo-hewitt-services.webp). At that size it is too soft for a
- * header and its strapline is illegible below about 40px tall, so the mark is
- * redrawn as vector here and the wordmark is set live in Playfair Display —
- * crisp at any size, recolourable for dark and light, and readable to screen
- * readers. See PRELAUNCH: a vector original from the client would let the
- * wordmark match their typeface exactly.
+ * Its wordmark is near-black, which would disappear on the dark green header
+ * and footer, so on those it sits on a white panel rather than being
+ * recoloured — the artwork itself is never altered.
  */
-export function Logo({ variant = "light", className = "", tagline = false }: Props) {
-  const isLight = variant === "light";
+export function Logo({ variant = "light", className = "", priority = false }: Props) {
+  const onDark = variant === "light";
 
   return (
     <Link
       href="/"
-      className={`group inline-flex items-center gap-3 ${className}`}
-      aria-label={`Hewitt Services${tagline ? " — where excellence is at its best" : ""} — home`}
+      className={`inline-flex items-center ${className}`}
+      aria-label="Hewitt Services — home"
     >
-      <LogoMark
-        tile={isLight}
-        className="h-10 w-10 shrink-0 transition-transform duration-300 group-hover:-translate-y-0.5 sm:h-11 sm:w-11"
-      />
-
-      <span className="flex flex-col leading-none">
-        <span
-          className={`whitespace-nowrap font-serif text-xl font-bold tracking-tight sm:text-2xl ${
-            isLight ? "text-white" : "text-forest"
-          }`}
-        >
-          Hewitt <span className={isLight ? "text-moss" : "text-moss-dark"}>Services</span>
-        </span>
-
-        {tagline ? (
-          <span
-            className={`mt-1.5 font-serif text-[0.7rem] italic tracking-[0.12em] ${
-              isLight ? "text-chalk/70" : "text-ink/70"
-            }`}
-          >
-            Where excellence is at its best
-          </span>
-        ) : (
-          <span
-            className={`mt-1.5 h-px w-8 transition-all duration-300 group-hover:w-14 ${
-              isLight ? "bg-moss" : "bg-moss-dark"
-            }`}
-            aria-hidden="true"
-          />
-        )}
+      <span
+        className={
+          onDark
+            ? "inline-flex rounded-lg bg-white px-3 py-2 shadow-sm shadow-black/20 transition duration-300 hover:-translate-y-0.5"
+            : "inline-flex transition duration-300 hover:-translate-y-0.5"
+        }
+      >
+        <Image
+          src={LOGO}
+          alt=""
+          width={330}
+          height={72}
+          priority={priority}
+          className="h-8 w-auto sm:h-10"
+        />
       </span>
     </Link>
   );
