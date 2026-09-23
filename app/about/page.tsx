@@ -99,9 +99,7 @@ export default function AboutPage() {
       <section className="section bg-mist">
         <div className="wrap grid items-center gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-forest">
-              <FounderPortrait />
-            </div>
+            <FounderPortrait />
           </Reveal>
 
           <Reveal delay={1} className="lg:col-span-7">

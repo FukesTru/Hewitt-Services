@@ -85,12 +85,19 @@ the library or regenerated.
 
 ### 1.2 Founder photograph — supplied ✅
 
-`public/images/demarcus-hewitt.jpg` (1500×1500, 466 KB) is in the repo and
+`public/images/demarcus-hewitt.jpg` (1000×1250, 297 KB) is in the repo and
 renders on the homepage founder feature and on `/about`. Because it is
 committed, it appears on a deploy regardless of the Artlist situation above.
 
+The supplied original was 1500×1500. It has been cropped to 4:5 around the
+subject — the square framing included a stretch of office wall and a printer
+on the right — and the mahogany panelling behind him was desaturated a little
+so it sits with the green palette rather than fighting it. Nothing about the
+subject was altered, and the original is recoverable from git history if the
+client prefers it untouched.
+
 Alt text: "Demarcus Hewitt, Founder and Enrolled Agent of Hewitt Services".
-Served through the image optimizer — 466 KB source down to roughly 20 KB AVIF
+Served through the image optimizer — 297 KB source down to roughly 20 KB AVIF
 at display size.
 
 It was never generated: a synthetic or stock face standing in for a real,
@@ -98,15 +105,29 @@ named person would misrepresent the firm. The monogram fallback in
 `components/FounderPortrait.tsx` remains for the case where the file is
 missing.
 
-### 1.3 Logo and favicon — client to supply
+### 1.3 Logo — supplied, but only as a small raster ⚠️
 
-- `components/Logo.tsx` — currently a typographic wordmark ("Hewitt
-  **Services**" with a gold rule). Replace the markup with the supplied file,
-  keeping the `Link` wrapper and its accessible name.
-- `public/favicon.svg` — placeholder navy/gold "H" tile.
-- **If the logo's brand colors differ from the palette below, update
-  `tailwind.config.ts`.** The current palette was specified in the brief, not
-  taken from the logo.
+The client supplied the logo as a 330×72 WebP, archived unchanged at
+`public/images/logo-hewitt-services.webp`. At that size it is too soft to set
+a header from, its strapline is illegible below roughly 40px tall, and its
+wordmark is near-black — invisible on the dark green header. So it is not used
+directly. Instead:
+
+- `components/LogoMark.tsx` — the mark redrawn as vector. The four greens are
+  sampled from the supplied file; the serif "H" is drawn as plain rectangles
+  so it needs no font and the same markup serves the page and the favicon.
+- `components/Logo.tsx` — mark plus the wordmark set live in Playfair Display,
+  with the strapline in the footer lockup.
+- `public/favicon.svg` and `public/apple-touch-icon.png` — generated from that
+  mark.
+
+**Worth asking the client for the vector original (AI, EPS, SVG or PDF).**
+With it, the wordmark could be set in the firm's actual typeface rather than
+Playfair Display, which is the one part of the lockup that is an
+approximation. Everything else is exact.
+
+The palette now follows the logo: `forest` `#1C4C23`, `forest-light` `#2E9C5A`,
+`moss` `#86BF87` and `moss-dark` `#14793A` are its four greens.
 
 ### 1.4 EPS Financial disclosures — client to supply
 

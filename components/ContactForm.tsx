@@ -168,7 +168,7 @@ export function ContactForm({
           name="serviceInquiryConfirmed"
           type="checkbox"
           required
-          className="mt-1 h-4 w-4 shrink-0 accent-[#2F6A38]"
+          className="mt-1 h-4 w-4 shrink-0 accent-[#14793A]"
         />
         <label htmlFor={`${id}-confirm`} className={`text-sm ${dark ? "text-chalk" : "text-ink"}`}>
           I confirm this is a service inquiry and not an advertising message or solicitation.{" "}

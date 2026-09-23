@@ -78,7 +78,7 @@ export function CheckList({ items, tone = "light" }: { items: string[]; tone?: "
       {items.map((item) => (
         <li key={item} className="flex gap-3">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" className="mt-0.5 shrink-0">
-            <circle cx="10" cy="10" r="9.25" stroke={dark ? "#8CBF94" : "#2F6A38"} strokeWidth="1.5" />
+            <circle cx="10" cy="10" r="9.25" stroke={dark ? "#86BF87" : "#14793A"} strokeWidth="1.5" />
             <path
               d="M6 10.2l2.7 2.7L14 7.6"
               stroke={dark ? "#8CBF94" : "#2F6A38"}

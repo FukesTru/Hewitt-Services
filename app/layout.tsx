@@ -35,14 +35,14 @@ export const metadata: Metadata = {
   authors: [{ name: site.name, url: site.url }],
   formatDetection: { telephone: true, address: true, email: true },
   icons: {
-    // TODO(client assets): replace with the favicon generated from the
-    // supplied logo.
+    // Drawn from the client's logo mark — see components/LogoMark.tsx.
     icon: "/favicon.svg",
+    apple: "/apple-touch-icon.png",
   },
 };
 
 export const viewport = {
-  themeColor: "#2C4A28",
+  themeColor: "#1C4C23",
   width: "device-width",
   initialScale: 1,
 };

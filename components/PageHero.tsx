@@ -30,7 +30,7 @@ export function PageHero({
   return (
     <section
       className={`on-dark relative isolate overflow-hidden bg-forest ${
-        size === "tall" ? "pt-40 pb-24 sm:pt-48 sm:pb-32" : "pt-36 pb-16 sm:pt-44 sm:pb-20"
+        size === "tall" ? "pt-40 pb-20 sm:pt-48 sm:pb-28" : "pt-36 pb-16 sm:pt-44 sm:pb-20"
       }`}
     >
       {image ? (
@@ -47,6 +47,10 @@ export function PageHero({
       ) : (
         <div className="media-fallback absolute inset-0 -z-10" aria-hidden="true" />
       )}
+
+      {/* A soft light from the upper right and a shadow into the section
+          below. Gives the band depth whether or not a photograph loads. */}
+      <div className="hero-glow absolute inset-0 -z-10" aria-hidden="true" />
 
       <div className="wrap">
         {crumbs ? <Breadcrumbs crumbs={crumbs} /> : null}

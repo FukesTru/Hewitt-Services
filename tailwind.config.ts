@@ -9,20 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Greens sampled from the client's existing site: a deep green for
-        // dark bands and a mid green for accents. Everything else is a tint
-        // of those two, chosen so each pairing clears WCAG 2.1 AA.
+        // The four greens are lifted straight from the logo mark (see
+        // components/LogoMark.tsx); forest.dark and moss.light are tints of
+        // them, added where contrast needed the extra step. Every pairing the
+        // design uses clears WCAG 2.1 AA — `npm run contrast` proves it.
         forest: {
-          DEFAULT: "#2C4A28",
-          dark: "#1E3419",
-          light: "#3E7D45",
+          DEFAULT: "#1C4C23",
+          dark: "#13351A",
+          light: "#2E9C5A",
         },
         moss: {
-          DEFAULT: "#8CBF94",
+          DEFAULT: "#86BF87",
           // Dark moss is the only green approved for TEXT on light
-          // backgrounds — 6.5:1 on white. The DEFAULT is for dark bands.
-          dark: "#2F6A38",
-          light: "#BFDCC4",
+          // backgrounds — 5.5:1 on white. The DEFAULT is for dark bands.
+          dark: "#14793A",
+          light: "#BEDCBF",
         },
         mist: "#F2F6F0",
         ink: "#37413A",

@@ -28,10 +28,12 @@ export function CookieConsent() {
       role="dialog"
       aria-label="Cookie consent"
       aria-live="polite"
-      className="on-dark fixed inset-x-0 bottom-0 z-[60] border-t border-white/15 bg-forest-dark/98 backdrop-blur"
+      /* Sits clear of both corners: the floating Call button is bottom-left
+         on mobile, and bottom-right is reserved for a chat widget. */
+      className="on-dark fixed bottom-24 left-4 right-4 z-[60] rounded-2xl border border-white/15 bg-forest-dark/95 shadow-2xl shadow-black/40 backdrop-blur sm:bottom-6 sm:left-1/2 sm:right-auto sm:w-[40rem] sm:max-w-[calc(100vw-3rem)] sm:-translate-x-1/2"
     >
-      <div className="wrap flex flex-col gap-4 py-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="max-w-3xl text-sm leading-relaxed text-chalk">
+      <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+        <p className="text-sm leading-relaxed text-chalk">
           We use essential cookies to run this site, and analytics cookies to understand how it is
           used — only if you accept. Read our{" "}
           <Link href="/privacy-policy" className="text-moss underline">

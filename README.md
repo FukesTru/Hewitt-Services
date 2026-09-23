@@ -92,17 +92,19 @@ or an FAQ means editing `lib/services.ts`, `lib/posts.ts` or `lib/faqs.ts`.
 
 ## Design system
 
-Green and white, taken from the client's existing site: a deep green for the
-dark bands and a mid green for accents. Everything else is a tint of those two.
+Green and white. `forest`, `forest-light`, `moss` and `moss-dark` are the four
+greens of the logo mark, sampled from the file the client supplied;
+`forest-dark` and `moss-light` are tints of them added where contrast needed
+another step.
 
 | Token | Value | Use |
 |---|---|---|
-| `forest` | `#2C4A28` | Primary dark — hero, header, footer, dark bands |
-| `forest-dark` | `#1E3419` | Utility bar, deepest bands, gradient base |
-| `forest-light` | `#3E7D45` | Mid green, gradients and hover fills |
-| `moss` | `#8CBF94` | Accents and buttons **on dark only** |
-| `moss-dark` | `#2F6A38` | Green **text, links and rules on light** (contrast) |
-| `moss-light` | `#BFDCC4` | Lightest accent — hover states on dark |
+| `forest` | `#1C4C23` | Primary dark — hero, header, footer, dark bands |
+| `forest-dark` | `#13351A` | Utility bar, deepest bands, gradient base |
+| `forest-light` | `#2E9C5A` | Mid green, gradients and hover fills |
+| `moss` | `#86BF87` | Accents and buttons **on dark only** |
+| `moss-dark` | `#14793A` | Green **text, links and rules on light** (contrast) |
+| `moss-light` | `#BEDCBF` | Lightest accent — hover states on dark |
 | `mist` | `#F2F6F0` | Alternating light sections |
 | `ink` | `#37413A` | Body text on light |
 | `chalk` | `#E3EAE2` | Body text on dark |

@@ -1,6 +1,6 @@
 const C = {
-  forest: "#2C4A28", "forest-dark": "#1E3419", "forest-light": "#3E7D45",
-  moss: "#8CBF94", "moss-dark": "#2F6A38", "moss-light": "#BFDCC4",
+  forest: "#1C4C23", "forest-dark": "#13351A", "forest-light": "#2E9C5A",
+  moss: "#86BF87", "moss-dark": "#14793A", "moss-light": "#BEDCBF",
   mist: "#F2F6F0", ink: "#37413A", chalk: "#E3EAE2", white: "#FFFFFF",
 };
 const lin = (c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4);
