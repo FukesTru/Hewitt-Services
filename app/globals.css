@@ -111,6 +111,21 @@ body {
     transform: none;
   }
 
+  /* The hand-drawn rule under the homepage headline draws itself in.
+     stroke-dashoffset rests at 0 and the animation fills backwards, so if
+     animations never run the rule is simply there — it can't get stuck
+     invisible the way an opacity entrance can. */
+  @keyframes draw-rule {
+    from {
+      stroke-dashoffset: 340;
+    }
+  }
+  .headline-rule path {
+    stroke-dasharray: 340;
+    stroke-dashoffset: 0;
+    animation: draw-rule 0.9s 0.35s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
+
   /* Depth for the dark hero band: a soft light from the upper right and a
      shadow falling into the section below. Sits over the photograph or the
      gradient equally, so every hero has the same modelling. */

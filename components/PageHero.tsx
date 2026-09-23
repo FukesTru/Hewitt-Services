@@ -5,7 +5,11 @@ import type { Media as MediaType } from "@/lib/media";
 import type { Crumb } from "@/lib/schema";
 
 type Props = {
-  title: string;
+  title: ReactNode;
+  /** Overrides the size classes on the H1. For a headline set by hand. */
+  titleClassName?: string;
+  /** The short rule under the H1. Off where the headline carries its own. */
+  accentRule?: boolean;
   /** One sentence under the H1. */
   lede?: string;
   eyebrow?: string;
@@ -19,6 +23,8 @@ type Props = {
 
 export function PageHero({
   title,
+  titleClassName,
+  accentRule = true,
   lede,
   eyebrow,
   crumbs,
@@ -59,14 +65,15 @@ export function PageHero({
           {eyebrow ? <p className="eyebrow mb-4 text-moss">{eyebrow}</p> : null}
           <h1
             className={`font-bold text-white ${
-              size === "tall"
+              titleClassName ??
+              (size === "tall"
                 ? "text-4xl leading-[1.1] sm:text-5xl lg:text-6xl"
-                : "text-3xl leading-[1.15] sm:text-4xl lg:text-5xl"
+                : "text-3xl leading-[1.15] sm:text-4xl lg:text-5xl")
             }`}
           >
             {title}
           </h1>
-          <span className="accent-rule mt-6" aria-hidden="true" />
+          {accentRule ? <span className="accent-rule mt-6" aria-hidden="true" /> : null}
           {lede ? (
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-chalk sm:text-xl">{lede}</p>
           ) : null}

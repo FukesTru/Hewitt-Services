@@ -103,8 +103,35 @@ export default function HomePage() {
       <JsonLd data={accountingServiceSchema()} />
 
       <PageHero
-        title="Your Trusted Partner for Tax Relief, Planning, and Precision"
-        lede="Tax and accounting services for individuals and business owners in Dallas and across Texas."
+        title={
+          <>
+            <span className="block">Taxes,</span>{" "}
+            <span className="relative inline-block text-moss-light">
+              to the letter.
+              {/* Hand-drawn rule under the second line. Decorative: the H1
+                  still reads "Taxes, to the letter." to a screen reader. */}
+              <svg
+                viewBox="0 0 320 14"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+                className="headline-rule pointer-events-none absolute -bottom-2 left-0 h-[0.26em] w-full text-moss sm:-bottom-3"
+              >
+                <path
+                  d="M3 10C58 4 116 3.2 174 6.4c58 3.2 102 4 143 -1.4"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="6"
+                  strokeLinecap="round"
+                  vectorEffect="non-scaling-stroke"
+                />
+              </svg>
+            </span>
+          </>
+        }
+        titleClassName="text-5xl leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl xl:text-[5.25rem]"
+        accentRule={false}
+        eyebrow="Tax and accounting · Dallas, Texas"
+        lede="Your trusted partner for tax relief, planning and precision — tax and accounting for individuals and business owners in Dallas and across Texas."
         image={IMAGES.homeHero()}
         priority
         size="tall"

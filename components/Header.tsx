@@ -136,7 +136,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
       <nav className="wrap flex h-20 items-center justify-between gap-4" aria-label="Main">
         <Logo />
 
-        <ul className="hidden items-center gap-1 lg:flex">
+        <ul className="hidden items-center gap-0.5 lg:flex xl:gap-1">
           {mainNav.map((item) => {
             const hasPanel = Boolean(item.groups || item.children);
             const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
@@ -153,7 +153,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
                     aria-expanded={openMenu === item.label}
                     aria-haspopup="true"
                     onClick={() => setOpenMenu(openMenu === item.label ? null : item.label)}
-                    className={`flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition ${
+                    className={`flex items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium transition xl:px-3 ${
                       active ? "text-moss" : "text-white hover:text-moss"
                     }`}
                   >
@@ -170,7 +170,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
                 ) : (
                   <Link
                     href={item.href}
-                    className={`block rounded-md px-3 py-2 text-sm font-medium transition ${
+                    className={`block whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium transition xl:px-3 ${
                       active ? "text-moss" : "text-white hover:text-moss"
                     }`}
                   >
@@ -210,14 +210,19 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
           })}
         </ul>
 
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center gap-3 lg:flex xl:gap-4">
           <a
             href={site.phone.href}
-            className="inline-flex items-center rounded-md px-2 py-3 text-sm font-semibold text-white transition hover:text-moss"
+            className="hidden items-center whitespace-nowrap rounded-md px-2 py-3 text-sm font-semibold text-white transition hover:text-moss xl:inline-flex"
           >
             {site.phone.display}
           </a>
-          <a href={site.links.booking} target="_blank" rel="noopener noreferrer" className="btn-primary">
+          <a
+            href={site.links.booking}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary whitespace-nowrap"
+          >
             Book a Free Call
           </a>
         </div>
@@ -264,10 +269,12 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
 
             <div className="space-y-2 border-t border-white/10 pt-6">
               {[
+                { label: "Home", href: "/" },
                 { label: "About", href: "/about" },
                 { label: "Tax Center", href: "/tax-center" },
                 { label: "Dallas", href: "/tax-solutions-in-dallas" },
                 { label: "Fort Worth", href: "/fort-worth-tax-services" },
+                { label: "Remotely", href: "/remote-tax-services" },
                 { label: "Reviews", href: "/reviews" },
                 { label: "Blog", href: "/blog" },
                 { label: "FAQ", href: "/faq" },

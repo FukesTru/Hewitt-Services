@@ -99,6 +99,7 @@ export const servicesNavGroups: NavGroup[] = [
 ];
 
 export const mainNav = [
+  { label: "Home", href: "/" },
   { label: "Services", href: "/services", groups: servicesNavGroups },
   { label: "About", href: "/about" },
   { label: "Tax Center", href: "/tax-center" },

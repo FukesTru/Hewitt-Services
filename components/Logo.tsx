@@ -35,7 +35,7 @@ export function Logo({ variant = "light", className = "", tagline = false }: Pro
 
       <span className="flex flex-col leading-none">
         <span
-          className={`font-serif text-xl font-bold tracking-tight sm:text-2xl ${
+          className={`whitespace-nowrap font-serif text-xl font-bold tracking-tight sm:text-2xl ${
             isLight ? "text-white" : "text-forest"
           }`}
         >
