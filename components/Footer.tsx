@@ -20,7 +20,7 @@ export function Footer() {
       <div className="wrap py-16">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Logo />
+            <Logo onDark />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-chalk/80">
               Tax planning, bookkeeping and IRS problem resolution for individuals and
               business owners in Dallas and across Texas, led by an Enrolled Agent.

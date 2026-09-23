@@ -111,8 +111,12 @@ another step.
 
 Playfair Display for headings, Inter for body and UI.
 
-`moss` fails contrast as text on white — use `moss-dark` there. `.btn-secondary`
-is for dark backgrounds, `.btn-secondary-light` for light ones.
+`moss` fails contrast as text on white — use `moss-dark` there.
+
+`.btn-primary` reads its ground: dark green with white text by default, and
+moss with dark text inside `.on-dark`. Put `.on-dark` on any dark green
+section and the buttons, focus rings and link colours inside it follow.
+`.btn-secondary` is for dark backgrounds, `.btn-secondary-light` for light.
 
 `npm run contrast` checks every pairing the design actually uses against WCAG
 2.1 AA and exits non-zero if one slips. Run it after touching the palette.

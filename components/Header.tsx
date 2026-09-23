@@ -8,26 +8,26 @@ import { site, mainNav, servicesNavGroups } from "@/lib/site";
 
 function UtilityBar() {
   return (
-    <div className="hidden border-b border-white/10 bg-forest-dark lg:block">
+    <div className="hidden border-b border-forest/10 bg-mist lg:block">
       {/* Links fill the bar's full height so the hit area matches what is drawn. */}
-      <div className="wrap flex h-10 items-stretch justify-end gap-2 text-xs text-chalk">
-        <a href={site.phone.href} className="flex items-center px-2 transition hover:text-moss">
+      <div className="wrap flex h-10 items-stretch justify-end gap-2 text-xs text-ink">
+        <a href={site.phone.href} className="flex items-center px-2 transition hover:text-moss-dark">
           {site.phone.display}
         </a>
-        <a href={`mailto:${site.email}`} className="flex items-center px-2 transition hover:text-moss">
+        <a href={`mailto:${site.email}`} className="flex items-center px-2 transition hover:text-moss-dark">
           {site.email}
         </a>
         <a
           href={site.links.portal}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center px-2 transition hover:text-moss"
+          className="flex items-center px-2 transition hover:text-moss-dark"
         >
           Client Login
         </a>
         <Link
           href="/tax-center#downloads"
-          className="flex items-center px-2 font-semibold text-moss transition hover:text-moss-light"
+          className="flex items-center px-2 font-semibold text-moss-dark transition hover:text-forest"
         >
           Free Tax Organizer
         </Link>
@@ -76,7 +76,7 @@ function ServicesMenu({ onNavigate }: { onNavigate?: () => void }) {
   );
 }
 
-export function Header({ transparentOverHero = true }: { transparentOverHero?: boolean }) {
+export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -115,7 +115,9 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
     };
   }, [mobileOpen]);
 
-  const solid = scrolled || !transparentOverHero || mobileOpen || openMenu !== null;
+  // The header is opaque at every scroll position now that it is light —
+  // `raised` only decides whether it casts a shadow over the page.
+  const raised = scrolled || mobileOpen || openMenu !== null;
 
   const scheduleClose = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -127,8 +129,8 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
 
   return (
     <header
-      className={`on-dark fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        solid ? "bg-forest shadow-lg shadow-forest/20" : "bg-transparent"
+      className={`fixed inset-x-0 top-0 z-50 border-b border-forest/10 bg-white transition-shadow duration-300 ${
+        raised ? "shadow-lg shadow-forest/10" : ""
       }`}
     >
       <UtilityBar />
@@ -154,7 +156,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
                     aria-haspopup="true"
                     onClick={() => setOpenMenu(openMenu === item.label ? null : item.label)}
                     className={`flex items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium transition xl:px-3 ${
-                      active ? "text-moss" : "text-white hover:text-moss"
+                      active ? "text-moss-dark" : "text-forest hover:text-moss-dark"
                     }`}
                   >
                     {item.label}
@@ -171,7 +173,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
                   <Link
                     href={item.href}
                     className={`block whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium transition xl:px-3 ${
-                      active ? "text-moss" : "text-white hover:text-moss"
+                      active ? "text-moss-dark" : "text-forest hover:text-moss-dark"
                     }`}
                   >
                     {item.label}
@@ -213,7 +215,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
         <div className="hidden items-center gap-3 lg:flex xl:gap-4">
           <a
             href={site.phone.href}
-            className="hidden items-center whitespace-nowrap rounded-md px-2 py-3 text-sm font-semibold text-white transition hover:text-moss xl:inline-flex"
+            className="hidden items-center whitespace-nowrap rounded-md px-2 py-3 text-sm font-semibold text-forest transition hover:text-moss-dark xl:inline-flex"
           >
             {site.phone.display}
           </a>
@@ -232,7 +234,7 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
           onClick={() => setMobileOpen((v) => !v)}
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-white lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-forest lg:hidden"
         >
           <span className="sr-only">{mobileOpen ? "Close menu" : "Open menu"}</span>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -248,26 +250,26 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
       {mobileOpen ? (
         <div
           id="mobile-menu"
-          className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-white/10 bg-forest pb-10 lg:hidden"
+          className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-forest/10 bg-white pb-10 lg:hidden"
         >
           <div className="wrap space-y-6 pt-6">
             <div className="space-y-2">
-              <p className="eyebrow text-moss">Services</p>
+              <p className="eyebrow text-moss-dark">Services</p>
               {servicesNavGroups.flatMap((g) => g.items).map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block rounded-md px-3 py-2.5 text-base text-white hover:bg-white/5"
+                  className="block rounded-md px-3 py-2.5 text-base text-forest hover:bg-mist"
                 >
                   {item.label}
                 </Link>
               ))}
-              <Link href="/services" className="block px-3 py-2 text-sm font-semibold text-moss">
+              <Link href="/services" className="block px-3 py-2 text-sm font-semibold text-moss-dark">
                 View all services &rarr;
               </Link>
             </div>
 
-            <div className="space-y-2 border-t border-white/10 pt-6">
+            <div className="space-y-2 border-t border-forest/10 pt-6">
               {[
                 { label: "Home", href: "/" },
                 { label: "About", href: "/about" },
@@ -283,25 +285,25 @@ export function Header({ transparentOverHero = true }: { transparentOverHero?: b
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block rounded-md px-3 py-2.5 text-base text-white hover:bg-white/5"
+                  className="block rounded-md px-3 py-2.5 text-base text-forest hover:bg-mist"
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
 
-            <div className="space-y-3 border-t border-white/10 pt-6">
+            <div className="space-y-3 border-t border-forest/10 pt-6">
               <a href={site.links.booking} target="_blank" rel="noopener noreferrer" className="btn-primary w-full">
                 Book a Free Call
               </a>
-              <a href={site.phone.href} className="btn-secondary w-full">
+              <a href={site.phone.href} className="btn-secondary-light w-full">
                 Call {site.phone.display}
               </a>
               <a
                 href={site.links.portal}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-3 py-2 text-center text-sm text-chalk underline"
+                className="block px-3 py-2 text-center text-sm text-ink underline"
               >
                 Client Login
               </a>

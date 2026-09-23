@@ -62,8 +62,13 @@ body {
            duration-200 ease-out;
   }
   .btn-primary {
-    @apply btn bg-moss text-forest-dark hover:-translate-y-0.5 hover:bg-moss-light
-           hover:shadow-lg hover:shadow-forest/20;
+    @apply btn bg-forest text-white hover:-translate-y-0.5 hover:bg-forest-dark
+           hover:shadow-lg hover:shadow-forest/25;
+  }
+  /* On the dark bands the same button flips to moss, where it has the contrast
+     the dark green cannot. */
+  .on-dark .btn-primary {
+    @apply bg-moss text-forest-dark hover:bg-moss-light hover:shadow-black/25;
   }
   .btn-secondary {
     @apply btn border-2 border-moss bg-transparent text-moss
