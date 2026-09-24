@@ -1,10 +1,8 @@
 import Link from "next/link";
 
 import { CTABand } from "@/components/CTABand";
-import { BlogCard } from "@/components/BlogCard";
 import { FaqTeaser } from "@/components/FAQAccordion";
 import { FounderPortrait } from "@/components/FounderPortrait";
-import { GoogleReviews } from "@/components/GoogleReviews";
 import { JsonLd } from "@/components/JsonLd";
 import { LeadMagnetStrip } from "@/components/LeadMagnetStrip";
 import { PageHero } from "@/components/PageHero";
@@ -13,8 +11,7 @@ import { Reveal } from "@/components/Reveal";
 import { ServiceCard } from "@/components/ServiceCard";
 import { TrustStrip } from "@/components/TrustStrip";
 import { homeFaqs } from "@/lib/faqs";
-import { IMAGES, postImage } from "@/lib/media";
-import { posts } from "@/lib/posts";
+import { IMAGES } from "@/lib/media";
 import { accountingServiceSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import { getService } from "@/lib/services";
@@ -64,7 +61,7 @@ const WHY_US = [
   },
   {
     title: "Compliance and accuracy come first",
-    body: "Every account is reviewed before a return is filed. Accuracy is not a finishing touch here — it is the thing that prevents the letters, the amendments and the penalties.",
+    body: "Every account is reviewed before a return is filed. Accuracy is not a finishing touch here. It is the thing that prevents the letters, the amendments and the penalties.",
   },
   {
     title: "Secure, whether virtual or in person",
@@ -87,7 +84,7 @@ const HOW_WE_WORK = [
   },
   {
     title: "We do the work",
-    body: "Filing, cleanup, planning or representation — handled, with you kept informed at each step rather than chased for updates.",
+    body: "Filing, cleanup, planning or representation, handled with you kept informed at each step rather than chased for updates.",
   },
   {
     title: "Ongoing support",
@@ -96,7 +93,6 @@ const HOW_WE_WORK = [
 ];
 
 export default function HomePage() {
-  const featured = posts.slice(0, 3);
 
   return (
     <>
@@ -131,7 +127,7 @@ export default function HomePage() {
         titleClassName="text-5xl leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl xl:text-[5.25rem]"
         accentRule={false}
         eyebrow="Tax and accounting · Dallas, Texas"
-        lede="Your trusted partner for tax relief, planning and precision — tax and accounting for individuals and business owners in Dallas and across Texas."
+        lede="Your trusted partner for tax relief, planning and precision. Tax and accounting for individuals and business owners in Dallas and across Texas."
         image={IMAGES.homeHero()}
         priority
         size="tall"
@@ -245,7 +241,7 @@ export default function HomePage() {
             <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
 
             <p className="prose-body mt-6 max-w-prose">
-              Hewitt Services is led by {site.founder.name}, an Enrolled Agent — a credential that
+              Hewitt Services is led by {site.founder.name}, an Enrolled Agent, a credential that
               carries federal authority to represent taxpayers before the IRS. The firm was built
               around a straightforward idea: get the details right the first time, and most of what
               people fear about taxes never happens.
@@ -302,20 +298,6 @@ export default function HomePage() {
 
       <LeadMagnetStrip />
 
-      {/* Reviews */}
-      <section className="section bg-white">
-        <div className="wrap">
-          <Reveal className="mx-auto max-w-3xl">
-            <GoogleReviews />
-            <p className="mt-6 text-center text-sm">
-              <Link href="/reviews" className="font-semibold text-moss-dark hover:underline">
-                More about reviews <span aria-hidden="true">&rarr;</span>
-              </Link>
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
       {/* FAQ teaser */}
       <section className="section bg-mist">
         <div className="wrap grid gap-12 lg:grid-cols-12">
@@ -332,31 +314,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Blog */}
-      <section className="section bg-white">
-        <div className="wrap">
-          <Reveal className="flex flex-wrap items-end justify-between gap-6">
-            <div className="max-w-2xl">
-              <p className="eyebrow text-moss-dark">From the blog</p>
-              <h2 className="mt-4 font-serif text-3xl font-bold text-forest sm:text-4xl">
-                Practical guidance, plainly written
-              </h2>
-              <span className="accent-rule mt-5 bg-moss-dark" aria-hidden="true" />
-            </div>
-            <Link href="/blog" className="text-sm font-semibold text-moss-dark hover:underline">
-              All articles <span aria-hidden="true">&rarr;</span>
-            </Link>
-          </Reveal>
-
-          <div className="mt-12 grid gap-8 lg:grid-cols-3">
-            {featured.map((post, i) => (
-              <Reveal key={post.slug} delay={i}>
-                <BlogCard post={post} cover={postImage(post.slug, post.imageAlt)} />
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <CTABand />
     </>

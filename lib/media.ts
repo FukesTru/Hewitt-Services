@@ -4,10 +4,10 @@ import path from "node:path";
 /**
  * Every art-directed image on the site, resolved in three tiers.
  *
- *   1. A file in public/  — self-hosted. Always preferred.
- *   2. The signed Artlist CDN URL from image-manifest.json — interim, so the
+ *   1. A file in public/  (self-hosted). Always preferred.
+ *   2. The signed Artlist CDN URL from image-manifest.json (interim), so the
  *      photography shows on a deploy before the files are committed.
- *   3. Neither — a deep-green gradient panel. Nothing 404s.
+ *   3. Neither, so a deep-green gradient panel. Nothing 404s.
  *
  * Tier 1 wins automatically, so `npm run fetch:images` + commit silently
  * upgrades the site from CDN to self-hosted with no code change.
@@ -41,7 +41,7 @@ const remoteSources: Map<string, string> = (() => {
       map.set(publicPath, image.sourceUrl);
     }
   } catch {
-    // No manifest, or unreadable — every image simply falls to the gradient.
+    // No manifest, or unreadable, so every image simply falls to the gradient.
   }
   return map;
 })();
@@ -99,11 +99,6 @@ export const IMAGES = {
       "/images/hero/about-office.jpg",
       "A small accounting office with an oak desk, a desk lamp and neatly stacked folders"
     ),
-  taxCenter: () =>
-    media(
-      "/images/hero/tax-center.jpg",
-      "A desk calendar, a closed laptop and a brass desk clock arranged on a dark desk"
-    ),
   faq: () =>
     media(
       "/images/hero/faq.jpg",
@@ -114,24 +109,10 @@ export const IMAGES = {
       "/images/hero/contact.jpg",
       "A small office waiting area with two leather chairs and a brass floor lamp"
     ),
-  reviews: () =>
-    media(
-      "/images/hero/reviews.jpg",
-      "Two chairs angled toward each other across a low table after a conversation"
-    ),
-  blog: () =>
-    media(
-      "/images/hero/blog.jpg",
-      "An open notebook, a fountain pen and a cup of coffee on a writing desk"
-    ),
   ogDefault: () =>
     media(
       "/images/og/og-default.jpg",
-      "Hewitt Services — tax and accounting services in Dallas, Texas"
+      "Hewitt Services: tax and accounting services in Dallas, Texas"
     ),
 } as const;
 
-/** Blog post cover images, keyed by post slug. */
-export function postImage(slug: string, alt: string): Media {
-  return media(`/images/blog/${slug}.jpg`, alt);
-}

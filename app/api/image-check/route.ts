@@ -94,6 +94,6 @@ export async function GET() {
         ? "All images are self-hosted. This route can be deleted."
         : reachable === probes.length
           ? "This server CAN reach Artlist. If images still do not show, the problem is the browser or a stale deploy."
-          : "This server CANNOT reach Artlist. Hotlinking will never work here — run `npm run images` to self-host.",
+          : "This server CANNOT reach Artlist. Hotlinking will never work here. Run `npm run images` to self-host.",
   });
 }

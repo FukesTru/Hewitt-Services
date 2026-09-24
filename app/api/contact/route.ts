@@ -79,7 +79,7 @@ export async function POST(request: Request) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           to: site.email,
-          subject: `Website inquiry — ${submission.firstName} ${submission.lastName}`,
+          subject: `Website inquiry: ${submission.firstName} ${submission.lastName}`,
           ...submission,
         }),
       });
@@ -93,7 +93,7 @@ export async function POST(request: Request) {
     }
   } else {
     console.warn(
-      `[contact] CONTACT_WEBHOOK_URL is not set — submission not delivered to ${site.email}.`,
+      `[contact] CONTACT_WEBHOOK_URL is not set. Submission not delivered to ${site.email}.`,
       submission
     );
   }

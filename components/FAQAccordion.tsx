@@ -11,7 +11,7 @@ type Props = {
   className?: string;
 };
 
-/** Native <details> — keyboard accessible and works before hydration. */
+/** Native <details>: keyboard accessible and works before hydration. */
 export function FAQAccordion({ faqs, className = "" }: Props) {
   return (
     <div className={`divide-y divide-forest/10 border-y border-forest/10 ${className}`}>
@@ -40,7 +40,7 @@ export function FAQAccordion({ faqs, className = "" }: Props) {
             ) : null}
             {faq.disclosure ? (
               <p className="mt-4 rounded-md border border-dashed border-moss-dark/50 bg-mist p-4 text-xs leading-relaxed text-ink">
-                {/* Required disclosures are the provider's to supply — this block
+                {/* Required disclosures are the provider's to supply. This block
                     stays visible until the client confirms EPS Financial's terms. */}
                 {EPS_DISCLOSURE_PLACEHOLDER}
               </p>

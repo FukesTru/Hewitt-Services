@@ -46,7 +46,7 @@ export default function FaqPage() {
           </Reveal>
 
           <div className="mt-14 grid gap-12 lg:grid-cols-12">
-            {/* Sticky topic filter — plain anchors, so it works without JS. */}
+            {/* Sticky topic filter: plain anchors, so it works without JS. */}
             <nav aria-label="FAQ topics" className="lg:col-span-3">
               <div className="lg:sticky lg:top-28">
                 <p className="eyebrow text-moss-dark">Jump to</p>
@@ -86,7 +86,7 @@ export default function FaqPage() {
 
       <CTABand
         heading="Still have questions? Let's talk."
-        body="Half an hour on the phone usually resolves more than an afternoon of searching. Ask us anything — there is no charge for the first conversation."
+        body="Half an hour on the phone usually resolves more than an afternoon of searching. Ask us anything. There is no charge for the first conversation."
       />
     </>
   );

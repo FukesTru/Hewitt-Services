@@ -3,7 +3,7 @@ import type { CSSProperties, ReactNode } from "react";
 type Props = {
   children: ReactNode;
   className?: string;
-  /** Stagger index — each step adds 80ms. */
+  /** Stagger index: each step adds 80ms. */
   delay?: number;
   as?: "div" | "section" | "li" | "article";
 };
@@ -21,7 +21,7 @@ type Props = {
  * `opacity: 0` inline during SSR would ship a page that is blank below the
  * hero until hydration finishes.
  *
- * Visitors who ask for reduced motion get no transition at all — see the
+ * Visitors who ask for reduced motion get no transition at all. See the
  * `prefers-reduced-motion` block in globals.css.
  */
 export function Reveal({ children, className = "", delay = 0, as: Tag = "div" }: Props) {

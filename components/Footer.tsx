@@ -5,9 +5,6 @@ import { services } from "@/lib/services";
 
 const company = [
   { label: "About", href: "/about" },
-  { label: "Tax Center", href: "/tax-center" },
-  { label: "Reviews", href: "/reviews" },
-  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];

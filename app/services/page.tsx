@@ -36,7 +36,7 @@ const GROUPS = [
   },
   {
     heading: "Get compliant and resolve",
-    blurb: "Unfiled years, IRS enforcement and forfeited Texas entities — brought back into order.",
+    blurb: "Unfiled years, IRS enforcement and forfeited Texas entities, brought back into order.",
     slugs: ["back-taxes-compliance", "irs-tax-problems", "franchise-tax-reinstatement"],
   },
   {
@@ -97,7 +97,7 @@ export default function ServicesPage() {
             <p className="prose-body">
               Below, the services are grouped by what you are actually trying to do rather than by
               what the profession calls them. If you are not sure where you fit, the three questions
-              further down will point you to the right page in one click — or call us and we will
+              further down will point you to the right page in one click. Or call us and we will
               tell you in two minutes.
             </p>
           </Reveal>

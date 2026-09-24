@@ -193,7 +193,7 @@ export default function TermsPage() {
                 <strong className="font-semibold text-forest">No guarantee of results.</strong> Tax
                 outcomes depend on your individual facts, your records and the law as it stands. We
                 do not guarantee any particular outcome, refund amount, tax saving, settlement,
-                approval or timeframe — including in matters before the IRS or the Texas
+                approval or timeframe, including in matters before the IRS or the Texas
                 Comptroller. Nothing on this site should be read as promising one.
               </p>
               <p>
@@ -231,7 +231,7 @@ export default function TermsPage() {
               <p>
                 <strong className="font-semibold text-forest">Ongoing work.</strong> Accessibility is not
                 a one-off task. We review the site as it changes, and some third-party embedded
-                content — such as the booking calendar and maps — is outside our direct control.
+                content, such as the booking calendar and maps, is outside our direct control.
               </p>
               <p>
                 <strong className="font-semibold text-forest">Telling us about a problem.</strong> If any

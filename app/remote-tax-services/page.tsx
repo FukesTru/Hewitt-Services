@@ -17,7 +17,7 @@ import type { Faq } from "@/lib/services";
 export const metadata = pageMetadata({
   title: `Remote Tax Services Across Texas | ${site.name}`,
   description:
-    "Work with a Dallas Enrolled Agent from anywhere in Texas. Secure uploads, electronic signatures, a real review call and full IRS representation — no office visit required.",
+    "Work with a Dallas Enrolled Agent from anywhere in Texas. Secure uploads, electronic signatures, a real review call and full IRS representation. No office visit required.",
   path: "/remote-tax-services",
 });
 
@@ -38,7 +38,7 @@ const REMOTE_SERVICES = [
 const STEPS = [
   {
     title: "A first call, from wherever you are",
-    body: "Book online or ring us. Half an hour, no charge, no preparation needed — just tell us what the situation is and we will tell you plainly whether we are the right firm for it.",
+    body: "Book online or ring us. Half an hour, no charge, no preparation needed. Just tell us what the situation is and we will tell you plainly whether we are the right firm for it.",
   },
   {
     title: "Documents go up, not out",
@@ -61,7 +61,7 @@ const REMOTE_FAQS: Faq[] = [
   },
   {
     q: "What if all my paperwork is on paper?",
-    a: "Photograph it with your phone and upload it. It does not need to be scanned, flattened or sorted — legible is enough, and we will tell you if anything came out unreadable. If there is a genuinely awkward pile, call us and we will find a way through it rather than leaving you to work it out alone.",
+    a: "Photograph it with your phone and upload it. It does not need to be scanned, flattened or sorted. Legible is enough, and we will tell you if anything came out unreadable. If there is a genuinely awkward pile, call us and we will find a way through it rather than leaving you to work it out alone.",
   },
   {
     q: "How do signatures work if we never meet?",
@@ -75,7 +75,7 @@ const REMOTE_FAQS: Faq[] = [
   },
   {
     q: "What do I actually need to work with you remotely?",
-    a: "A phone or a computer, an email address, and about half an hour for the review call. No scanner, no printer, no particular software, no app to install. If your internet is unreliable, tell us and we will work around it — a phone call and a posted copy is still a perfectly good way to run a tax return.",
+    a: "A phone or a computer, an email address, and about half an hour for the review call. No scanner, no printer, no particular software, no app to install. If your internet is unreliable, tell us and we will work around it. A phone call and a posted copy is still a perfectly good way to run a tax return.",
   },
   {
     q: "Which parts of Texas do you cover?",
@@ -138,7 +138,7 @@ export default function RemotePage() {
 
       <PageHero
         title="Work With Us Remotely, Anywhere in Texas"
-        lede="The same Enrolled Agent, the same review, the same representation — minus the drive."
+        lede="The same Enrolled Agent, the same review, the same representation, minus the drive."
         eyebrow="Remotely"
         crumbs={crumbs}
         image={IMAGES.remoteHero()}
@@ -327,7 +327,7 @@ export default function RemotePage() {
                 Ask us a question first
               </Link>
               <p className="text-xs leading-relaxed text-ink/70">
-                Prefer to meet face to face? The Dallas office is open to you — see the{" "}
+                Prefer to meet face to face? The Dallas office is open to you. See the{" "}
                 <Link href="/tax-solutions-in-dallas" className="text-moss-dark underline">
                   Dallas page
                 </Link>{" "}

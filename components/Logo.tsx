@@ -22,7 +22,7 @@ export function Logo({ onDark = false, className = "", priority = false }: Props
     <Link
       href="/"
       className={`inline-flex items-center ${className}`}
-      aria-label="Hewitt Services — home"
+      aria-label="Hewitt Services, home"
     >
       <span
         className={`inline-flex transition duration-300 hover:-translate-y-0.5 ${

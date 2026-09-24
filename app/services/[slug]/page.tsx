@@ -118,7 +118,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="wrap">
           <Reveal className="max-w-prose space-y-6">
             {service.intro.map((para, i) => (
-              <p key={i} className="prose-body">
+              <p
+                key={i}
+                className={
+                  i === 0 ? "text-lg leading-relaxed text-forest sm:text-xl" : "prose-body"
+                }
+              >
                 {para}
               </p>
             ))}

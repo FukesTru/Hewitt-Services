@@ -14,15 +14,8 @@ const PAGES = [
   "/services/back-taxes-compliance", "/services/irs-tax-problems",
   "/services/franchise-tax-reinstatement", "/services/refund-advances",
   "/tax-solutions-in-dallas", "/fort-worth-tax-services", "/remote-tax-services",
-  "/tax-center", "/faq",
-  "/blog", "/reviews", "/contact", "/privacy-policy", "/terms-and-disclaimer", "/sitemap",
+  "/faq", "/contact", "/privacy-policy", "/terms-and-disclaimer", "/sitemap",
   "/thank-you",
-  "/blog/behind-on-taxes-filing-back-returns-texas",
-  "/blog/irs-notice-first-30-days",
-  "/blog/texas-franchise-tax-forfeiture",
-  "/blog/monthly-bookkeeping-vs-year-end-cleanup",
-  "/blog/tax-refund-advances-explained",
-  "/blog/proactive-tax-planning-year-end-questions",
 ];
 
 const REDIRECTS = [
@@ -44,13 +37,17 @@ const REDIRECTS = [
   ["/services/refund-advances-eps-program", "/services/refund-advances"],
   ["/frequently-asked-questions", "/faq"],
   ["/about-us/frequently-asked-questions", "/faq"],
-  ["/business-tax-organizer", "/tax-center"],
-  ["/track-refund", "/tax-center"],
-  ["/tax-center/track-refund", "/tax-center"],
+  ["/business-tax-organizer", "/#downloads"],
+  ["/track-refund", "/contact"],
+  ["/tax-center/track-refund", "/contact"],
+  ["/tax-center", "/services"],
+  ["/tax-center/anything-else", "/services"],
+  ["/reviews", "/about"],
   ["/appointments", "/contact"],
   // Legacy blog archive → index, but the site's own posts must NOT redirect.
-  ["/blog/2019/05/some-syndicated-article", "/blog"],
-  ["/blog/random-old-post", "/blog"],
+  ["/blog", "/"],
+  ["/blog/2019/05/some-syndicated-article", "/"],
+  ["/blog/irs-notice-first-30-days", "/"],
 ];
 
 const problems = [];
@@ -133,7 +130,7 @@ async function checkPage(path) {
 
   // Guardrail: no fabricated ratings anywhere.
   if (/aggregateRating|reviewCount|ratingValue/i.test(html)) {
-    fail(path, "contains rating markup — no verified review data exists");
+    fail(path, "contains rating markup; no verified review data exists");
   }
 }
 
@@ -146,10 +143,14 @@ async function checkRedirect(from, to) {
   if (loc !== to) fail(`redirect ${from}`, `went to "${loc}", expected "${to}"`);
 }
 
-async function checkOwnPostNotRedirected() {
-  const res = await fetch(`${BASE}/blog/irs-notice-first-30-days`, { redirect: "manual" });
-  if (res.status !== 200) {
-    fail("own blog post", `swallowed by the legacy /blog/* redirect (status ${res.status})`);
+async function checkRetiredSectionsAreGone() {
+  // The blog, the Tax Center and the reviews page were removed. Nothing under
+  // them may 200, and every one of them has to land somewhere useful.
+  for (const gone of ["/blog", "/blog/irs-notice-first-30-days", "/tax-center", "/reviews"]) {
+    const res = await fetch(BASE + gone, { redirect: "manual" });
+    if (res.status !== 301 && res.status !== 308) {
+      fail(`retired ${gone}`, `expected a redirect, got ${res.status}`);
+    }
   }
 }
 
@@ -158,7 +159,7 @@ async function checkSitemapXml() {
   const xml = await res.text();
   if (/thank-you/.test(xml)) fail("sitemap.xml", "must not list /thank-you");
   const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  if (urls.length !== 27) fail("sitemap.xml", `expected 27 URLs, found ${urls.length}`);
+  if (urls.length !== 18) fail("sitemap.xml", `expected 18 URLs, found ${urls.length}`);
   const robots = await (await fetch(`${BASE}/robots.txt`)).text();
   if (!/Disallow: \/thank-you/.test(robots)) fail("robots.txt", "must disallow /thank-you");
   if (!/Sitemap: https:\/\/hewittservices\.net\/sitemap\.xml/.test(robots)) {
@@ -170,7 +171,7 @@ async function checkSitemapXml() {
 const urlCount = await checkSitemapXml();
 for (const p of PAGES) await checkPage(p);
 for (const [from, to] of REDIRECTS) await checkRedirect(from, to);
-await checkOwnPostNotRedirected();
+await checkRetiredSectionsAreGone();
 
 console.log(`Pages checked:      ${PAGES.length}`);
 console.log(`Redirects checked:  ${REDIRECTS.length}`);

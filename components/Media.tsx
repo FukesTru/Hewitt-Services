@@ -3,7 +3,7 @@ import type { Media as MediaType } from "@/lib/media";
 
 type Props = {
   media: MediaType;
-  /** Rendered behind content — always decorative, so alt text is suppressed. */
+  /** Rendered behind content, always decorative, so alt text is suppressed. */
   fill?: boolean;
   priority?: boolean;
   sizes?: string;

@@ -71,24 +71,22 @@ app/
   page.tsx                Home
   about/ services/ ...    One directory per page
   services/[slug]/        The 7 service pages, from lib/services.ts
-  blog/[slug]/            The 6 posts, from lib/posts.ts
   api/contact/route.ts    Form endpoint
   sitemap.ts robots.ts    sitemap.xml and robots.txt
 components/               Header, Footer, PageHero, ServiceCard, ProcessTimeline,
                           FAQAccordion, CTABand, TrustStrip, ContactForm,
-                          CalendlyEmbed, MapEmbed, RelatedLinks, BlogCard, …
+                          CalendlyEmbed, MapEmbed, RelatedLinks, …
 lib/
-  site.ts                 NAP, links, nav — single source of truth
+  site.ts                 NAP, links, nav (single source of truth)
   services.ts             All 7 service pages' content
-  posts.ts                All 6 blog posts
   faqs.ts                 Site-wide FAQ, grouped by topic
   routes.ts               Route registry driving both sitemaps
   schema.ts seo.ts        JSON-LD builders and per-page metadata
   media.ts                Image manifest + graceful fallback
 ```
 
-**Content lives in `lib/`, not in JSX.** Editing a service page, a blog post
-or an FAQ means editing `lib/services.ts`, `lib/posts.ts` or `lib/faqs.ts`.
+**Content lives in `lib/`, not in JSX.** Editing a service page or an FAQ
+means editing `lib/services.ts` or `lib/faqs.ts`.
 
 ## Design system
 
@@ -141,10 +139,12 @@ until hydration completes, which is bad for a site whose whole job is search
 and accessibility. There is also a 2.5s failsafe that un-hides everything if
 the observer never runs. See `components/Reveal.tsx`.
 
-**Redirect ordering.** The legacy `/blog/*` rule in `next.config.mjs` must
-stay last, and its negative-lookahead list must contain every slug in
-`lib/posts.ts`. Add a post without adding its slug there and the post 301s to
-the blog index. `npm run qa` checks for exactly this.
+**Redirect ordering.** `/tax-center/track-refund` has to be matched before
+the `/tax-center/:path*` catch-all beneath it, or it lands on the wrong page.
+`npm run qa` checks for exactly this.
+
+**No em dashes.** The copy uses commas, colons and full stops instead.
+`grep -rn "—" app components lib` should come back empty.
 
 **No invented facts.** No testimonials, star ratings, review counts, years in
 business, client numbers, savings figures, credential numbers or team members

@@ -26,7 +26,7 @@ function UtilityBar() {
           Client Login
         </a>
         <Link
-          href="/tax-center#downloads"
+          href="/#downloads"
           className="flex items-center px-2 font-semibold text-moss-dark transition hover:text-forest"
         >
           Free Tax Organizer
@@ -115,7 +115,7 @@ export function Header() {
     };
   }, [mobileOpen]);
 
-  // The header is opaque at every scroll position now that it is light —
+  // The header is opaque at every scroll position now that it is light;
   // `raised` only decides whether it casts a shadow over the page.
   const raised = scrolled || mobileOpen || openMenu !== null;
 
@@ -273,12 +273,9 @@ export function Header() {
               {[
                 { label: "Home", href: "/" },
                 { label: "About", href: "/about" },
-                { label: "Tax Center", href: "/tax-center" },
                 { label: "Dallas", href: "/tax-solutions-in-dallas" },
                 { label: "Fort Worth", href: "/fort-worth-tax-services" },
                 { label: "Remotely", href: "/remote-tax-services" },
-                { label: "Reviews", href: "/reviews" },
-                { label: "Blog", href: "/blog" },
                 { label: "FAQ", href: "/faq" },
                 { label: "Contact", href: "/contact" },
               ].map((item) => (

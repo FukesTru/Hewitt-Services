@@ -100,7 +100,7 @@ export default function PrivacyPolicyPage() {
 
             <LegalSection heading="Cookies and analytics">
               <p>
-                Essential cookies and similar storage are used to make the site work — for example,
+                Essential cookies and similar storage are used to make the site work. For example,
                 remembering your cookie choice. These cannot be switched off without breaking the
                 site.
               </p>
@@ -121,11 +121,11 @@ export default function PrivacyPolicyPage() {
               </p>
               <LegalList
                 items={[
-                  "Appointment scheduling — our booking provider, for arranging consultations",
-                  "Secure client portal — our practice management provider, for document exchange and electronic signatures",
-                  "Website form handling and email delivery — for transmitting enquiries to us",
-                  "Website analytics — for usage measurement, only with your consent",
-                  "Refund advances — EPS Financial, where you apply for a refund advance product",
+                  "Appointment scheduling: our booking provider, for arranging consultations",
+                  "Secure client portal: our practice management provider, for document exchange and electronic signatures",
+                  "Website form handling and email delivery: for transmitting enquiries to us",
+                  "Website analytics: for usage measurement, only with your consent",
+                  "Refund advances: EPS Financial, where you apply for a refund advance product",
                   // PLACEHOLDER: replace the generic descriptions above with the
                   // named providers and their own privacy policy links once the
                   // client confirms the final vendor list.

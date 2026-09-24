@@ -14,7 +14,7 @@ const SRC = "/images/demarcus-hewitt.jpg";
  * little so it sits with the green palette instead of fighting it. Nothing
  * about the subject was altered.
  *
- * The frame — a soft green block set behind one corner — is part of the
+ * The frame, a soft green block set behind one corner, is part of the
  * component rather than the call sites, so the homepage and the about page
  * cannot drift apart.
  *

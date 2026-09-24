@@ -3,7 +3,6 @@ import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import { posts } from "@/lib/posts";
 import { SITEMAP_GROUPS, routes } from "@/lib/routes";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
@@ -12,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata = pageMetadata({
   title: `Site Map | ${site.name}`,
   description:
-    "Browse every page of the Hewitt Services website: services, Dallas and Fort Worth pages, tax center, FAQ, blog, reviews and contact information.",
+    "Browse every page of the Hewitt Services website: services, the Dallas, Fort Worth and remote pages, FAQ and contact information.",
   path: "/sitemap",
 });
 
@@ -56,22 +55,6 @@ export default function SiteMapPage() {
               );
             })}
 
-            <Reveal delay={5}>
-              <h2 className="font-serif text-xl font-bold text-forest">Blog articles</h2>
-              <span className="accent-rule mt-3 bg-moss-dark" aria-hidden="true" />
-              <ul className="mt-5 space-y-2.5">
-                {posts.map((p) => (
-                  <li key={p.slug}>
-                    <Link
-                      href={`/blog/${p.slug}`}
-                      className="text-sm text-ink transition hover:text-moss-dark"
-                    >
-                      {p.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
           </div>
 
           <Reveal className="mt-16 rounded-xl border border-forest/10 bg-mist p-6">

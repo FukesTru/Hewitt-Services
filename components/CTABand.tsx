@@ -12,7 +12,7 @@ type Props = {
 
 export function CTABand({
   heading = "Let's start with a free discovery call",
-  body = "Tell us where things stand. We will tell you what we would do about it, what it involves and what it costs — before you commit to anything.",
+  body = "Tell us where things stand. We will tell you what we would do about it, what it involves and what it costs, before you commit to anything.",
   withForm = true,
   defaultInterest,
 }: Props) {

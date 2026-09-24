@@ -16,7 +16,7 @@ export default function ThankYouPage() {
   return (
     <>
       <PageHero
-        title="Thank you — your message is on its way"
+        title="Thank you, your message is on its way"
         lede="We have received your inquiry and will come back to you shortly."
         eyebrow="Message sent"
       />
@@ -26,7 +26,7 @@ export default function ThankYouPage() {
           <Reveal className="max-w-prose space-y-5">
             <p className="prose-body">
               A real person reads every inquiry that comes through this site. If your matter is
-              time-sensitive — an IRS deadline, a levy notice, a filing date — please call us on{" "}
+              time-sensitive, such as an IRS deadline, a levy notice or a filing date, please call us on{" "}
               <a href={site.phone.href} className="font-semibold text-moss-dark underline">
                 {site.phone.display}
               </a>{" "}
@@ -53,9 +53,7 @@ export default function ThankYouPage() {
             <span className="accent-rule mt-4 bg-moss-dark" aria-hidden="true" />
             <ul className="mt-6 grid gap-4 sm:grid-cols-3">
               {[
-                { label: "Tax Center", href: "/tax-center", body: "Organizers, key dates and official IRS tools." },
                 { label: "Frequently asked questions", href: "/faq", body: "The things people ask us first." },
-                { label: "Blog", href: "/blog", body: "Practical guidance, plainly written." },
               ].map((l) => (
                 <li key={l.href}>
                   <Link

@@ -1,4 +1,3 @@
-import { posts } from "./posts";
 import { services } from "./services";
 
 export type Route = {
@@ -16,13 +15,12 @@ export type Route = {
  * (app/sitemap.ts) and the HTML sitemap (app/sitemap/page.tsx) are generated
  * from this list, so the two can never drift apart.
  *
- * /thank-you is deliberately absent — it is noindex.
+ * /thank-you is deliberately absent: it is noindex.
  */
 export const routes: Route[] = [
   { path: "/", label: "Home", group: "Company", priority: 1, changeFrequency: "weekly" },
   { path: "/about", label: "About Demarcus Hewitt, EA", group: "Company", priority: 0.8, changeFrequency: "monthly" },
   { path: "/contact", label: "Contact", group: "Company", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/reviews", label: "Client Reviews", group: "Company", priority: 0.6, changeFrequency: "monthly" },
 
   { path: "/services", label: "All Services", group: "Services", priority: 0.9, changeFrequency: "monthly" },
   ...services.map<Route>((s) => ({
@@ -55,9 +53,7 @@ export const routes: Route[] = [
     changeFrequency: "monthly",
   },
 
-  { path: "/tax-center", label: "Tax Center", group: "Resources", priority: 0.7, changeFrequency: "monthly" },
   { path: "/faq", label: "Frequently Asked Questions", group: "Resources", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/blog", label: "Blog", group: "Resources", priority: 0.7, changeFrequency: "weekly" },
 
   { path: "/privacy-policy", label: "Privacy Policy", group: "Legal", priority: 0.3, changeFrequency: "yearly" },
   {
@@ -69,15 +65,5 @@ export const routes: Route[] = [
   },
   { path: "/sitemap", label: "Site Map", group: "Legal", priority: 0.3, changeFrequency: "monthly" },
 ];
-
-export const blogRoutes: Route[] = posts.map((p) => ({
-  path: `/blog/${p.slug}`,
-  label: p.title,
-  group: "Resources",
-  priority: 0.6,
-  changeFrequency: "yearly",
-}));
-
-export const allRoutes: Route[] = [...routes, ...blogRoutes];
 
 export const SITEMAP_GROUPS = ["Company", "Services", "Locations", "Resources", "Legal"] as const;

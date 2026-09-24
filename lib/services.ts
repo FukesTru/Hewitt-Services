@@ -47,14 +47,12 @@ export const services: Service[] = [
       "Monthly bookkeeping and cleanup for Dallas businesses: categorization, reconciliations and clear financial reports that keep you tax-ready. Book a free call.",
     keyword: "monthly bookkeeping Dallas",
     promise:
-      "Books that stay current, reconciled and tax-ready every month — not reconstructed in a panic each April.",
+      "Books that stay current, reconciled and tax-ready every month, not reconstructed in a panic each April.",
     cardBlurb:
       "Transactions categorized, accounts reconciled and readable reports in your hands every month.",
     intro: [
-      "Bookkeeping is the backbone of a healthy business. When the books are updated every month, you can see cash flow, profit and spending as they actually are instead of guessing until year-end. That visibility changes decisions: which work is worth repeating, when you can afford to hire, whether a slow quarter is a blip or the start of a trend.",
-      "Books left untouched cost money in quieter ways. Deductions go unclaimed because nobody remembered the purchase. Small errors compound across twelve months and take far longer to unwind than to prevent. Tax season turns into an attempt to reconstruct a year out of bank statements and memory.",
-      "We keep the books for businesses in Dallas and for clients across Texas who work with us virtually. Each month we categorize transactions, reconcile your accounts and send reports you can actually read. If your records are behind, or were never set up properly to begin with, we clean them up first and then keep them current.",
-      "Because the same firm prepares your return, nothing is lost in translation between a bookkeeper and a tax preparer. What we record during the year is exactly what your tax planning is built on.",
+      "Books updated every month show you cash flow, profit and spending as they actually are. Books left for a year have to be reconstructed from bank statements and memory.",
+      "We categorize, reconcile and report each month for businesses in Dallas and across Texas. If your records are behind, we clean them up first, then keep them current.",
     ],
     handles: [
       "Transaction categorization reviewed by a person, not left to software rules",
@@ -139,13 +137,11 @@ export const services: Service[] = [
     cardBlurb:
       "Year-round strategy for business owners and high earners, built on current numbers.",
     intro: [
-      "Most people treat tax as a once-a-year event. The return gets filed, the number is whatever it turns out to be, and twelve months of opportunity pass unused. By the time you see the bill, nearly every decision that shaped it has already been made.",
-      "Planning works the other way around. We look ahead at the year you are in and the years coming, and we make decisions while there is still time for them to matter. That covers how your business is structured, how and when income lands, what you set aside for estimated payments, and how a major event such as a sale, an expansion or a new hire will land on your return.",
-      "We plan for higher-earning individuals and established business owners in Dallas, Fort Worth and across Texas. Planning is tied directly to your bookkeeping, so strategy rests on current figures rather than last year's impressions.",
-      "The goal is to move from compliance, which reports what already happened, toward wealth preservation, which shapes what happens next. No strategy removes the obligation to pay what you owe. Good planning makes sure you are not paying more than that by default.",
+      "Filing a return reports what already happened. Planning decides what happens next, while there is still time in the year to act on it.",
+      "We plan for higher earners and established business owners in Dallas, Fort Worth and across Texas. Strategy is tied to your actual numbers, not to a generic checklist.",
     ],
     handles: [
-      "Entity structuring review — whether your current structure still fits the business you actually run",
+      "Entity structuring review: whether your current structure still fits the business you actually run",
       "Income and deduction alignment across the whole year",
       "Year-round monitoring instead of an April surprise",
       "Estimated tax payment planning and scheduling",
@@ -184,7 +180,7 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Who benefits most from proactive tax planning?",
-        a: "Owners with roughly $300,000 or more in revenue tend to see the clearest benefit, along with high earners drawing income from several sources. The more moving parts in your year — multiple entities, property, equity compensation, irregular income — the more there is to plan around, and the less a once-a-year return can do.",
+        a: "Owners with roughly $300,000 or more in revenue tend to see the clearest benefit, along with high earners drawing income from several sources. The more moving parts in your year (multiple entities, property, equity compensation, irregular income), the more there is to plan around, and the less a once-a-year return can do.",
       },
       {
         q: "What is the difference between tax planning and tax preparation?",
@@ -196,7 +192,7 @@ export const services: Service[] = [
       },
       {
         q: "When should I start tax planning?",
-        a: "Earlier in the year gives more room to work, but there is rarely a bad time to start. Options narrow as December approaches and narrow sharply once the year closes. If you are reading this in the fourth quarter there is usually still something worth doing — just less than there was in March.",
+        a: "Earlier in the year gives more room to work, but there is rarely a bad time to start. Options narrow as December approaches and narrow sharply once the year closes. If you are reading this in the fourth quarter there is usually still something worth doing, just less than there was in March.",
       },
       {
         q: "Can you coordinate with my bookkeeper or financial advisor?",
@@ -223,14 +219,12 @@ export const services: Service[] = [
       "Accurate individual and small business tax preparation in Dallas, TX. Secure uploads, e-signatures, virtual or in-person appointments. Book a free consultation.",
     keyword: "tax preparation Dallas TX",
     promise:
-      "Accurate returns, prepared carefully and filed on time — in person or entirely online.",
+      "Accurate returns, prepared carefully and filed on time, in person or entirely online.",
     cardBlurb:
       "Individual, family and small business returns prepared with the questions actually asked.",
     intro: [
-      "A tax return is the official record of a year of your life, and small errors in it have a way of becoming letters later. We prepare returns for individuals, families, self-employed people and small businesses with the same approach in every case: establish the facts, claim what you are genuinely entitled to, and file something that holds up.",
-      "That means asking questions. Credits and deductions are missed far less often because someone hid them than because nobody asked the right question — about a home office, a vehicle, a dependent's tuition, or a side project that did not feel like a business yet.",
-      "You can work with us whichever way suits you. Clients across Texas upload documents to the secure portal, review the return together on a call and sign electronically without ever visiting an office. Clients in Dallas are welcome to sit down with us on Estate Lane instead.",
-      "For eligible individuals, a refund advance through EPS Financial may be available once a return has been filed and accepted. We will explain how that works and whether it makes sense for you, with no pressure either way.",
+      "A return is the official record of a year of your life, and small errors in it have a way of becoming letters later.",
+      "We prepare individual, family and business returns, in person in Dallas or entirely online. Most missed deductions are missed because nobody asked, so we ask.",
     ],
     handles: [
       "Individual and family returns",
@@ -276,7 +270,7 @@ export const services: Service[] = [
       },
       {
         q: "Do you prepare returns for self-employed people and business owners?",
-        a: "Yes. Self-employed returns, single-member LLCs and small business filings are a regular part of our work. If your bookkeeping is behind, we can bring it current first — a return built on incomplete records is where most avoidable errors start.",
+        a: "Yes. Self-employed returns, single-member LLCs and small business filings are a regular part of our work. If your bookkeeping is behind, we can bring it current first. A return built on incomplete records is where most avoidable errors start.",
       },
       {
         q: "Can I file without visiting your office?",
@@ -311,14 +305,12 @@ export const services: Service[] = [
       "Behind on tax returns? Hewitt Services retrieves IRS transcripts, files unfiled returns and builds a roadmap to get compliant. Book a confidential call.",
     keyword: "file back taxes Dallas",
     promise:
-      "Unfiled years brought current — quietly, accurately, and in the right order.",
+      "Unfiled years brought current, quietly and accurately, in the right order.",
     cardBlurb:
       "One year behind or many: transcripts pulled, returns filed, compliance restored.",
     intro: [
-      "Don't panic, and don't ignore it. Those two things together resolve most of what feels unsolvable about unfiled returns. The situation is far more common than people assume, and almost always more fixable than it looks from the inside.",
-      "Here is the part that matters most: filing comes first. Before anyone can negotiate a balance, arrange a payment plan or request relief, the IRS generally expects the missing returns to be on file. Compliance is not a formality to handle afterwards — it is the foundation everything else is built on. People who try to settle a balance before filing usually find the conversation goes nowhere.",
-      "We work with individuals and business owners in Dallas and across Texas who are anywhere from one year behind to many. We establish which years are genuinely missing, pull the IRS transcripts showing what was reported about you, reconstruct what we can where your own records are gone, and file accurate returns year by year.",
-      "Nobody here is going to lecture you about how this happened. We have heard every version, and none of them change what needs doing next.",
+      "Do not panic, and do not ignore it. Unfiled years are far more common than people think, and far more fixable.",
+      "Filing comes first: the IRS generally wants returns on record before it will discuss a balance, a payment plan or relief. We establish which years are genuinely required, then work through them in order.",
     ],
     handles: [
       "Identifying exactly which years are unfiled",
@@ -333,7 +325,7 @@ export const services: Service[] = [
     steps: [
       {
         title: "Confidential consultation",
-        body: "Tell us roughly where things stand. You do not need documents, a complete picture or an explanation — just a willingness to find out where you actually are.",
+        body: "Tell us roughly where things stand. You do not need documents, a complete picture or an explanation. Just a willingness to find out where you actually are.",
       },
       {
         title: "Identify missing years and gather data",
@@ -376,7 +368,7 @@ export const services: Service[] = [
       },
       {
         q: "Do I have to file every missing year?",
-        a: "Not always. The IRS often focuses on the most recent six years when bringing someone back into compliance, though that is a general practice rather than a rule and every situation differs. Older years can still matter — for a refund you are owed, or where the IRS has already filed a substitute return on your behalf.",
+        a: "Not always. The IRS often focuses on the most recent six years when bringing someone back into compliance, though that is a general practice rather than a rule and every situation differs. Older years can still matter, for a refund you are owed, or where the IRS has already filed a substitute return on your behalf.",
       },
       {
         q: "How does back tax filing lead into resolving a balance?",
@@ -401,14 +393,12 @@ export const services: Service[] = [
     promise:
       "An Enrolled Agent standing between you and the IRS, from the first letter to the last.",
     cardBlurb:
-      "Notices, audits, balances, liens and levies — handled by someone authorized to represent you.",
+      "Notices, audits, balances, liens and levies, handled by someone authorized to represent you.",
     urgentBanner:
       "Received a levy or wage garnishment notice? Call (972) 591-0008 now. Deadlines matter.",
     intro: [
-      "An envelope from the IRS has a way of sitting unopened on the counter for a week. That is understandable, and it is also the most expensive thing you can do with it, because most notices carry a deadline and the options narrow once it passes.",
-      "You do not have to handle this yourself. Demarcus Hewitt is an Enrolled Agent, which means he is federally authorized to represent taxpayers before the IRS. With authorization in place, IRS correspondence and calls come to us. We read the notice, tell you in plain English what it actually says, and respond inside the window.",
-      "Some of this work turns out to be straightforward. A surprising number of notices are simply wrong, or ask for a single document, or relate to a return that was already filed. Some of it is heavier — audits, balances that have grown, liens, garnishments and levies. The approach is the same either way: establish the facts, get you compliant, then work the options your situation actually supports.",
-      "What we will not do is tell you how this ends before we know your facts. Anyone who does that is selling something.",
+      "An IRS envelope has a way of sitting unopened on the counter for a week. That week is usually the most expensive part.",
+      "Demarcus Hewitt is an Enrolled Agent, federally authorized to represent taxpayers before the IRS. Once you sign the authorization, the letters and the phone calls come to us.",
     ],
     handles: [
       "IRS notices and letters, read and answered inside the deadline",
@@ -458,7 +448,7 @@ export const services: Service[] = [
       },
       {
         q: "What is the difference between a tax lien and a levy?",
-        a: "A lien is a legal claim against your property securing a tax debt. It affects your credit and complicates any sale, but nothing is taken from you. A levy is the actual taking — money pulled from a bank account or withheld from wages. A lien is a warning shot; a levy is collection already in progress.",
+        a: "A lien is a legal claim against your property securing a tax debt. It affects your credit and complicates any sale, but nothing is taken from you. A levy is the actual taking: money pulled from a bank account or withheld from wages. A lien is a warning shot; a levy is collection already in progress.",
       },
       {
         q: "Can you help with a wage garnishment or bank levy?",
@@ -493,10 +483,8 @@ export const services: Service[] = [
     cardBlurb:
       "Forfeited or not in good standing? We file what is missing and handle the reinstatement.",
     intro: [
-      "Nearly every entity doing business in Texas — LLCs, corporations and most partnerships — has to file an annual franchise tax report with the Texas Comptroller. Plenty of owners never think about it, particularly when the business owes nothing, because a report showing no tax due still has to be filed.",
-      "Miss enough of them and the state forfeits your right to transact business. That is usually how owners find out: a bank flags the account, a contract stalls during diligence, a lender asks for a certificate of account status, or a renewal is refused. The business is still operating, but on paper it is not in good standing, and the liability protection you formed the entity for can be affected.",
-      "The annual report is generally due May 15, though dates shift when they fall on a weekend or holiday — confirm the current year rather than relying on memory.",
-      "Most of these situations are fixable. We review your exact status with the Comptroller and the Secretary of State, file the reports that are missing, deal with the balances or penalties standing in the way, and submit the reinstatement paperwork. Then we put you on a calendar so it does not happen twice.",
+      "Nearly every Texas entity has to file an annual franchise tax report. Miss enough of them and the state forfeits your right to transact business.",
+      "Owners usually find out at the worst moment: a bank flags the account, or a sale stalls for want of a certificate of account status. Most of it is fixable.",
     ],
     handles: [
       "Status review with the Texas Comptroller and the Secretary of State",
@@ -542,7 +530,7 @@ export const services: Service[] = [
       },
       {
         q: "What happens if my business is forfeited?",
-        a: "Forfeiture generally means the entity loses its right to transact business in Texas, and the liability protection owners rely on can be affected. In practice it tends to surface at the worst possible moment — during a sale, a loan application or a contract review — because a certificate of account status cannot be issued.",
+        a: "Forfeiture generally means the entity loses its right to transact business in Texas, and the liability protection owners rely on can be affected. In practice it tends to surface at the worst possible moment, during a sale, a loan application or a contract review, because a certificate of account status cannot be issued.",
       },
       {
         q: "How do I know if my business is in good standing?",
@@ -577,14 +565,12 @@ export const services: Service[] = [
       "Need your refund sooner? Learn how refund advances through EPS Financial work and whether you may qualify when you file with Hewitt Services in Dallas.",
     keyword: "tax refund advance Dallas",
     promise:
-      "An option for eligible clients who need their refund sooner — explained plainly, before you decide.",
+      "An option for eligible clients who need their refund sooner, explained plainly, before you decide.",
     cardBlurb:
       "For eligible clients filing with us: an advance through EPS Financial, explained in full first.",
     intro: [
       "Waiting weeks for a refund is genuinely difficult when something is due now. For clients who file with us, a refund advance through EPS Financial may be an option.",
-      "Here is the general shape of it. We prepare and file your return. Once the IRS accepts it, you can apply for an advance through EPS Financial. If you are approved, funds are delivered to a debit card or by direct deposit, typically not long after approval. When your refund is issued, the advance is repaid from it automatically, and what remains goes to you.",
-      "Two things are worth being clear about up front. A refund advance is not your refund — it is a separate product with its own terms, provided by EPS Financial rather than by this firm. And approval is not automatic; it depends on eligibility criteria the provider sets.",
-      "We will walk you through the current terms before you apply, so you are deciding with the actual numbers in front of you rather than a general impression. If it is not the right fit for your situation, we will say so. Filing accurately, so the IRS accepts your return without avoidable delay, is the part we control, and it matters either way.",
+      "It is not your refund. It is a separate product from EPS Financial with its own terms, and we will walk you through those before you apply.",
     ],
     handles: [
       "Accurate return preparation, so the IRS accepts your filing without avoidable delay",
@@ -595,7 +581,7 @@ export const services: Service[] = [
     steps: [
       {
         title: "Book a tax appointment",
-        body: "Refund advances are offered in connection with a return we prepare, so the process starts the same way any filing does — in person in Dallas or virtually from anywhere in Texas.",
+        body: "Refund advances are offered in connection with a return we prepare, so the process starts the same way any filing does, in person in Dallas or virtually from anywhere in Texas.",
       },
       {
         title: "We prepare and file your return",

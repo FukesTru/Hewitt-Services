@@ -11,9 +11,9 @@ it is never filled with a plausible guess.
 
 ## 1. Blocking — the site should not launch without these
 
-### 1.1 Photography (24 images) — live, but on a borrowed host
+### 1.1 Photography (15 images): live, but on a borrowed host
 
-All 24 images were generated with Artlist (Seedream 5.0, 2K) and live in the
+All 15 images were generated with Artlist (Seedream 5.0, 2K) and live in the
 firm's Artlist library. **They now render on the site**, served directly from
 Artlist's CDN, so the deploy no longer looks unfinished.
 
@@ -75,9 +75,8 @@ white holes, no layout shift. The `remotePatterns` config was verified too
 |---|---|
 | Page heroes | `public/images/hero/` (8) |
 | Service pages | `public/images/services/` (7) |
-| Blog covers | `public/images/blog/` (6) |
 | Social share card | `public/images/og/og-default.jpg` (1) |
-| Artlist credits used | 2,300 |
+| Artlist credits used | 2,400 generated; 15 still in use |
 
 If a signed URL has expired (403), the manifest also records each image's
 Artlist `generationId` and the exact prompt, so it can be re-downloaded from
@@ -191,8 +190,8 @@ accepts analytics cookies; while the ID is still the placeholder,
 | Item | Where | Current behaviour |
 |---|---|---|
 | **Business hours** | `lib/site.ts` → `hours` (currently `null`) | Footer, Dallas, Fort Worth and Contact pages all show "Hours available on request — call or email and we will confirm." No hours were invented. |
-| **Google Business Profile review URL** | `lib/site.ts` → `links.googleReviews` | `/reviews` and the homepage reviews block fall back to an "ask us for our review page" email link. |
-| **Free Tax Organizer PDF** | `lib/site.ts` → `downloads.taxOrganizer` | Lead-magnet strip and Tax Center offer "Request by email" instead of a download. |
+| **Google Business Profile review URL** | `lib/site.ts` → `links.googleReviews` | Used only in the `sameAs` list of the firm's JSON-LD, which drops it while it is null. The reviews page was removed. |
+| **Free Tax Organizer PDF** | `lib/site.ts` → `downloads.taxOrganizer` | The lead-magnet strip on the homepage offers "Request by email" instead of a download. |
 | **Business Tax Organizer PDF** | `lib/site.ts` → `downloads.businessTaxOrganizer` | Same. |
 | **Registered legal entity name** | `lib/site.ts` → `legalNote` | Uses "Hewitt Services" throughout. The old site mixed in "Hewitt Financial Services"; the brand is Hewitt Services everywhere here. |
 | **Clients outside Texas** | `app/remote-tax-services/page.tsx` | The Remotely page claims Texas only — "our office is in Dallas and we do not keep premises anywhere else". Nothing nationwide was implied. Confirm whether out-of-state clients are accepted, and the page can be widened. |
@@ -207,18 +206,20 @@ accepts analytics cookies; while the ID is still the placeholder,
 | Slot | Where |
 |---|---|
 | Third-party AI chat widget | `app/layout.tsx`, before `</body>`. Owns the bottom-**right** corner; the mobile "Call Now" button is pinned bottom-**left** so they never overlap. |
-| Google reviews widget | `components/GoogleReviews.tsx` |
-| Newsletter signup webhook | `app/blog/page.tsx` |
 | CRM webhook | `app/api/contact/route.ts` |
-| Native tax calculators | `app/tax-center/page.tsx`. The old site's third-party hosted calculators were deliberately not carried over. |
 
 ---
 
 ## 4. Deliberately not carried over from the old site
 
-- **~1,000 syndicated blog articles.** Six original posts were written
-  instead. Every other `/blog/*` URL 301s to `/blog`; the six own slugs are
-  excluded from that rule in `next.config.mjs`.
+- **The blog, in full.** The old platform's ~1,000 syndicated articles were
+  never carried over, and the six original posts written for the new site
+  have since been removed at the client's request. Every `/blog/*` URL 301s
+  to the homepage.
+- **The Tax Center.** `/tax-center` 301s to `/services`; the Free Tax
+  Organizer strip it held now lives on the homepage at `/#downloads`.
+- **The reviews page.** `/reviews` 301s to `/about`. No testimonials, star
+  ratings or review counts appear anywhere on the site.
 - **Third-party hosted calculators** (old template platform).
 - **The old AI chat bot** (old template platform).
 - **The OLTPro preparer login.**
@@ -242,11 +243,11 @@ node scripts/responsive-check.mjs http://127.0.0.1:3000
 
 Currently passing:
 
-- **27 pages** — the 20 briefed pages, `/thank-you`, and 6 blog posts
-- Exactly **one `<h1>` per page**; 27 unique titles, 27 unique meta descriptions
+- **19 pages**, including `/thank-you`
+- Exactly **one `<h1>` per page**; 19 unique titles, 19 unique meta descriptions
 - Canonical, Open Graph and Twitter tags on every page
 - `noindex` on `/thank-you` only; excluded from `sitemap.xml` and disallowed in `robots.txt`
-- **24 legacy 301 redirects** verified, including that the six own blog posts are *not* caught by the legacy `/blog/*` rule
+- **28 legacy 301 redirects** verified, including that the retired blog, Tax Center and reviews URLs all land somewhere useful
 - Breadcrumb nav + `BreadcrumbList` schema on every inner page
 - All JSON-LD parses; **no `aggregateRating`, `reviewCount` or `ratingValue` anywhere**
 - Skip link and `<main id="main">` on every page

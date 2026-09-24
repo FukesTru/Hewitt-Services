@@ -34,7 +34,7 @@ const PILLARS = [
   },
   {
     title: "Income optimization",
-    body: "When income lands, when expenses are incurred and how estimated payments are set are all still decisions — right up until December 31.",
+    body: "When income lands, when expenses are incurred and how estimated payments are set are all still decisions, right up until December 31.",
     href: "/services/tax-planning",
   },
   {
@@ -44,7 +44,7 @@ const PILLARS = [
   },
   {
     title: "Texas franchise tax reinstatement",
-    body: "A forfeited entity surfaces at the worst moment — a sale, a loan, a contract. We file what is missing and restore good standing.",
+    body: "A forfeited entity surfaces at the worst moment: a sale, a loan, a contract. We file what is missing and restore good standing.",
     href: "/services/franchise-tax-reinstatement",
   },
 ];
@@ -91,7 +91,7 @@ export default function DallasPage() {
 
       <PageHero
         title="Tax Solutions in Dallas, TX"
-        lede="Bookkeeping, planning, filing and IRS representation from one firm on Estate Lane — in person or entirely online."
+        lede="Bookkeeping, planning, filing and IRS representation from one firm on Estate Lane, in person or entirely online."
         eyebrow="Dallas, Texas"
         crumbs={crumbs}
         image={IMAGES.dallasHero()}
@@ -112,7 +112,7 @@ export default function DallasPage() {
         <div className="wrap">
           <Reveal className="max-w-prose space-y-5">
             <p className="prose-body">
-              Dallas runs on small and mid-size businesses — trades, clinics, agencies, restaurants,
+              Dallas runs on small and mid-size businesses: trades, clinics, agencies, restaurants,
               consultancies, family firms that have been here three generations. What they have in
               common is owners doing the work and the admin at the same time, with the admin
               generally losing.
@@ -125,8 +125,8 @@ export default function DallasPage() {
             <p className="prose-body">
               The approach is the same whichever way you work with us: accuracy first, peace of mind
               after. Get the records right, file what is genuinely owed and nothing more, deal with
-              problems while they are still small. Most of what people dread about tax — the letters,
-              the penalties, the amended returns — traces back to something that was not checked
+              problems while they are still small. Most of what people dread about tax (the letters,
+              the penalties, the amended returns) traces back to something that was not checked
               carefully enough the first time.
             </p>
             <p className="prose-body">
@@ -151,7 +151,7 @@ export default function DallasPage() {
                 "By the time the return is prepared, every decision that shaped the bill has already been made.",
                 "A year reconstructed from bank statements loses the detail that supports deductions.",
                 "Errors made in month two repeat for ten more months before anyone looks.",
-                "Problems — an unfiled year, a franchise tax lapse — go unnoticed until they escalate.",
+                "Problems like an unfiled year or a franchise tax lapse go unnoticed until they escalate.",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
                   <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-moss-dark" />
@@ -320,10 +320,10 @@ export default function DallasPage() {
             {[
               { label: "Texas Comptroller of Public Accounts", href: "https://comptroller.texas.gov/" },
               { label: "Texas franchise tax information", href: "https://comptroller.texas.gov/taxes/franchise/" },
-              { label: "IRS — Where's My Refund?", href: "https://www.irs.gov/refunds" },
-              { label: "IRS — Get Transcript", href: "https://www.irs.gov/individuals/get-transcript" },
-              { label: "IRS — Make a Payment", href: "https://www.irs.gov/payments" },
-              { label: "IRS — Forms and Publications", href: "https://www.irs.gov/forms-instructions-and-publications" },
+              { label: "IRS: Where's My Refund?", href: "https://www.irs.gov/refunds" },
+              { label: "IRS: Get Transcript", href: "https://www.irs.gov/individuals/get-transcript" },
+              { label: "IRS: Make a Payment", href: "https://www.irs.gov/payments" },
+              { label: "IRS: Forms and Publications", href: "https://www.irs.gov/forms-instructions-and-publications" },
             ].map((r) => (
               <li key={r.href}>
                 <a

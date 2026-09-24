@@ -93,7 +93,7 @@ export const faqGroups: FaqGroup[] = [
     faqs: [
       {
         q: "How do I book a first call, and what happens on it?",
-        a: "Book online or call us, and the first conversation is free. You describe where things stand — no documents needed. We tell you what we would do about it, roughly what it involves and what it costs. If we are not the right fit, we will say so. Nothing is decided on that call.",
+        a: "Book online or call us, and the first conversation is free. You describe where things stand, and no documents are needed. We tell you what we would do about it, roughly what it involves and what it costs. If we are not the right fit, we will say so. Nothing is decided on that call.",
         link: { label: "Book a discovery call", href: "/contact" },
       },
     ],

@@ -24,7 +24,7 @@ const founderNode = {
 };
 
 /**
- * The firm itself. Deliberately carries NO aggregateRating or reviewCount —
+ * The firm itself. Deliberately carries NO aggregateRating or reviewCount:
  * the firm has not supplied verified review data and inventing it is off limits.
  */
 export function accountingServiceSchema(opts?: { includeMap?: boolean }) {
@@ -127,51 +127,6 @@ export function itemListSchema(items: { name: string; path: string }[]) {
       position: i + 1,
       name: it.name,
       url: `${site.url}${it.path}`,
-    })),
-  };
-}
-
-export function articleSchema(input: {
-  headline: string;
-  description: string;
-  path: string;
-  datePublished: string;
-  image: string;
-}) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: input.headline,
-    description: input.description,
-    image: `${site.url}${input.image}`,
-    datePublished: input.datePublished,
-    dateModified: input.datePublished,
-    mainEntityOfPage: { "@type": "WebPage", "@id": `${site.url}${input.path}` },
-    author: { "@type": "Organization", name: site.name, url: site.url },
-    publisher: {
-      "@type": "Organization",
-      name: site.name,
-      url: site.url,
-    },
-  };
-}
-
-export function blogSchema(posts: { title: string; slug: string; description: string; date: string }[]) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "@id": `${site.url}/blog#blog`,
-    name: `${site.name} Blog`,
-    url: `${site.url}/blog`,
-    description:
-      "Practical tax planning, bookkeeping and IRS guidance for Texas business owners and families.",
-    publisher: { "@type": "Organization", name: site.name, url: site.url },
-    blogPost: posts.map((p) => ({
-      "@type": "BlogPosting",
-      headline: p.title,
-      description: p.description,
-      url: `${site.url}/blog/${p.slug}`,
-      datePublished: p.date,
     })),
   };
 }

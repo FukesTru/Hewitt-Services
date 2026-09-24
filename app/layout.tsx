@@ -61,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         {/* Arms the scroll-reveal animation before first paint. Without JS the
-            page stays fully readable — see components/Reveal.tsx. */}
+            page stays fully readable. See components/Reveal.tsx. */}
         <RevealScript />
       </head>
       <body className="bg-white font-sans antialiased">
@@ -82,7 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <Script id="chat-widget" strategy="lazyOnload" src="https://…" />
 
-          Do NOT re-use the chat bot from the previous site — it is hosted by
+          Do NOT re-use the chat bot from the previous site. It is hosted by
           the old template platform.
           ────────────────────────────────────────────────────────────────────
         */}

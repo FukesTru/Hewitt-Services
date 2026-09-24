@@ -47,7 +47,7 @@ body {
     outline-offset: 2px;
     border-radius: 2px;
   }
-  /* On the dark green bands a green outline is low contrast — use white. */
+  /* On the dark green bands a green outline is low contrast , use white. */
   .on-dark a:focus-visible,
   .on-dark button:focus-visible,
   .on-dark [tabindex]:focus-visible {
@@ -98,7 +98,7 @@ body {
   /* Scroll reveal.
      Visible by default, so the page reads correctly with JavaScript disabled
      or still loading. The `js` class is added by an inline script in <head>
-     before first paint, which is what arms the animation — so there is no
+     before first paint, which is what arms the animation , so there is no
      flash of content appearing and then being hidden again. */
   .reveal {
     opacity: 1;
@@ -118,7 +118,7 @@ body {
 
   /* The hand-drawn rule under the homepage headline draws itself in.
      stroke-dashoffset rests at 0 and the animation fills backwards, so if
-     animations never run the rule is simply there — it can't get stuck
+     animations never run the rule is simply there , it can't get stuck
      invisible the way an opacity entrance can. */
   @keyframes draw-rule {
     from {
@@ -132,7 +132,7 @@ body {
   }
 
   /* Depth for the dark hero band: a soft light from the upper right and a
-     shadow falling into the section below. Sits over the photograph or the
+     shadow falling into the section below. It sits over the photograph or the
      gradient equally, so every hero has the same modelling. */
   .hero-glow {
     pointer-events: none;
@@ -165,7 +165,7 @@ body {
     transition-duration: 0.001ms !important;
   }
   /* Nothing moves and, importantly, nothing starts hidden waiting to be
-     observed — reduced motion must never mean reduced content. */
+     observed , reduced motion must never mean reduced content. */
   .js .reveal,
   .js .reveal[data-revealed] {
     opacity: 1 !important;

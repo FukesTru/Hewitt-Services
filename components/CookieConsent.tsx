@@ -15,7 +15,7 @@ export function CookieConsent() {
     try {
       window.localStorage.setItem(CONSENT_KEY, value);
     } catch {
-      /* Private browsing with storage disabled — the banner simply closes. */
+      /* Private browsing with storage disabled. The banner simply closes. */
     }
     window.dispatchEvent(new Event(CONSENT_EVENT));
     setVisible(false);
@@ -35,7 +35,7 @@ export function CookieConsent() {
       <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
         <p className="text-sm leading-relaxed text-chalk">
           We use essential cookies to run this site, and analytics cookies to understand how it is
-          used — only if you accept. Read our{" "}
+          used, only if you accept. Read our{" "}
           <Link href="/privacy-policy" className="text-moss underline">
             Privacy Policy
           </Link>

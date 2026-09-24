@@ -28,7 +28,7 @@ const crumbs = [
 const EXPECT = [
   {
     title: "You describe the situation",
-    body: "No documents, no preparation. Just tell us where things stand — including the parts you would rather not say out loud. We have heard it before.",
+    body: "No documents, no preparation. Just tell us where things stand, including the parts you would rather not say out loud. We have heard it before.",
   },
   {
     title: "We tell you what we would do",
@@ -47,7 +47,7 @@ export default function ContactPage() {
 
       <PageHero
         title="Contact Hewitt Services"
-        lede="Book your free discovery call — half an hour, no charge, and no obligation at the end of it."
+        lede="Book your free discovery call. Half an hour, no charge, and no obligation at the end of it."
         eyebrow="Get in touch"
         crumbs={crumbs}
         image={IMAGES.contact()}

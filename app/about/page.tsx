@@ -129,7 +129,7 @@ export default function AboutPage() {
             </p>
 
             {/*
-              PLACEHOLDER — client to supply, if they wish to publish them:
+              PLACEHOLDER: client to supply, if they wish to publish them:
                 • years of experience
                 • education and qualifications beyond the EA credential
                 • prior employers or practice history
@@ -160,8 +160,8 @@ export default function AboutPage() {
             </p>
             <p className="text-base leading-relaxed text-chalk sm:text-lg">
               In practice, it means that once you sign an authorization form, an EA can speak with the
-              IRS on your behalf — request your records, respond to notices, and represent you in an
-              audit or collection matter — rather than relaying everything through you.
+              IRS on your behalf, requesting your records, responding to notices and representing you
+              in an audit or collection matter, rather than relaying everything through you.
             </p>
             <p className="text-sm leading-relaxed text-chalk/75">
               Hewitt Services is a tax and accounting practice. It is not a law firm and does not
@@ -253,7 +253,7 @@ export default function AboutPage() {
             <h2 className="font-serif text-3xl font-bold text-forest">Referrals are welcome</h2>
             <span className="accent-rule mx-auto mt-5 bg-moss-dark" aria-hidden="true" />
             <p className="prose-body mx-auto mt-6 max-w-2xl">
-              This firm has grown mostly the quiet way — one client telling someone else that the
+              This firm has grown mostly the quiet way, one client telling someone else that the
               work was done properly. If we have helped you, and you know someone in the same spot,
               we would be glad to talk to them.
             </p>
@@ -280,7 +280,6 @@ export default function AboutPage() {
             {[
               { label: "Our services", href: "/services" },
               { label: "IRS tax problems", href: "/services/irs-tax-problems" },
-              { label: "Client reviews", href: "/reviews" },
               { label: "Contact us", href: "/contact" },
             ].map((l) => (
               <li key={l.href}>

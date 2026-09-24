@@ -1,19 +1,3 @@
-/**
- * Slugs of the blog posts this site actually owns. Every OTHER /blog/* URL is a
- * leftover from the old template platform (~1,000 syndicated articles that were
- * deliberately not carried over) and is redirected to the blog index.
- */
-const OWN_BLOG_SLUGS = [
-  "behind-on-taxes-filing-back-returns-texas",
-  "irs-notice-first-30-days",
-  "texas-franchise-tax-forfeiture",
-  "monthly-bookkeeping-vs-year-end-cleanup",
-  "tax-refund-advances-explained",
-  "proactive-tax-planning-year-end-questions",
-];
-
-const legacyBlogPattern = `/blog/:path((?!${OWN_BLOG_SLUGS.join("$|")}$).*)`;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -59,13 +43,21 @@ const nextConfig = {
       // --- Resources ---
       { source: "/frequently-asked-questions", destination: "/faq", permanent: true },
       { source: "/about-us/frequently-asked-questions", destination: "/faq", permanent: true },
-      { source: "/business-tax-organizer", destination: "/tax-center", permanent: true },
-      { source: "/track-refund", destination: "/tax-center", permanent: true },
-      { source: "/tax-center/track-refund", destination: "/tax-center", permanent: true },
+      { source: "/business-tax-organizer", destination: "/#downloads", permanent: true },
+      { source: "/track-refund", destination: "/contact", permanent: true },
       { source: "/appointments", destination: "/contact", permanent: true },
 
-      // --- Retired blog archive (must stay last; excludes this site's own posts) ---
-      { source: legacyBlogPattern, destination: "/blog", permanent: true },
+      // --- Retired sections ---
+      // The Tax Center, the blog and the reviews page were removed. The blog
+      // pattern covers both this site's own posts and the ~1,000 syndicated
+      // articles left over from the old template platform. The more specific
+      // /tax-center path has to be matched before the catch-all below it.
+      { source: "/tax-center/track-refund", destination: "/contact", permanent: true },
+      { source: "/tax-center", destination: "/services", permanent: true },
+      { source: "/tax-center/:path*", destination: "/services", permanent: true },
+      { source: "/reviews", destination: "/about", permanent: true },
+      { source: "/blog", destination: "/", permanent: true },
+      { source: "/blog/:path*", destination: "/", permanent: true },
     ];
   },
   async headers() {

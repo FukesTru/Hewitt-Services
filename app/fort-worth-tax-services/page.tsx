@@ -66,7 +66,7 @@ const FW_FAQS: Faq[] = [
   },
   {
     q: "How do I get documents to you if I never visit?",
-    a: "Through the client portal, from a phone or a laptop. Photographs of paper documents are fine as long as they are legible. If something has to arrive on paper, we will tell you and arrange it — but for almost everyone, that never comes up.",
+    a: "Through the client portal, from a phone or a laptop. Photographs of paper documents are fine as long as they are legible. If something has to arrive on paper, we will tell you and arrange it, but for almost everyone that never comes up.",
   },
 ];
 
@@ -91,7 +91,7 @@ export default function FortWorthPage() {
 
       <PageHero
         title="Tax Services for Fort Worth, TX Clients"
-        lede="An Enrolled Agent on your side, working with you from across the metroplex — securely, and without the drive."
+        lede="An Enrolled Agent on your side, working with you from across the metroplex, securely and without the drive."
         eyebrow="Fort Worth, Texas"
         crumbs={crumbs}
         image={IMAGES.fortWorthHero()}
@@ -157,7 +157,7 @@ export default function FortWorthPage() {
                   {/* PLACEHOLDER: client to confirm whether in-person meetings
                       are offered in Fort Worth itself. Until confirmed, this
                       page must not claim a Fort Worth location. */}
-                  In-person in Fort Worth by appointment — ask us when you call
+                  In-person in Fort Worth by appointment. Ask us when you call
                 </li>
               </ul>
               <p className="mt-6 text-xs leading-relaxed text-ink/70">
@@ -237,7 +237,7 @@ export default function FortWorthPage() {
               <p className="mt-4 text-sm text-ink/80">
                 The office is in North Dallas, reachable across the metroplex by car. Journey times
                 vary considerably with traffic, so allow for it and let us know if you are running
-                late — it is not a problem.
+                late. It is not a problem.
               </p>
             </div>
 

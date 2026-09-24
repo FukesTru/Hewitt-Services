@@ -1,7 +1,7 @@
 /**
  * Single source of truth for NAP data, external links and navigation.
  * Anything the client still has to supply is marked PLACEHOLDER and is
- * surfaced in PRELAUNCH.md — do not invent values for these.
+ * surfaced in PRELAUNCH.md. Do not invent values for these.
  */
 
 export const site = {
@@ -38,7 +38,7 @@ export const site = {
   },
   // PLACEHOLDER: business hours to be supplied by the client. Do not invent hours.
   hours: null as string | null,
-  hoursPlaceholder: "Hours available on request — call or email and we will confirm.",
+  hoursPlaceholder: "Hours available on request. Call or email and we will confirm.",
   links: {
     booking: "https://calendly.com/demarcushewitt",
     portal: "https://hs.taxdome.com/login",
@@ -102,7 +102,6 @@ export const mainNav = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services", groups: servicesNavGroups },
   { label: "About", href: "/about" },
-  { label: "Tax Center", href: "/tax-center" },
   {
     label: "Locations",
     href: "/tax-solutions-in-dallas",
@@ -112,6 +111,5 @@ export const mainNav = [
       { label: "Remotely", href: "/remote-tax-services" },
     ],
   },
-  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
