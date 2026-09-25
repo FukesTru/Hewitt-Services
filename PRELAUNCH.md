@@ -164,16 +164,57 @@ Also in the privacy policy: `PLACEHOLDER` at the service-provider list —
 replace the generic descriptions with the named vendors and links to their
 policies once the final vendor list is settled.
 
-### 1.6 Contact form delivery
+### 1.6 LeadConnector form: consents to rebuild ⚠️
 
-`app/api/contact/route.ts`
+`components/LeadForm.tsx`
 
-Set the `CONTACT_WEBHOOK_URL` environment variable to the firm's form/email
-service so submissions reach **info@hewittservices.net**. Until it is set the
-route validates and logs the submission but does not deliver it — it warns
-loudly in the server log rather than silently pretending to send.
+The contact form is now the firm's own LeadConnector form
+(`6sdCYX21g6paqY5PPANN`), embedded as an iframe. The site no longer collects,
+validates or transmits anything: fields, routing and delivery are all
+configured in LeadConnector. `app/api/contact/route.ts` and its
+`CONTACT_WEBHOOK_URL` are gone with it.
 
-A commented CRM webhook slot sits directly beneath it.
+**Three things the old form carried have to be rebuilt in the LeadConnector
+form builder, because the site can no longer enforce them from outside the
+iframe:**
+
+1. **A required anti-solicitation confirmation.** "I confirm this is a service
+   inquiry and not an advertising message or solicitation."
+2. **Two separate, unchecked SMS opt-ins**, one for service messages and one
+   for marketing, each carrying: "Message frequency may vary. Message and data
+   rates may apply. Reply STOP to opt out." and "Text HELP to (972) 591-0008
+   for help."
+3. **Links to the Privacy Policy and the SMS Terms** from inside the form.
+
+The site still publishes SMS Terms at `/terms-and-disclaimer#sms-terms` and a
+privacy policy that describes SMS consent. If the firm texts clients, the
+consent has to be taken somewhere, and the website form was where it used to
+happen.
+
+Two other things to set in LeadConnector: where submissions are delivered
+(**info@hewittservices.net**), and the post-submit behaviour. `/thank-you` is
+still built and still `noindex`, so the form can be pointed at it; otherwise
+LeadConnector shows its own confirmation inside the iframe and `/thank-you`
+becomes an orphan page that can be deleted.
+
+The "do not send Social Security numbers or full tax documents" note sits on
+the page around the iframe, where the site still controls it.
+
+### 1.6a Chat widget
+
+`app/layout.tsx`
+
+The firm's LeadConnector chat widget (`6ab682b050fc24ace636505e`) loads on
+every page with `strategy="lazyOnload"`, after everything that makes the page
+usable. It owns the bottom-right corner; the mobile "Call Now" button is
+bottom-left, so they do not collide.
+
+**It is not gated behind the cookie banner.** GA4 is, because it is analytics.
+The chat widget is treated as functional, on the grounds that it is the
+service rather than measurement of it. Both LeadConnector embeds are now named
+in the Privacy Policy's service-provider list. If the firm's counsel wants
+chat gated too, it is a small change: move the `<Script>` behind the same
+consent check `components/Analytics.tsx` uses.
 
 ### 1.7 GA4 measurement ID
 

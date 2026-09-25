@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 import { Analytics } from "@/components/Analytics";
@@ -75,17 +76,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <RevealOnNavigate />
 
         {/*
-          ── Third-party AI chat widget slot ─────────────────────────────────
-          Reserved for the client's chat provider. Paste the vendor's <script>
-          here. The widget owns the BOTTOM-RIGHT corner; the mobile "Call Now"
-          button is pinned bottom-left so the two never overlap.
+          The firm's LeadConnector chat widget. It owns the BOTTOM-RIGHT
+          corner; the mobile "Call Now" button is pinned bottom-left so the
+          two never overlap. Loaded lazily, after everything that makes the
+          page usable.
 
-          <Script id="chat-widget" strategy="lazyOnload" src="https://…" />
-
-          Do NOT re-use the chat bot from the previous site. It is hosted by
-          the old template platform.
-          ────────────────────────────────────────────────────────────────────
+          This is NOT the chat bot from the previous site, which was hosted by
+          the old template platform and was deliberately left behind.
         */}
+        <Script
+          id="lc-chat-widget"
+          strategy="lazyOnload"
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6ab682b050fc24ace636505e"
+        />
       </body>
     </html>
   );

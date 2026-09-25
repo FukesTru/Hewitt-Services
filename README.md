@@ -60,8 +60,7 @@ node scripts/responsive-check.mjs http://127.0.0.1:3000
 
 | Variable | Required | Purpose |
 |---|---|---|
-| `CONTACT_WEBHOOK_URL` | Yes, in production | Where `/api/contact` posts submissions so they reach info@hewittservices.net. Unset, the route validates and logs but does not deliver. |
-| `CRM_WEBHOOK_URL` | Optional | Commented slot in `app/api/contact/route.ts`. |
+| (none) | | The enquiry form and the chat widget are both hosted by LeadConnector, so the site holds no form secrets. |
 
 ## Structure
 

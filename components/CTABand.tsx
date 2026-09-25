@@ -1,12 +1,16 @@
-import { ContactForm } from "./ContactForm";
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { site } from "@/lib/site";
 
 type Props = {
   heading?: string;
   body?: string;
-  /** Include the short inquiry form alongside the copy. */
+  /** Include the panel alongside the copy. */
   withForm?: boolean;
+  /**
+   * What the visitor was reading when they hit this band. Passed straight
+   * through to the form page so the message panel can name it.
+   */
   defaultInterest?: string;
 };
 
@@ -48,21 +52,25 @@ export function CTABand({
             </p>
           </Reveal>
 
+          {/* The message form itself lives on /contact. Embedding the
+              LeadConnector iframe in this band would put a third-party frame
+              on nearly every page of the site, so this links to it instead. */}
           {withForm ? (
             <Reveal delay={1}>
               <div className="rounded-2xl bg-forest-dark p-6 ring-1 ring-white/10 sm:p-8">
-                <h3 className="font-serif text-xl font-semibold text-white">Send us a message</h3>
-                <p className="mt-2 text-sm text-chalk/80">
-                  We reply to every inquiry. Fields marked * are required.
+                <h3 className="font-serif text-xl font-semibold text-white">Prefer to write?</h3>
+                <p className="mt-3 text-sm leading-relaxed text-chalk/80">
+                  {defaultInterest
+                    ? `Send us a message about ${defaultInterest.toLowerCase()} and we will come back to you. Every inquiry gets a reply.`
+                    : "Send us a message and we will come back to you. Every inquiry gets a reply."}
                 </p>
-                <div className="mt-6">
-                  <ContactForm
-                    variant="short"
-                    tone="dark"
-                    defaultInterest={defaultInterest}
-                    id="cta-form"
-                  />
-                </div>
+                <Link href="/contact" className="btn-primary mt-6 inline-flex">
+                  Send us a message
+                </Link>
+                <p className="mt-6 text-xs leading-relaxed text-chalk/70">
+                  Please do not send Social Security numbers or full tax documents by email. Client
+                  documents go through the secure portal.
+                </p>
               </div>
             </Reveal>
           ) : null}

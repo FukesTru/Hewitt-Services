@@ -123,7 +123,8 @@ export default function PrivacyPolicyPage() {
                 items={[
                   "Appointment scheduling: our booking provider, for arranging consultations",
                   "Secure client portal: our practice management provider, for document exchange and electronic signatures",
-                  "Website form handling and email delivery: for transmitting enquiries to us",
+                  "Website enquiry form: LeadConnector, which hosts the form on our contact page and receives what you submit through it",
+                  "Live chat: LeadConnector, which runs the chat window on this site and receives what you type into it",
                   "Website analytics: for usage measurement, only with your consent",
                   "Refund advances: EPS Financial, where you apply for a refund advance product",
                   // PLACEHOLDER: replace the generic descriptions above with the

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { CalendlyEmbed } from "@/components/CalendlyEmbed";
-import { ContactForm } from "@/components/ContactForm";
+import { LeadForm } from "@/components/LeadForm";
 import { FaqTeaser } from "@/components/FAQAccordion";
 import { JsonLd } from "@/components/JsonLd";
 import { MapEmbed } from "@/components/MapEmbed";
@@ -85,12 +85,24 @@ export default function ContactPage() {
             </h2>
             <span className="accent-rule mt-4 bg-moss-dark" aria-hidden="true" />
             <p className="mt-4 text-base leading-relaxed text-ink">
-              Tell us a little about what you need and we will come back to you. Fields marked * are
-              required.
+              Tell us a little about what you need and we will come back to you.
             </p>
-            <div className="mt-8 rounded-2xl border border-forest/10 bg-mist p-6 sm:p-8">
-              <ContactForm id="contact-page-form" />
+            <div className="mt-8 rounded-2xl border border-forest/10 bg-mist p-4 sm:p-6">
+              <LeadForm />
             </div>
+            <p className="mt-4 text-sm leading-relaxed text-ink/80">
+              For your security, please do not send Social Security numbers or full tax documents
+              through this form. Use our{" "}
+              <a
+                href={site.links.portal}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-moss-dark underline"
+              >
+                secure client portal
+              </a>
+              .
+            </p>
           </Reveal>
         </div>
       </section>
