@@ -4,9 +4,19 @@ const defaults = [
   "Secure client portal",
 ];
 
-export function TrustStrip({ items = defaults }: { items?: string[] }) {
+export function TrustStrip({
+  items = defaults,
+  align = "left",
+}: {
+  items?: string[];
+  align?: "left" | "center";
+}) {
   return (
-    <ul className="flex flex-wrap items-center gap-x-6 gap-y-3">
+    <ul
+      className={`flex flex-wrap items-center gap-x-6 gap-y-3 ${
+        align === "center" ? "justify-center" : ""
+      }`}
+    >
       {items.map((item) => (
         <li key={item} className="flex items-center gap-2 text-sm text-chalk">
           <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true" className="shrink-0">

@@ -142,6 +142,15 @@ body {
       linear-gradient(to bottom, rgba(19, 53, 26, 0) 55%, rgba(11, 32, 15, 0.55) 100%);
   }
 
+  /* The same modelling, centred, for the landing page hero. */
+  .hero-glow-center {
+    pointer-events: none;
+    background-image:
+      radial-gradient(64% 70% at 50% 16%, rgba(134, 191, 135, 0.15) 0%, rgba(134, 191, 135, 0) 68%),
+      radial-gradient(95% 55% at 50% 104%, rgba(19, 53, 26, 0.55) 0%, rgba(19, 53, 26, 0) 72%),
+      linear-gradient(to bottom, rgba(19, 53, 26, 0) 58%, rgba(11, 32, 15, 0.5) 100%);
+  }
+
   /* Hero/section fallback used until the client's photography is dropped in. */
   .media-fallback {
     background-color: var(--forest-dark);

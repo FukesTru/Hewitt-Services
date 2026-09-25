@@ -19,6 +19,8 @@ type Props = {
   children?: ReactNode;
   /** Taller treatment for the homepage. */
   size?: "default" | "tall";
+  /** Centred stack for the landing page. Inner pages stay left-aligned. */
+  align?: "left" | "center";
 };
 
 export function PageHero({
@@ -32,7 +34,10 @@ export function PageHero({
   priority = false,
   children,
   size = "default",
+  align = "left",
 }: Props) {
+  const centered = align === "center";
+
   return (
     <section
       className={`on-dark relative isolate overflow-hidden bg-forest ${
@@ -45,8 +50,14 @@ export function PageHero({
           {/* Two-layer scrim keeps headline contrast well above 4.5:1 whatever
               the photograph underneath happens to be. */}
           <div className="absolute inset-0 bg-forest-dark/75" aria-hidden="true" />
+          {/* The left-to-right scrim exists to sit behind left-aligned text.
+              A centred headline needs a symmetric one. */}
           <div
-            className="absolute inset-0 bg-gradient-to-r from-forest-dark via-forest-dark/70 to-forest-dark/30"
+            className={`absolute inset-0 ${
+              centered
+                ? "bg-gradient-to-t from-forest-dark via-forest-dark/55 to-forest-dark/45"
+                : "bg-gradient-to-r from-forest-dark via-forest-dark/70 to-forest-dark/30"
+            }`}
             aria-hidden="true"
           />
         </div>
@@ -54,14 +65,18 @@ export function PageHero({
         <div className="media-fallback absolute inset-0 -z-10" aria-hidden="true" />
       )}
 
-      {/* A soft light from the upper right and a shadow into the section
-          below. Gives the band depth whether or not a photograph loads. */}
-      <div className="hero-glow absolute inset-0 -z-10" aria-hidden="true" />
+      {/* A soft light and a shadow into the section below, so the band has
+          depth whether or not a photograph loads. The light sits over the
+          headline, which is why it moves with the alignment. */}
+      <div
+        className={`absolute inset-0 -z-10 ${centered ? "hero-glow-center" : "hero-glow"}`}
+        aria-hidden="true"
+      />
 
       <div className="wrap">
         {crumbs ? <Breadcrumbs crumbs={crumbs} /> : null}
 
-        <div className="max-w-3xl">
+        <div className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
           {eyebrow ? <p className="eyebrow mb-4 text-moss">{eyebrow}</p> : null}
           <h1
             className={`font-bold text-white ${
@@ -73,9 +88,17 @@ export function PageHero({
           >
             {title}
           </h1>
-          {accentRule ? <span className="accent-rule mt-6" aria-hidden="true" /> : null}
+          {accentRule ? (
+            <span className={`accent-rule mt-6 ${centered ? "mx-auto" : ""}`} aria-hidden="true" />
+          ) : null}
           {lede ? (
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-chalk sm:text-xl">{lede}</p>
+            <p
+              className={`mt-6 max-w-2xl text-lg leading-relaxed text-chalk sm:text-xl ${
+                centered ? "mx-auto" : ""
+              }`}
+            >
+              {lede}
+            </p>
           ) : null}
           {children ? <div className="mt-8">{children}</div> : null}
         </div>

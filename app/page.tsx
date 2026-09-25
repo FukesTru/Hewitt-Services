@@ -131,8 +131,9 @@ export default function HomePage() {
         image={IMAGES.homeHero()}
         priority
         size="tall"
+        align="center"
       >
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           <a href={site.links.booking} target="_blank" rel="noopener noreferrer" className="btn-primary">
             Book a Free Discovery Call
           </a>
@@ -141,7 +142,7 @@ export default function HomePage() {
           </a>
         </div>
         <div className="mt-10">
-          <TrustStrip />
+          <TrustStrip align="center" />
         </div>
       </PageHero>
 
